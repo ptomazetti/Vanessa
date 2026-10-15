@@ -1,8 +1,8 @@
   // Links de pagamento: trocar "[PREENCHER]" pelos links do Stripe e do PayPal.
   // Enquanto um link não estiver preenchido, o botão abre o WhatsApp.
   var PAGAMENTO = {
-    avulsaCartao: "[PREENCHER: link Stripe da sessão avulsa]",
-    avulsaPaypal: "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=vany.torriani%40gmail.com&item_name=Sess%C3%A3o+avulsa+de+psican%C3%A1lise+%2850+minutos%29&amount=150.00&currency_code=BRL&no_shipping=1",
+    inicialCartao: "[PREENCHER: link Stripe da sessão avulsa]",
+    inicialPaypal: "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=vany.torriani%40gmail.com&item_name=Sess%C3%A3o+avulsa+de+psican%C3%A1lise+%2850+minutos%29&amount=150.00&currency_code=BRL&no_shipping=1",
     mensalCartao: "[PREENCHER: link Stripe do plano mensal]",
     mensalPaypal: "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=vany.torriani%40gmail.com&item_name=Plano+mensal+de+psican%C3%A1lise+%284+sess%C3%B5es%29&amount=540.00&currency_code=BRL&no_shipping=1"
   };
@@ -15,8 +15,8 @@
   }
   function medir(nome, rotulo) { if (window.gtag) gtag("event", nome, { rotulo: rotulo }); }
   document.addEventListener("click", function (e) {
-    var a = e.target.closest && e.target.closest(".js-wa, [data-pay]");
-    if (a) medir(a.dataset.pay ? "clique_pagamento" : "clique_whatsapp", a.dataset.pay || a.textContent.trim().slice(0, 60));
+    var a = e.target.closest && e.target.closest(".js-wa, .js-book, .pay-option");
+    if (a) medir(a.dataset.method ? "clique_pagamento" : a.dataset.book ? "clique_agendar" : "clique_whatsapp", a.dataset.method || a.dataset.book || a.textContent.trim().slice(0, 60));
   });
   // Número da Vanessa (só dígitos, com 55 e DDD).
   var WHATSAPP = "5551993497223";
@@ -49,13 +49,6 @@
     });
   });
 
-  document.querySelectorAll("[data-pay]").forEach(function (a) {
-    var link = PAGAMENTO[a.dataset.pay] || "";
-    var nome = a.dataset.pay.indexOf("Paypal") > -1 ? "PayPal" : "cartão";
-    var plano = a.dataset.pay.indexOf("mensal") === 0 ? "o plano mensal" : "a sessão avulsa";
-    a.href = link.indexOf("https://") === 0 ? link : "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Olá, Vanessa. Quero pagar " + plano + " com " + nome + ".");
-    a.target = "_blank"; a.rel = "noopener";
-  });
 
   var ano = document.getElementById("ano"); if (ano) ano.textContent = new Date().getFullYear();
 
@@ -69,4 +62,40 @@
     backdrop.addEventListener("click", closeMenu);
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !drawer.hidden) closeMenu(); });
     drawer.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { if (!drawer.hidden) closeMenu(); }); });
+  }
+  // Agendar: escolher a forma de pagamento
+  var dlg = document.getElementById("pay-dialog");
+  var PLANOS = {
+    inicial: { nome: "Sessão inicial", resumo: "R$ 150, 50 minutos, online", msg: "a sessão inicial" },
+    mensal: { nome: "Plano mensal", resumo: "R$ 540 por mês, 4 sessões", msg: "o plano mensal" }
+  };
+  function wa(texto) { return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(texto); }
+  function abrirPagamento(plano) {
+    var p = PLANOS[plano] || PLANOS.inicial;
+    document.getElementById("pay-over").textContent = p.nome;
+    document.getElementById("pay-summary").textContent = p.resumo;
+    dlg.querySelectorAll(".pay-option[data-method]").forEach(function (o) {
+      var m = o.dataset.method; if (m === "pix") return;
+      var link = PAGAMENTO[plano + (m === "cartao" ? "Cartao" : "Paypal")] || "";
+      o.href = link.indexOf("https://") === 0 ? link : wa("Olá, Vanessa. Quero agendar " + p.msg + " e pagar com " + (m === "cartao" ? "cartão" : "PayPal") + ".");
+    });
+    document.getElementById("pix-box").hidden = true;
+    document.getElementById("pix-wa").href = wa("Olá, Vanessa. Paguei " + p.msg + " por Pix e gostaria de marcar o horário.");
+    dlg.showModal();
+  }
+  if (dlg) {
+    document.querySelectorAll(".js-book").forEach(function (b) {
+      b.addEventListener("click", function (e) { e.preventDefault(); abrirPagamento(b.dataset.book); });
+    });
+    dlg.querySelector('[data-method="pix"]').addEventListener("click", function () {
+      var box = document.getElementById("pix-box"); box.hidden = !box.hidden;
+    });
+    document.getElementById("pix-copy").addEventListener("click", function () {
+      var btn = this, chave = document.getElementById("pix-key").textContent;
+      function ok() { btn.textContent = "Copiado"; setTimeout(function () { btn.textContent = "Copiar"; }, 2000); }
+      if (navigator.clipboard) navigator.clipboard.writeText(chave).then(ok, function () { selecionar(); });
+      else selecionar();
+      function selecionar() { var r = document.createRange(); r.selectNodeContents(document.getElementById("pix-key")); var sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); }
+    });
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
   }
