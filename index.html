@@ -619,6 +619,20 @@
   .hero-abroad a:hover { background: rgba(93, 111, 98, .18); }
   .skip { position: absolute; left: 16px; top: -60px; z-index: 100; padding: .7rem 1rem; border-radius: .5rem; background: var(--primary); color: #FFFFFF; text-decoration: none; }
   .skip:focus { top: 12px; }
+  /* Ciência nos temas e serviços para casais e famílias */
+  .science { display: flex; gap: 1rem; align-items: flex-start; padding: 1.25rem 1.4rem; border-radius: 1rem; background: var(--linen-2); border: 1px solid var(--border); }
+  .science h4 { margin: 0 0 .4rem; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--sage); font-family: var(--sans); }
+  .science p { margin: 0 0 .5rem; color: var(--ink); }
+  .science .science-src { margin: 0; font-size: 15px; color: var(--ink-soft); }
+  .science-src a { color: var(--primary); text-underline-offset: 3px; }
+  .panel .panel-full { grid-column: 1 / -1; }
+  .card .price.price-text { font-size: 28px; }
+  .family { margin-top: 4rem; }
+  .family-title { font-size: 30px; line-height: 38px; font-weight: 400; margin: .25rem 0 .75rem; }
+  .family-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .family-grid .plan-for { min-height: 0; flex: 1; }
+  .family-grid .btn { justify-content: center; }
+  @media (max-width: 900px) { .family-grid { grid-template-columns: 1fr; } .family-title { font-size: 24px; line-height: 32px; } }
   .todo { background: #FFF3C4; padding: 0 .2em; border-radius: .2em; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -759,6 +773,14 @@
           <p>Muita gente com TDAH passou anos se culpando. Na análise, você olha para a sua história com mais gentileza, entende o seu jeito de funcionar e encontra formas de viver bem com ele. Se fizer sentido, indico profissionais para a avaliação e sigo com você.</p>
           <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema TDAH. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
         </div>
+        <div class="science panel-full">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>
+          <div>
+            <h4>O que diz a ciência</h4>
+            <p>O NIMH, instituto de saúde mental dos Estados Unidos, define o TDAH como um transtorno do neurodesenvolvimento, com um padrão persistente de desatenção, hiperatividade e/ou impulsividade. Ele começa na infância e, em muitas pessoas, continua na vida adulta, afetando trabalho, estudos e relações. Existem tratamentos eficazes para os sintomas.</p>
+            <p class="science-src">Fonte: <a href="https://www.nimh.nih.gov/health/publications/adhd-what-you-need-to-know" target="_blank" rel="noopener">NIMH: ADHD, what you need to know</a></p>
+          </div>
+        </div>
       </div>
       <div class="panel card" role="tabpanel" id="painel-autismo" aria-labelledby="tab-autismo" hidden>
         <div>
@@ -774,6 +796,14 @@
           <h3>Como posso acompanhar você</h3>
           <p>Muitos adultos autistas aprenderam a disfarçar o próprio jeito e chegam exaustos. Aqui você não precisa fingir. A análise abre espaço para entender o seu modo de sentir o mundo e cuidar do cansaço de se adaptar o tempo todo.</p>
           <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema autismo. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
+        </div>
+        <div class="science panel-full">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>
+          <div>
+            <h4>O que diz a ciência</h4>
+            <p>Segundo a Organização Mundial da Saúde, o autismo é uma condição do neurodesenvolvimento que envolve diferenças na comunicação e na interação social e interesses ou comportamentos mais restritos e repetitivos. Em 2021, cerca de 1 em cada 127 pessoas no mundo era autista. Muitas recebem o diagnóstico só bem mais tarde, já adultas.</p>
+            <p class="science-src">Fonte: <a href="https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders" target="_blank" rel="noopener">OMS: Autism</a></p>
+          </div>
         </div>
       </div>
       <div class="panel card" role="tabpanel" id="painel-borderline" aria-labelledby="tab-borderline" hidden>
@@ -791,6 +821,14 @@
           <p>Sentir com intensidade não é defeito. A análise oferece um vínculo estável, com horário fixo e combinados claros, para você entender e acolher o que sente. Muitas vezes esse cuidado anda junto com um psiquiatra, e eu caminho ao lado.</p>
           <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema borderline. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
         </div>
+        <div class="science panel-full">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>
+          <div>
+            <h4>O que diz a ciência</h4>
+            <p>O transtorno de personalidade borderline é marcado por instabilidade persistente no humor, nas relações, na autoimagem e no comportamento. Uma revisão publicada no JAMA em 2023 estima que ele afete de 0,7% a 2,7% dos adultos nos Estados Unidos e aponta a psicoterapia, incluindo a terapia psicodinâmica, como tratamento de escolha.</p>
+            <p class="science-src">Fonte: <a href="https://pubmed.ncbi.nlm.nih.gov/36853245/" target="_blank" rel="noopener">JAMA, 2023: Borderline Personality Disorder, a review</a></p>
+          </div>
+        </div>
       </div>
       <div class="panel card" role="tabpanel" id="painel-bipolar" aria-labelledby="tab-bipolar" hidden>
         <div>
@@ -806,6 +844,14 @@
           <h3>Como posso acompanhar você</h3>
           <p>O tratamento da bipolaridade inclui acompanhamento psiquiátrico, e a análise caminha junto. Nela, você aprende a perceber os sinais de cada fase, cuidar das suas relações e construir uma rotina que proteja o seu bem-estar.</p>
           <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema bipolaridade. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
+        </div>
+        <div class="science panel-full">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>
+          <div>
+            <h4>O que diz a ciência</h4>
+            <p>A OMS descreve o transtorno bipolar como uma condição que afeta o humor, a energia, a atividade e o pensamento, com episódios de mania ou hipomania e episódios de depressão. Cerca de 1 em cada 200 pessoas no mundo vive com bipolaridade, segundo dados de 2021.</p>
+            <p class="science-src">Fonte: <a href="https://www.who.int/news-room/fact-sheets/detail/bipolar-disorder" target="_blank" rel="noopener">OMS: Bipolar disorder</a></p>
+          </div>
         </div>
       </div>
       <div class="panel card" role="tabpanel" id="painel-ansiedade" aria-labelledby="tab-ansiedade" hidden>
@@ -823,6 +869,14 @@
           <p>A ansiedade costuma falar de algo que ainda não encontrou palavras. Na análise, você descobre de onde vem esse alarme e, aos poucos, o corpo e a mente encontram mais calma.</p>
           <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema ansiedade e pânico. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
         </div>
+        <div class="science panel-full">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>
+          <div>
+            <h4>O que diz a ciência</h4>
+            <p>Segundo a OMS, cerca de 4,4% da população mundial vive com um transtorno de ansiedade. Em 2021, eram 359 milhões de pessoas. Só cerca de 1 em cada 4 pessoas que precisam de cuidado recebe algum tratamento.</p>
+            <p class="science-src">Fonte: <a href="https://www.who.int/news-room/fact-sheets/detail/anxiety-disorders" target="_blank" rel="noopener">OMS: Anxiety disorders</a></p>
+          </div>
+        </div>
       </div>
       <div class="panel card" role="tabpanel" id="painel-depressao" aria-labelledby="tab-depressao" hidden>
         <div>
@@ -839,6 +893,14 @@
           <p>Ninguém precisa atravessar isso sem companhia. A análise é um lugar para colocar em palavras o que pesa, no seu tempo. Quando for importante, indico avaliação psiquiátrica e sigo ao seu lado.</p>
           <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema depressão. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
         </div>
+        <div class="science panel-full">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>
+          <div>
+            <h4>O que diz a ciência</h4>
+            <p>A OMS estima que cerca de 5,7% dos adultos no mundo vivam com depressão, e ela é mais comum entre as mulheres. A depressão é diferente da tristeza do dia a dia: dura semanas e afeta várias áreas da vida, como o sono, a energia, o trabalho e as relações.</p>
+            <p class="science-src">Fonte: <a href="https://www.who.int/news-room/fact-sheets/detail/depression" target="_blank" rel="noopener">OMS: Depressive disorder</a></p>
+          </div>
+        </div>
       </div>
       <div class="panel card" role="tabpanel" id="painel-burnout" aria-labelledby="tab-burnout" hidden>
         <div>
@@ -854,6 +916,14 @@
           <h3>Como posso acompanhar você</h3>
           <p>Esgotamento não é falta de força. Na análise, você entende o que trouxe você até aqui, revê o lugar do trabalho na sua vida e reaprende a cuidar de si.</p>
           <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema burnout. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
+        </div>
+        <div class="science panel-full">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>
+          <div>
+            <h4>O que diz a ciência</h4>
+            <p>Na CID-11, a classificação internacional da OMS, o burnout é um fenômeno ocupacional, e não uma doença. É uma síndrome causada por estresse crônico no trabalho que não foi bem administrado, com três marcas: exaustão, distanciamento mental ou cinismo em relação ao trabalho e sensação de menor eficácia profissional.</p>
+            <p class="science-src">Fonte: <a href="https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases" target="_blank" rel="noopener">OMS: Burn-out, an occupational phenomenon</a></p>
+          </div>
         </div>
       </div>
       <div class="panel card panel-wide" role="tabpanel" id="painel-relacoes" aria-labelledby="tab-relacoes" hidden>
@@ -895,6 +965,14 @@
           <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
         <p>Se você está em perigo agora, ligue 190. Mulheres podem ligar para o 180, a Central de Atendimento à Mulher, gratuita e 24 horas. Violência contra pessoas idosas pode ser denunciada no Disque 100.</p>
         </div>
+        <div class="science panel-full">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>
+          <div>
+            <h4>O que diz a ciência</h4>
+            <p>O DSM-5, manual de diagnósticos da psiquiatria, descreve o transtorno de personalidade narcisista como um padrão duradouro de grandiosidade, necessidade de admiração e falta de empatia. Expressões como "mãe narcisista" não são diagnósticos, mas ajudam a nomear relações marcadas por esses traços. A OMS inclui o abuso psicológico e o comportamento controlador na definição de violência entre parceiros.</p>
+            <p class="science-src">Fonte: <a href="https://www.ncbi.nlm.nih.gov/books/NBK556001/" target="_blank" rel="noopener">StatPearls (NCBI): Narcissistic Personality Disorder</a> e <a href="https://www.who.int/news-room/fact-sheets/detail/violence-against-women" target="_blank" rel="noopener">OMS: Violence against women</a></p>
+          </div>
+        </div>
       </div>
       <div class="panel card" role="tabpanel" id="painel-idosos" aria-labelledby="tab-idosos" hidden>
         <div>
@@ -914,6 +992,14 @@
           <p>Se a tecnologia for uma barreira, alguém da família pode ajudar a abrir a chamada nas primeiras vezes. Depois, o espaço é só seu, com o mesmo sigilo.</p>
           <p>Familiares também podem me procurar para entender como apoiar quem amam.</p>
           <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Gostaria de agendar uma sessão para mim ou para um familiar idoso." href="#contato">Agendar para mim ou para um familiar</a>
+        </div>
+        <div class="science panel-full">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>
+          <div>
+            <h4>O que diz a ciência</h4>
+            <p>Segundo a OMS, cerca de 14% dos adultos com 70 anos ou mais vivem com um transtorno mental, mais comumente ansiedade ou depressão. Envelhecer traz perdas e mudanças reais, e cuidar da saúde emocional nessa fase faz parte de envelhecer bem.</p>
+            <p class="science-src">Fonte: <a href="https://www.who.int/news-room/fact-sheets/detail/mental-health-of-older-adults" target="_blank" rel="noopener">OMS: Mental health of older adults</a></p>
+          </div>
         </div>
       </div>
       <div class="others">
@@ -1021,7 +1107,7 @@
         <article class="card plan">
           <h3>Plano personalizado</h3>
           <p class="plan-for">Para quem precisa de outro ritmo ou formato</p>
-          <p class="price">Sob consulta<small>valor combinado com você</small></p>
+          <p class="price price-text">A combinar<small>pelo WhatsApp</small></p>
           <ul>
             <li>Duas ou mais sessões por semana</li>
             <li>Horários especiais e outros fusos</li>
@@ -1030,6 +1116,33 @@
           <a class="btn btn-ghost btn-pill js-wa" data-msg="Olá, Vanessa. Gostaria de conversar sobre um plano personalizado." href="#contato">Montar meu plano</a>
           <div class="pay-links"><span class="pay-muted">Pix, cartão ou PayPal</span></div>
         </article>
+      </div>
+      <div class="family">
+        <div class="section-head measure">
+          <span class="overline">Para casais e famílias</span>
+          <h3 class="family-title">Quando a dor está na relação, cuidar juntos ajuda</h3>
+          <p>Todos começam com uma primeira sessão, para entender o que vocês estão vivendo. A duração e o valor são combinados pelo WhatsApp.</p>
+        </div>
+        <div class="family-grid">
+          <article class="card plan">
+            <h3>Terapia de casal</h3>
+            <p class="plan-for">Para casais que querem entender os conflitos, voltar a conversar ou decidir com cuidado os próximos passos.</p>
+            <p class="price price-text">A combinar<small>pelo WhatsApp</small></p>
+            <a class="btn btn-ghost btn-pill js-wa" data-msg="Olá, Vanessa. Gostaria de marcar uma primeira sessão de terapia de casal." href="#contato">Marcar primeira sessão</a>
+          </article>
+          <article class="card plan">
+            <h3>Terapia familiar</h3>
+            <p class="plan-for">Para famílias que vivem conflitos, mudanças, perdas ou dificuldades de convivência entre gerações.</p>
+            <p class="price price-text">A combinar<small>pelo WhatsApp</small></p>
+            <a class="btn btn-ghost btn-pill js-wa" data-msg="Olá, Vanessa. Gostaria de marcar uma primeira sessão de terapia familiar." href="#contato">Marcar primeira sessão</a>
+          </article>
+          <article class="card plan">
+            <h3>Orientação para familiares</h3>
+            <p class="plan-for">Para pais de adolescentes, filhos de pessoas idosas e famílias de quem vive com TDAH, autismo, borderline ou bipolaridade.</p>
+            <p class="price price-text">A combinar<small>pelo WhatsApp</small></p>
+            <a class="btn btn-ghost btn-pill js-wa" data-msg="Olá, Vanessa. Gostaria de marcar uma primeira sessão de orientação para familiares." href="#contato">Marcar primeira sessão</a>
+          </article>
+        </div>
       </div>
       <p class="plan-note">Combinamos juntos quantas sessões por semana fazem sentido para você. Se em algum momento for melhor ter duas, montamos um plano personalizado.</p>
       <p class="pay-methods">Você pode pagar por <strong>Pix</strong>, <strong>cartão de crédito</strong> ou <strong>PayPal</strong>. Se você mora fora do Brasil, use cartão internacional ou PayPal.</p>
@@ -1087,6 +1200,10 @@
         <details>
           <summary>Você atende por plano de saúde?</summary>
           <p>O atendimento é particular, e não emito recibo para reembolso do plano de saúde.</p>
+        </details>
+        <details>
+          <summary>Você atende casais e famílias?</summary>
+          <p>Sim. Atendo casais, famílias e também familiares que querem aprender a apoiar alguém. Tudo começa com uma primeira sessão, e o valor é combinado pelo WhatsApp.</p>
         </details>
         <details>
           <summary>Você atende crianças?</summary>
@@ -1160,6 +1277,7 @@
       <a href="#como-funciona">Como funciona</a>
       <a href="#sobre">Sobre</a>
       <a href="#planos">Valores</a>
+      <a href="#planos">Casais e famílias</a>
       <a href="#faq">Dúvidas</a>
       <a href="#contato">Contato</a>
     </nav>
