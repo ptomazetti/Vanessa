@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://ptomazetti.github.io/Vanessa/sitemap.xml
+Sitemap: https://vanessapsi.netlify.app/sitemap.xml
