@@ -446,6 +446,41 @@
     .tabs::-webkit-scrollbar { display: none; }
     .tab { flex: none; scroll-snap-align: start; }
   }
+  /* Legibilidade: textos maiores e contraste reforçado */
+  body { font-size: 17px; line-height: 1.7; }
+  .lead { font-size: 19px; line-height: 31px; }
+  @media (max-width: 767px) { .lead { font-size: 18px; line-height: 29px; } }
+  .card p, .faq details p, .signs li, .themes li, .plan li { font-size: 17px; }
+  .micro, .pay, .pay-muted, .gentle-note, .privacy, .safety p, .pay-methods, .also { font-size: 16px; }
+  .proof-strip ul { font-size: 16px; }
+  .brand small, .step-label, .plan-tag, .creds li > span:first-child, .contact-list span { font-size: 13px; }
+  .price small { font-size: 14px; }
+  .crisis, footer { font-size: 15px; }
+  .overline { font-size: 14px; }
+  :root { --ink-soft: #4A3C37; }
+  .proof-strip, .pay-muted, .gentle-note, .pay { color: #4A3C37; }
+  :focus-visible { outline: 3px solid #8C5845; outline-offset: 3px; }
+  .tab { min-height: 46px; }
+  .btn { min-height: 48px; }
+  /* Fundos e texturas */
+  body { background-color: #FBF8F4; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27180%27%20height%3D%27180%27%3E%3Cfilter%20id%3D%27g%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%272%27%20stitchTiles%3D%27stitch%27/%3E%3CfeColorMatrix%20values%3D%270%200%200%200%20.45%200%200%200%200%20.3%200%200%200%200%20.22%200%200%200%20.07%200%27/%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23g%29%27/%3E%3C/svg%3E"); }
+  section, .proof-strip { position: relative; isolation: isolate; }
+  .hero { background: radial-gradient(60% 70% at 0% 0%, rgba(239, 190, 149, .22), transparent 70%), radial-gradient(50% 60% at 100% 100%, rgba(93, 111, 98, .10), transparent 70%); }
+  .hero::after, #contato::after, #sobre::after { content: ""; position: absolute; z-index: -1; pointer-events: none; background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20300%20300%22%20fill%3D%22none%22%20stroke%3D%22%238C5845%22%20stroke-width%3D%221%22%3E%3Ccircle%20cx%3D%22150%22%20cy%3D%22150%22%20r%3D%2240%22/%3E%3Ccircle%20cx%3D%22150%22%20cy%3D%22150%22%20r%3D%2270%22/%3E%3Ccircle%20cx%3D%22150%22%20cy%3D%22150%22%20r%3D%22100%22/%3E%3Cpath%20d%3D%22M250.0%20150.0%20Q265.4%20125.5%20290.0%20150.0%20Q265.4%20174.5%20250.0%20150.0Z%22/%3E%3Ccircle%20cx%3D%22217.6%22%20cy%3D%22168.1%22%20r%3D%222%22/%3E%3Cpath%20d%3D%22M236.6%20200.0%20Q262.2%20186.5%20271.2%20220.0%20Q237.7%20229.0%20236.6%20200.0Z%22/%3E%3Ccircle%20cx%3D%22199.5%22%20cy%3D%22199.5%22%20r%3D%222%22/%3E%3Cpath%20d%3D%22M200.0%20236.6%20Q229.0%20237.7%20220.0%20271.2%20Q186.5%20262.2%20200.0%20236.6Z%22/%3E%3Ccircle%20cx%3D%22168.1%22%20cy%3D%22217.6%22%20r%3D%222%22/%3E%3Cpath%20d%3D%22M150.0%20250.0%20Q174.5%20265.4%20150.0%20290.0%20Q125.5%20265.4%20150.0%20250.0Z%22/%3E%3Ccircle%20cx%3D%22131.9%22%20cy%3D%22217.6%22%20r%3D%222%22/%3E%3Cpath%20d%3D%22M100.0%20236.6%20Q113.5%20262.2%2080.0%20271.2%20Q71.0%20237.7%20100.0%20236.6Z%22/%3E%3Ccircle%20cx%3D%22100.5%22%20cy%3D%22199.5%22%20r%3D%222%22/%3E%3Cpath%20d%3D%22M63.4%20200.0%20Q62.3%20229.0%2028.8%20220.0%20Q37.8%20186.5%2063.4%20200.0Z%22/%3E%3Ccircle%20cx%3D%2282.4%22%20cy%3D%22168.1%22%20r%3D%222%22/%3E%3Cpath%20d%3D%22M50.0%20150.0%20Q34.6%20174.5%2010.0%20150.0%20Q34.6%20125.5%2050.0%20150.0Z%22/%3E%3Ccircle%20cx%3D%2282.4%22%20cy%3D%22131.9%22%20r%3D%222%22/%3E%3Cpath%20d%3D%22M63.4%20100.0%20Q37.8%20113.5%2028.8%2080.0%20Q62.3%2071.0%2063.4%20100.0Z%22/%3E%3Ccircle%20cx%3D%22100.5%22%20cy%3D%22100.5%22%20r%3D%222%22/%3E%3Cpath%20d%3D%22M100.0%2063.4%20Q71.0%2062.3%2080.0%2028.8%20Q113.5%2037.8%20100.0%2063.4Z%22/%3E%3Ccircle%20cx%3D%22131.9%22%20cy%3D%2282.4%22%20r%3D%222%22/%3E%3Cpath%20d%3D%22M150.0%2050.0%20Q125.5%2034.6%20150.0%2010.0%20Q174.5%2034.6%20150.0%2050.0Z%22/%3E%3Ccircle%20cx%3D%22168.1%22%20cy%3D%2282.4%22%20r%3D%222%22/%3E%3Cpath%20d%3D%22M200.0%2063.4%20Q186.5%2037.8%20220.0%2028.8%20Q229.0%2062.3%20200.0%2063.4Z%22/%3E%3Ccircle%20cx%3D%22199.5%22%20cy%3D%22100.5%22%20r%3D%222%22/%3E%3Cpath%20d%3D%22M236.6%20100.0%20Q237.7%2071.0%20271.2%2080.0%20Q262.2%20113.5%20236.6%20100.0Z%22/%3E%3Ccircle%20cx%3D%22217.6%22%20cy%3D%22131.9%22%20r%3D%222%22/%3E%3C/svg%3E") center / contain no-repeat; opacity: .10; }
+  .hero::after { width: 520px; height: 520px; right: -160px; top: -120px; }
+  #sobre::after { width: 420px; height: 420px; left: -180px; bottom: -140px; }
+  #contato::after { width: 560px; height: 560px; right: -200px; top: 50%; transform: translateY(-50%); opacity: .12; }
+  .tinted { background-color: #F4ECE5; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27180%27%20height%3D%27180%27%3E%3Cfilter%20id%3D%27g%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%272%27%20stitchTiles%3D%27stitch%27/%3E%3CfeColorMatrix%20values%3D%270%200%200%200%20.45%200%200%200%200%20.3%200%200%200%200%20.22%200%200%200%20.07%200%27/%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23g%29%27/%3E%3C/svg%3E"); }
+  #reconhece { background: linear-gradient(180deg, #FFFDFB 0%, #FBF5F0 100%); }
+  #relacoes { background-color: #F7EBE7; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27180%27%20height%3D%27180%27%3E%3Cfilter%20id%3D%27g%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%272%27%20stitchTiles%3D%27stitch%27/%3E%3CfeColorMatrix%20values%3D%270%200%200%200%20.45%200%200%200%200%20.3%200%200%200%200%20.22%200%200%200%20.07%200%27/%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23g%29%27/%3E%3C/svg%3E"), radial-gradient(70% 60% at 100% 0%, rgba(140, 88, 69, .10), transparent 70%); }
+  #idosos { background-color: #EDF1EA; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27180%27%20height%3D%27180%27%3E%3Cfilter%20id%3D%27g%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%272%27%20stitchTiles%3D%27stitch%27/%3E%3CfeColorMatrix%20values%3D%270%200%200%200%20.45%200%200%200%200%20.3%200%200%200%200%20.22%200%200%200%20.07%200%27/%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23g%29%27/%3E%3C/svg%3E"), radial-gradient(60% 60% at 0% 100%, rgba(93, 111, 98, .14), transparent 70%); }
+  #planos { background: linear-gradient(180deg, #FBF8F4 0%, #F6EEE6 100%); }
+  #faq { background-color: #FBF8F4; }
+  #contato { background-color: #F1E6DD; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27180%27%20height%3D%27180%27%3E%3Cfilter%20id%3D%27g%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%272%27%20stitchTiles%3D%27stitch%27/%3E%3CfeColorMatrix%20values%3D%270%200%200%200%20.45%200%200%200%200%20.3%200%200%200%200%20.22%200%200%200%20.07%200%27/%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23g%29%27/%3E%3C/svg%3E"); overflow: hidden; }
+  .hero, #sobre { overflow: hidden; }
+  section + section, .proof-strip + section { border-top: 1px solid rgba(217, 191, 154, .45); }
+  .card { box-shadow: 0 1px 0 rgba(255,255,255,.8) inset, 0 10px 30px -18px rgba(72, 10, 35, .25); }
+  .proof-strip { background-color: #F2E8DF; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27180%27%20height%3D%27180%27%3E%3Cfilter%20id%3D%27g%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%272%27%20stitchTiles%3D%27stitch%27/%3E%3CfeColorMatrix%20values%3D%270%200%200%200%20.45%200%200%200%200%20.3%200%200%200%200%20.22%200%200%200%20.07%200%27/%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23g%29%27/%3E%3C/svg%3E"); }
   .todo { background: #FFF3C4; padding: 0 .2em; border-radius: .2em; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -711,7 +746,7 @@
       <div class="measure">
         <span class="overline">Para pessoas idosas</span>
         <h2>Envelhecer também merece escuta</h2>
-        <p class="lead" style="margin-top:1rem">Com formação em gerontologia, acolho pessoas idosas e suas famílias num tempo de muitas mudanças. Aqui há espaço para falar das perdas, das memórias e também dos desejos que continuam vivos.</p>
+        <p class="lead" style="margin-top:1rem">Tenho formação em gerontologia, que é o cuidado com o envelhecimento. Acolho pessoas idosas e suas famílias num tempo de muitas mudanças. Aqui há espaço para falar das perdas, das memórias e também dos desejos que continuam vivos.</p>
         <ul class="themes one-col">
           <li>Solidão e saudade</li>
           <li>Luto de pessoas queridas</li>
@@ -735,7 +770,7 @@
       <div class="section-head measure">
         <span class="overline">Como funciona</span>
         <h2>Do primeiro contato à sua primeira sessão</h2>
-        <p class="lead">Na análise, você fala do que quiser e eu escuto com atenção ao que se repete. Aos poucos, o sentido do que faz sofrer aparece na sua própria fala.</p>
+        <p class="lead">Na sessão, você fala do que quiser e eu escuto com atenção. Aos poucos, você vai entendendo melhor o que sente.</p>
       </div>
       <ol class="steps">
         <li class="card">
@@ -746,7 +781,7 @@
         <li class="card">
           <div class="step-top"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6.5" width="13" height="11" rx="2.5"/><path d="m16 10.5 5-3v9l-5-3"/></svg></span><span class="step-label">Passo 2</span></div>
           <h3>Fazemos a primeira sessão</h3>
-          <p>50 minutos por Google Meet, WhatsApp ou outra plataforma combinada. Você conta o que trouxe e tira suas dúvidas.</p>
+          <p>50 minutos por chamada de vídeo, no Google Meet, no WhatsApp ou onde for melhor para você. Você conta o que trouxe e tira suas dúvidas.</p>
         </li>
         <li class="card">
           <div class="step-top"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4M9 14.5l2 2 4-4"/></svg></span><span class="step-label">Passo 3</span></div>
@@ -840,9 +875,9 @@
           <div class="pay-links"><span class="pay-muted">Pix, cartão ou PayPal</span></div>
         </article>
       </div>
-      <p class="plan-note">A frequência é combinada com cada pessoa: em alguns momentos do tratamento pode ser indicado atender duas vezes por semana. Nesse caso, montamos juntos um plano personalizado.</p>
-      <p class="pay-methods">Formas de pagamento: <strong>Pix</strong>, <strong>cartão de crédito</strong> pelo Stripe e <strong>PayPal</strong>. Para quem mora fora do Brasil, cartão internacional e PayPal funcionam bem.</p>
-      <p class="privacy plan-rules"><strong>Faltas e remarcações:</strong> avise com pelo menos 24 horas de antecedência. Faltas ou avisos com menos de 24 horas são cobrados como sessão realizada, inclusive nos planos. Sessões dos planos valem só dentro do período contratado.</p>
+      <p class="plan-note">Combinamos juntos quantas sessões por semana fazem sentido para você. Se em algum momento for melhor ter duas, montamos um plano personalizado.</p>
+      <p class="pay-methods">Você pode pagar por <strong>Pix</strong>, <strong>cartão de crédito</strong> ou <strong>PayPal</strong>. Se você mora fora do Brasil, use cartão internacional ou PayPal.</p>
+      <p class="privacy plan-rules"><strong>Se precisar faltar:</strong> avise com pelo menos 24 horas de antecedência. Se o aviso vier depois disso, ou se você faltar, a sessão é cobrada normalmente, também nos planos. As sessões do plano valem dentro do mês contratado.</p>
     </div>
   </section>
 
@@ -867,11 +902,11 @@
         </details>
         <details>
           <summary>Como é a primeira sessão?</summary>
-          <p>Uma sessão normal de 50 minutos, por R$ 150. Você conta o que trouxe, tira dúvidas e sente se fica à vontade. Não há compromisso de continuar.</p>
+          <p>É uma sessão de 50 minutos, por R$ 150. Você conta o que trouxe, tira suas dúvidas e sente se fica à vontade. Depois, decide com calma se quer continuar.</p>
         </details>
         <details>
           <summary>Qual a diferença entre psicanálise e psicoterapia?</summary>
-          <p>A psicanálise trabalha com a fala livre e com aquilo que não sabemos sobre nós mesmos. Não segue protocolo fixo nem passa tarefas: cada tratamento parte do que você traz.</p>
+          <p>Na psicanálise, você fala livremente e, com o tempo, descobre coisas sobre si que ainda não sabia. Não há tarefas nem roteiro pronto. Tudo parte do que você traz.</p>
         </details>
         <details>
           <summary>Quanto tempo dura o tratamento?</summary>
@@ -879,7 +914,7 @@
         </details>
         <details>
           <summary>Quais são as formas de pagamento?</summary>
-          <p>Pix, cartão de crédito pelo Stripe e PayPal. Quem mora fora do Brasil pode usar cartão internacional ou PayPal.</p>
+          <p>Pix, cartão de crédito ou PayPal. Se você mora fora do Brasil, pode usar cartão internacional ou PayPal.</p>
         </details>
         <details>
           <summary>Posso mudar de plano?</summary>
@@ -887,7 +922,7 @@
         </details>
         <details>
           <summary>E se eu precisar faltar ou remarcar?</summary>
-          <p>Avise com pelo menos 24 horas de antecedência. Faltas ou avisos com menos de 24 horas são cobrados como sessão realizada. O horário fica reservado para você, e essa regra protege o seu tratamento.</p>
+          <p>Avise com pelo menos 24 horas de antecedência. Se o aviso vier depois disso, ou se você faltar, a sessão é cobrada normalmente. Seu horário fica guardado só para você, e esse combinado ajuda a cuidar do seu tratamento.</p>
         </details>
         <details>
           <summary>Você atende por plano de saúde? Emite recibo?</summary>
@@ -916,7 +951,7 @@
         <ul class="contact-list">
           <li><span>WhatsApp</span><a class="js-wa" href="#contato">(51) 99349-7223</a></li>
           <li><span>Primeira sessão</span><strong>R$ 150, 50 minutos, online</strong></li>
-          <li><span>Cartão ou PayPal</span><strong>Pelos botões na seção Valores</strong></li>
+          <li><span>Cartão ou PayPal</span><strong>Pelos botões em Valores</strong></li>
           <li><span>Pix (celular)</span><strong>51993497223</strong><small class="pix-info">Vanessa Ramos Torriani, Banco Inter</small></li>
         </ul>
         <a class="btn btn-primary btn-pill btn-lg js-wa" href="#contato">
