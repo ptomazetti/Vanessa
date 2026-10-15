@@ -342,6 +342,22 @@
   .plan-rules { margin-top: 2rem; }
   @media (max-width: 900px) { .plans { grid-template-columns: 1fr; max-width: 520px; } .plan-for { min-height: 0; } .plans .featured { order: -1; } }
   .plan-note { margin: 2rem 0 0; max-width: 68ch; color: var(--ink-soft); }
+  .tabs { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.5rem; }
+  .tab {
+    font: 600 15px/1 var(--sans); padding: .8rem 1.4rem; border-radius: 9999px; cursor: pointer;
+    background: var(--surface); color: var(--ink-soft); border: 1px solid var(--sand);
+    transition: background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .tab:hover { border-color: var(--primary); color: var(--primary); }
+  .tab[aria-selected="true"] { background: var(--primary); border-color: var(--primary); color: #fff; }
+  .panel { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; box-shadow: var(--shadow); }
+  .panel[hidden] { display: none; }
+  .panel h3 { margin-bottom: 1rem; }
+  .panel p { color: var(--ink-soft); margin-bottom: 1.5rem; }
+  .signs { list-style: none; padding: 0; margin: 0; }
+  .signs li { padding: .7rem 0 .7rem 1.6rem; border-bottom: 1px solid var(--border); position: relative; }
+  .signs li::before { content: "?"; position: absolute; left: 0; top: .7rem; font-family: var(--serif); font-style: italic; color: var(--primary); }
+  @media (max-width: 767px) { .panel { grid-template-columns: 1fr; gap: 1.5rem; } .tab { padding: .7rem 1.1rem; font-size: 14px; } }
   .todo { background: #FFF3C4; padding: 0 .2em; border-radius: .2em; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -445,6 +461,87 @@
         <li>Transtorno de personalidade borderline</li>
         <li>Transtorno bipolar</li>
       </ul>
+    </div>
+  </section>
+
+  <section id="reconhece">
+    <div class="wrap">
+      <div class="section-head measure">
+        <span class="overline">Você se reconhece?</span>
+        <h2>Desconfia que pode ter TDAH, autismo ou outra condição?</h2>
+        <p class="lead">Escolha um tema e veja se algo faz sentido para você. Não é um teste nem um diagnóstico: é um primeiro passo para conversar.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Temas">
+        <button class="tab" role="tab" id="tab-tdah" aria-controls="painel-tdah" aria-selected="true">TDAH</button>
+        <button class="tab" role="tab" id="tab-autismo" aria-controls="painel-autismo" aria-selected="false" tabindex="-1">Autismo</button>
+        <button class="tab" role="tab" id="tab-borderline" aria-controls="painel-borderline" aria-selected="false" tabindex="-1">Borderline</button>
+        <button class="tab" role="tab" id="tab-bipolar" aria-controls="painel-bipolar" aria-selected="false" tabindex="-1">Bipolaridade</button>
+      </div>
+      <div class="panel card" role="tabpanel" id="painel-tdah" aria-labelledby="tab-tdah">
+        <div>
+          <h3>Você se reconhece em alguma destas perguntas?</h3>
+          <ul class="signs">
+            <li>Você se distrai com facilidade, mesmo com o que é importante para você?</li>
+            <li>Começa muitas coisas e tem dificuldade para terminar?</li>
+            <li>Esquece prazos, compromissos e objetos com frequência?</li>
+            <li>Sente uma inquietação constante, ou age por impulso e se arrepende depois?</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Como posso ajudar</h3>
+          <p>Muitos adultos só descobrem o TDAH depois de anos ouvindo que são desorganizados ou preguiçosos. Na análise, você entende como isso marcou sua história e sua autoestima. Se fizer sentido, indico profissionais para a avaliação e sigo com você depois do diagnóstico.</p>
+          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema TDAH. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
+        </div>
+      </div>
+      <div class="panel card" role="tabpanel" id="painel-autismo" aria-labelledby="tab-autismo" hidden>
+        <div>
+          <h3>Você se reconhece em alguma destas perguntas?</h3>
+          <ul class="signs">
+            <li>Situações sociais cansam muito ou parecem ter regras que ninguém explicou?</li>
+            <li>Barulho, luz, cheiros ou texturas incomodam mais você do que os outros?</li>
+            <li>Mudanças de rotina deixam você muito desconfortável?</li>
+            <li>Sente que passa o dia se adaptando ao jeito dos outros para se encaixar?</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Como posso ajudar</h3>
+          <p>O autismo em adolescentes e adultos muitas vezes passa despercebido, principalmente quando a pessoa aprendeu a disfarçar o próprio jeito. Na análise, há espaço para falar do cansaço de se adaptar o tempo todo. Se fizer sentido, indico profissionais para a avaliação e sigo com você antes e depois dela.</p>
+          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema autismo. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
+        </div>
+      </div>
+      <div class="panel card" role="tabpanel" id="painel-borderline" aria-labelledby="tab-borderline" hidden>
+        <div>
+          <h3>Você se reconhece em alguma destas perguntas?</h3>
+          <ul class="signs">
+            <li>Suas emoções são muito intensas e mudam rápido?</li>
+            <li>Tem muito medo de abandono ou de rejeição?</li>
+            <li>Suas relações oscilam entre admiração e decepção?</li>
+            <li>Convive com uma sensação de vazio ou com atitudes impulsivas que machucam você?</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Como posso ajudar</h3>
+          <p>Quem vive com o transtorno de personalidade borderline costuma sofrer muito nas relações e se sentir incompreendido. A análise oferece um vínculo estável, com horário fixo e regras claras, para que você entenda e organize o que sente. O tratamento costuma andar junto com acompanhamento psiquiátrico.</p>
+          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema borderline. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
+        </div>
+      </div>
+      <div class="panel card" role="tabpanel" id="painel-bipolar" aria-labelledby="tab-bipolar" hidden>
+        <div>
+          <h3>Você se reconhece em alguma destas perguntas?</h3>
+          <ul class="signs">
+            <li>Passa por períodos de muita energia, pouco sono e pensamentos acelerados?</li>
+            <li>Depois vêm fases de tristeza profunda e cansaço?</li>
+            <li>Já tomou decisões impulsivas em fases de euforia, como gastos ou rompimentos?</li>
+            <li>Sente que seu humor muda em ciclos que você não controla?</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Como posso ajudar</h3>
+          <p>O transtorno bipolar precisa de acompanhamento psiquiátrico. A análise caminha junto: ajuda você a reconhecer os sinais de cada fase, a lidar com o impacto nas relações e no trabalho e a construir uma rotina que proteja o seu tratamento.</p>
+          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema bipolaridade. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
+        </div>
+      </div>
+      <p class="privacy">O diagnóstico de TDAH, autismo, borderline ou bipolaridade é feito por psiquiatra, neurologista ou psicólogo. Meu trabalho é escutar, ajudar você a entender o que vive, indicar avaliação quando for o caso e acompanhar o tratamento. Se houver pensamentos de se machucar, ligue agora para o CVV no 188.</p>
     </div>
   </section>
 
@@ -682,7 +779,25 @@
   var MSG = "Olá, Vanessa. Vi seu site e gostaria de agendar uma primeira conversa.";
   var waUrl = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MSG);
   document.querySelectorAll(".js-wa").forEach(function (a) {
-    a.href = waUrl; a.target = "_blank"; a.rel = "noopener";
+    a.href = a.dataset.msg ? "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg) : waUrl;
+    a.target = "_blank"; a.rel = "noopener";
+  });
+
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
+  function selectTab(t) {
+    tabs.forEach(function (x) {
+      var on = x === t;
+      x.setAttribute("aria-selected", on);
+      x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute("aria-controls")).hidden = !on;
+    });
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener("click", function () { selectTab(t); });
+    t.addEventListener("keydown", function (e) {
+      var d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+      if (d) { var n = tabs[(i + d + tabs.length) % tabs.length]; selectTab(n); n.focus(); }
+    });
   });
 
   document.getElementById("ano").textContent = new Date().getFullYear();
