@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vanessa Torriani, psicanalista</title>
 <link rel="icon" type="image/png" href="img/favicon.png">
-<meta name="description" content="Vanessa Torriani, psicanálise clínica e sistêmica. Atendimento para adolescentes, adultos e idosos, presencial e online. Um espaço de escuta, com sigilo e sem pressa.">
+<meta name="description" content="Vanessa Torriani, psicanálise clínica e sistêmica. Atendimento para adolescentes, adultos e idosos, online e com hora marcada. Um espaço de escuta, com sigilo e sem pressa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -328,6 +328,19 @@
   .foot-logo { width: 120px; height: auto; border-radius: 1rem; }
   .exp-title { margin: 3rem 0 .5rem; }
   .pix-info { font-size: 14px; color: var(--ink-soft); }
+  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; align-items: stretch; }
+  .plan { display: flex; flex-direction: column; position: relative; }
+  .plan h3 { margin-bottom: .35rem; }
+  .plan-for { font-size: 15px; min-height: 3em; }
+  .price { font-family: var(--serif); font-size: 34px; line-height: 1.2; color: var(--ink); margin: 1rem 0 1.25rem !important; }
+  .price small { display: block; font-family: var(--sans); font-size: 13px; color: var(--ink-soft); }
+  .plan ul { list-style: none; padding: 0; margin: 0 0 1.75rem; flex: 1; color: var(--ink-soft); }
+  .plan li { padding: .55rem 0; border-bottom: 1px solid var(--border); }
+  .plan .btn { justify-content: center; }
+  .plan.featured { border: 1px solid var(--primary); box-shadow: var(--shadow); }
+  .plan-tag { position: absolute; top: -.8rem; left: 2rem; background: var(--primary); color: #fff; font-size: 12px; font-weight: 600; padding: .3rem .8rem; border-radius: 9999px; }
+  .plan-rules { margin-top: 2rem; }
+  @media (max-width: 900px) { .plans { grid-template-columns: 1fr; max-width: 520px; } .plan-for { min-height: 0; } .plans .featured { order: -1; } }
   .todo { background: #FFF3C4; padding: 0 .2em; border-radius: .2em; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -350,6 +363,7 @@
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#para-quem">Para quem é</a></li>
       <li><a href="#modalidades">Modalidades</a></li>
+      <li><a href="#planos">Planos</a></li>
       <li><a href="#abordagem">Abordagem</a></li>
       <li><a href="#faq">Dúvidas</a></li>
     </ul>
@@ -367,7 +381,7 @@
       <div>
         <span class="overline terra">Psicanálise clínica e sistêmica</span>
         <h1>Um espaço de escuta, cuidado e <em>tempo</em> para falar de si</h1>
-        <p class="lead">Psicanálise para adolescentes, adultos e idosos que buscam autoconhecimento ou atravessam momentos difíceis: ansiedade, tristeza, luto, relações que se repetem e questões de autoestima. Atendimento presencial em <span class="todo">bairro, cidade</span> e online.</p>
+        <p class="lead">Psicanálise para adolescentes, adultos e idosos que buscam autoconhecimento ou atravessam momentos difíceis: ansiedade, tristeza, luto, relações que se repetem e questões de autoestima. Atendimento online e com hora marcada, no Brasil e no exterior.</p>
         <div class="hero-actions">
           <a class="btn btn-primary btn-pill btn-lg js-wa" href="#contato">
             Agendar primeira conversa
@@ -393,9 +407,9 @@
       <div class="measure">
         <span class="overline terra">Quem sou eu</span>
         <h2>Olá, eu sou a Vanessa</h2>
-        <p class="lead" style="margin-top:1.5rem">Sou <strong>psicanalista clínica e sistêmica</strong> e atendo adolescentes, adultos e idosos. Atuo com psicanálise clínica, terapia sistêmica, terapia ABA e gerontologia, com sessões presenciais e terapia online. Não atendo crianças. <span class="todo">[Instituições, anos e tempo de prática]</span></p>
+        <p class="lead" style="margin-top:1.5rem">Sou <strong>psicanalista clínica e sistêmica</strong> e atendo adolescentes, adultos e idosos. Atuo com psicanálise clínica, terapia sistêmica, terapia ABA e gerontologia, sempre online e com hora marcada. Não atendo crianças. <span class="todo">[Instituições, anos e tempo de prática]</span></p>
         <p class="lead">Acredito que cada pessoa chega com uma história que não cabe em respostas prontas. Por isso a análise parte da sua fala, no seu ritmo, com atenção ao que se repete e ao que ainda não tem nome.</p>
-        <p class="lead">Para mim, o consultório é um lugar de <span class="accent">escuta sem julgamento</span>. Recebo cada história com ética, sigilo e o cuidado que ela merece. <span class="todo">[frase pessoal da Vanessa, a confirmar]</span></p>
+        <p class="lead">Para mim, a sessão é um lugar de <span class="accent">escuta sem julgamento</span>. Recebo cada história com ética, sigilo e o cuidado que ela merece. <span class="todo">[frase pessoal da Vanessa, a confirmar]</span></p>
         <p class="badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
           Formação em psicanálise: <strong class="todo">instituição</strong>
@@ -437,25 +451,24 @@
     <div class="wrap">
       <div class="section-head measure">
         <span class="overline">Modalidades</span>
-        <h2>Presencial ou online, com o mesmo cuidado</h2>
+        <h2>Atendimento online, com hora marcada</h2>
         <p class="lead">O primeiro passo é uma conversa inicial, para você conhecer a forma de trabalho e decidir se quer começar.</p>
       </div>
       <div class="modal-grid">
         <article class="card modal-card">
-          <ul class="chips"><li class="chip">Atendimento presencial</li></ul>
-          <h3>No consultório</h3>
-          <p>Um espaço reservado e silencioso, pensado para que você se sinta à vontade.</p>
+          <ul class="chips"><li class="chip">Sessões online</li><li class="chip terra">Hora marcada</li></ul>
+          <h3>Por videochamada</h3>
+          <p>Você faz a sessão de onde estiver. Basta um lugar reservado, onde possa falar à vontade, e uma boa conexão.</p>
           <ul>
-            <li>Endereço: <span class="todo">rua, bairro, cidade</span></li>
-            <li>Dias e horários: <span class="todo">a confirmar</span></li>
+            <li>Plataforma: <span class="todo">a confirmar</span></li>
           </ul>
         </article>
         <article class="card modal-card">
-          <ul class="chips"><li class="chip">Sessões online</li></ul>
-          <h3>Por videochamada</h3>
-          <p>Para quem mora longe, viaja muito ou prefere ser atendida de casa. Basta um lugar reservado e boa conexão.</p>
+          <ul class="chips"><li class="chip">Agenda</li></ul>
+          <h3>Como marcar</h3>
+          <p>As sessões são marcadas com antecedência pelo WhatsApp. No plano mensal ou trimestral, o seu horário fica reservado toda semana.</p>
           <ul>
-            <li>Plataforma: <span class="todo">a confirmar</span></li>
+            <li>Dias e horários: <span class="todo">a confirmar</span></li>
           </ul>
         </article>
       </div>
@@ -465,7 +478,7 @@
         </div>
         <div>
           <h3>Mora fora do Brasil? A sessão acontece no seu fuso horário.</h3>
-          <p>Atendo brasileiros que vivem em outros países, com sessões online marcadas no horário local de onde você está. As sessões são em português. <span class="todo">(confirmar com a Vanessa)</span></p>
+          <p>Atendo brasileiros que vivem em outros países, com sessões online marcadas no horário local de onde você está. As sessões são em português.</p>
         </div>
         <a class="btn btn-light btn-pill btn-lg js-wa" href="#contato">
           Agendar do exterior
@@ -497,27 +510,62 @@
         </article>
       </div>
 
-      <div class="cards" style="margin-top:1.5rem">
-        <article class="card">
-          <h3>Duração</h3>
-          <p>Sessões de <span class="todo">50 minutos</span>.</p>
-        </article>
-        <article class="card">
-          <h3>Frequência</h3>
-          <p>Em geral uma ou mais vezes por semana, combinada entre nós.</p>
-        </article>
-        <article class="card">
-          <h3>Valores</h3>
-          <p>Informados na conversa inicial. Pagamento por Pix. <span class="todo">Confirmar se emite recibo.</span></p>
-        </article>
-      </div>
       <div class="center-cta">
-        <a class="btn btn-primary btn-pill btn-lg js-wa" href="#contato">Agendar sessão</a>
+        <a class="btn btn-primary btn-pill btn-lg" href="#planos">Ver planos</a>
       </div>
     </div>
   </section>
 
-  <section id="abordagem" class="tinted">
+  <section id="planos" class="tinted">
+    <div class="wrap">
+      <div class="section-head measure">
+        <span class="overline">Planos</span>
+        <h2>Escolha o formato que cabe na sua rotina</h2>
+        <p class="lead">Todas as sessões são online, de <span class="todo">50</span> minutos, com pagamento por Pix.</p>
+      </div>
+      <div class="plans">
+        <article class="card plan">
+          <h3>Sessão avulsa</h3>
+          <p class="plan-for">Para começar ou para quem precisa de horários flexíveis</p>
+          <p class="price"><span class="todo">R$ valor</span><small>por sessão</small></p>
+          <ul>
+            <li>1 sessão online</li>
+            <li>Horário marcado conforme a agenda</li>
+            <li>Pix antes da sessão</li>
+          </ul>
+          <a class="btn btn-ghost btn-pill js-wa" href="#contato">Agendar sessão</a>
+        </article>
+        <article class="card plan featured">
+          <span class="plan-tag">Recomendado</span>
+          <h3>Plano mensal</h3>
+          <p class="plan-for">Para quem quer manter a análise com regularidade</p>
+          <p class="price"><span class="todo">R$ valor</span><small>por mês</small></p>
+          <ul>
+            <li>4 sessões, uma por semana</li>
+            <li>Horário fixo reservado para você</li>
+            <li>Valor menor por sessão</li>
+            <li>Pix no início do mês</li>
+          </ul>
+          <a class="btn btn-primary btn-pill js-wa" href="#contato">Quero o plano mensal</a>
+        </article>
+        <article class="card plan">
+          <h3>Plano trimestral</h3>
+          <p class="plan-for">Para quem já decidiu seguir com o processo</p>
+          <p class="price"><span class="todo">R$ valor</span><small>por trimestre</small></p>
+          <ul>
+            <li>12 sessões, uma por semana</li>
+            <li>Horário fixo reservado por três meses</li>
+            <li>Maior desconto por sessão</li>
+            <li>Pix à vista <span class="todo">ou em parcelas</span></li>
+          </ul>
+          <a class="btn btn-ghost btn-pill js-wa" href="#contato">Quero o plano trimestral</a>
+        </article>
+      </div>
+      <p class="privacy plan-rules">Remarcação com até <span class="todo">24 horas</span> de antecedência. Sessões dos planos são usadas dentro do período contratado. <span class="todo">Confirmar regras e se emite recibo.</span></p>
+    </div>
+  </section>
+
+  <section id="abordagem">
     <div class="wrap">
       <div class="section-head measure">
         <span class="overline">Abordagem</span>
@@ -561,7 +609,7 @@
           <p>Não há um prazo definido. Algumas pessoas ficam meses, outras anos. A decisão de encerrar é sempre conversada e respeita o seu momento.</p>
         </details>
         <details>
-          <summary>A sessão online funciona igual à presencial?</summary>
+          <summary>A sessão online funciona bem?</summary>
           <p>Sim. A análise acontece pela fala, e isso funciona bem por vídeo. Peço apenas que você esteja num lugar onde possa falar à vontade, sem interrupções.</p>
         </details>
         <details>
@@ -590,7 +638,7 @@
           <li><span>Pix (celular)</span><strong>51993497223</strong><small class="pix-info">Vanessa Ramos Torriani, Banco Inter</small></li>
           <li><span>E-mail</span><a href="mailto:contato@exemplo.com.br"><span class="todo">contato@exemplo.com.br</span></a></li>
           <li><span>Instagram</span><a href="#"><span class="todo">@vanessa.psicanalise</span></a></li>
-          <li><span>Consultório</span><strong><span class="todo">Bairro, cidade</span></strong></li>
+          <li><span>Atendimento</span><strong>Online, com hora marcada</strong></li>
         </ul>
         <a class="btn btn-primary js-wa" href="#">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.13.2-3.82-.8-3.24-1.27-5.3-4.57-5.46-4.78-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.64-.4.85-.4h.61c.2 0 .46-.07.72.55.27.64.9 2.2.98 2.36.08.16.13.35.03.56-.1.21-.16.34-.32.53-.16.19-.33.42-.48.56-.16.16-.32.33-.14.65.19.32.83 1.37 1.78 2.21 1.22 1.09 2.25 1.42 2.57 1.58.32.16.5.13.69-.08.19-.21.8-.93 1.01-1.25.21-.32.43-.27.72-.16.29.11 1.86.88 2.18 1.04.32.16.53.24.61.37.08.13.08.77-.16 1.45Z"/></svg>
