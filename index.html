@@ -341,6 +341,7 @@
   .plan-tag { position: absolute; top: -.8rem; left: 2rem; background: var(--primary); color: #fff; font-size: 12px; font-weight: 600; padding: .3rem .8rem; border-radius: 9999px; }
   .plan-rules { margin-top: 2rem; }
   @media (max-width: 900px) { .plans { grid-template-columns: 1fr; max-width: 520px; } .plan-for { min-height: 0; } .plans .featured { order: -1; } }
+  .plan-note { margin: 2rem 0 0; max-width: 68ch; color: var(--ink-soft); }
   .todo { background: #FFF3C4; padding: 0 .2em; border-radius: .2em; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -561,6 +562,7 @@
           <a class="btn btn-ghost btn-pill js-wa" href="#contato">Quero o plano trimestral</a>
         </article>
       </div>
+      <p class="plan-note">A frequência é combinada com cada pessoa. Em alguns momentos do tratamento pode ser indicado atender duas vezes por semana. Nesse caso, o plano é ajustado e o valor por sessão continua o do plano escolhido.</p>
       <p class="privacy plan-rules"><strong>Faltas e remarcações:</strong> avise com pelo menos 24 horas de antecedência. Faltas ou avisos com menos de 24 horas são cobrados como sessão realizada, inclusive nos planos. Sessões dos planos valem só dentro do período contratado. <span class="todo">Confirmar se emite recibo.</span></p>
     </div>
   </section>
@@ -615,6 +617,10 @@
         <details>
           <summary>Você atende por plano de saúde?</summary>
           <p><span class="todo">A confirmar com a Vanessa: atendimento particular, com ou sem recibo para reembolso.</span></p>
+        </details>
+        <details>
+          <summary>Posso mudar de plano?</summary>
+          <p>Sim. O plano acompanha o tratamento. Se for indicado aumentar ou diminuir a frequência, combinamos a mudança e ela vale a partir do mês ou trimestre seguinte.</p>
         </details>
         <details>
           <summary>E se eu precisar faltar ou remarcar?</summary>
