@@ -753,3 +753,4 @@
   .meet .lead { margin: .75rem 0 1.5rem; }
   #como-funciona .more-link { margin-top: 2rem; }
   @media (max-width: 767px) { .meet { grid-template-columns: 1fr; gap: 1.5rem; } .meet-img { max-width: 200px; } }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
