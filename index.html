@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vanessa Torriani, psicanalista</title>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Vanessa Torriani, psicanalista", "description": "Psicanálise online para adolescentes, adultos e idosos: TDAH, autismo, ansiedade, depressão, borderline, bipolaridade, relacionamentos abusivos e envelhecimento.", "url": "https://ptomazetti.github.io/Vanessa/", "image": "https://ptomazetti.github.io/Vanessa/img/logo.jpg", "telephone": "+55 51 99349-7223", "areaServed": "BR", "availableLanguage": "pt-BR", "priceRange": "R$ 150 a R$ 540"}</script>
 <link rel="icon" type="image/png" href="img/favicon.png">
 <meta name="description" content="Psicanálise online para TDAH, autismo, borderline, bipolaridade e emoções intensas. Vanessa Torriani atende adolescentes, adultos e idosos no Brasil e no exterior. Primeira sessão por R$ 150.">
 <meta name="theme-color" content="#480A23">
@@ -334,7 +335,7 @@
   .foot-logo { width: 120px; height: auto; border-radius: 1rem; }
   .exp-title { margin: 3rem 0 .5rem; }
   .pix-info { font-size: 14px; color: var(--ink-soft); }
-  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; align-items: stretch; }
+  .plans { display: grid; grid-template-columns: repeat(2, 1fr); max-width: 900px; gap: 1.5rem; align-items: stretch; }
   .plan { display: flex; flex-direction: column; position: relative; }
   .plan h3 { margin-bottom: .35rem; }
   .plan-for { font-size: 15px; min-height: 3em; }
@@ -530,6 +531,23 @@
   @media (max-width: 1200px) { .tab-groups { grid-template-columns: repeat(2, auto); } }
   @media (max-width: 767px) { .tab-groups { grid-template-columns: minmax(0, 1fr); gap: 1rem; } }
   .tab-group { min-width: 0; }
+  /* Blocos de oferta, apoio e etiquetas */
+  .first-session { display: grid; grid-template-columns: 1fr auto; gap: 2.5rem; align-items: center; margin-bottom: 2rem; padding: 2rem 2.25rem; }
+  .first-session h3 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 30px; line-height: 38px; margin-bottom: .75rem; }
+  .first-session p { color: var(--ink-soft); max-width: 60ch; }
+  .first-session p:not(.price) { margin: 0 0 .9rem; }
+  .first-session .first-promise { color: var(--ink); font-weight: 600; margin-bottom: 0; }
+  .first-side { display: grid; gap: .9rem; justify-items: start; }
+  .first-side .price { margin: 0 !important; line-height: 1.1; }
+  @media (max-width: 900px) { .first-session { grid-template-columns: 1fr; gap: 1.25rem; padding: 1.5rem; } .first-session h3 { font-size: 24px; line-height: 32px; } }
+  .between { display: flex; gap: 1.25rem; align-items: flex-start; margin: 2rem 0 0; padding: 1.75rem 2rem; }
+  .between h3 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 28px; line-height: 36px; margin-bottom: .6rem; }
+  .between p { margin: 0 0 .6rem; color: var(--ink-soft); max-width: 66ch; }
+  .between .between-quote { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--primary); }
+  .between .between-note { font-size: 15px; margin: 0; }
+  @media (max-width: 767px) { .between { flex-direction: column; padding: 1.5rem; } .between h3 { font-size: 23px; line-height: 31px; } }
+  .topic-chips { list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-wrap: wrap; gap: .6rem; }
+  .topic-chips li { padding: .5rem 1rem; border-radius: 9999px; font-weight: 600; font-size: 15px; }
   /* Design system: Serene Psychoanalytic Sanctuary */
   :root {
     --canvas: #FBF9F5; --surface: #FFFFFF; --linen: #F5EFEB; --linen-2: #F8F5F0;
@@ -584,6 +602,18 @@
   .card .price { color: var(--ink); font-size: 34px; line-height: 1.15; }
   .card .price small { font-size: 14px; }
   .first-session .first-side .price { font-size: 36px; }
+  /* Conversão: barra fixa no celular e oferta inicial */
+  .mobile-cta { display: none; }
+  @media (max-width: 767px) {
+    .wa-float { display: none; }
+    .mobile-cta { display: flex; align-items: center; justify-content: center; gap: .6rem; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+      padding: .85rem max(16px, env(safe-area-inset-left, 0px)) calc(.85rem + env(safe-area-inset-bottom, 0px)); background: var(--primary); color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; box-shadow: 0 -8px 24px -12px rgba(39, 36, 34, .35); }
+    .mobile-cta svg { width: 20px; height: 20px; }
+    .mobile-cta small { font-weight: 400; opacity: .9; margin-left: .35rem; }
+    body { padding-bottom: 64px; }
+  }
+  .first-side .pay-links { justify-content: flex-start; margin-top: 0; }
+  .first-after { margin: 0 !important; font-size: 15px; color: var(--ink-soft); }
   .todo { background: #FFF3C4; padding: 0 .2em; border-radius: .2em; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -619,17 +649,17 @@
   <section class="hero" id="inicio">
     <div class="wrap hero-grid">
       <div>
-        <span class="overline">Psicanálise online para TDAH, autismo e emoções intensas</span>
+        <span class="overline">Psicanálise online para TDAH, autismo, emoções intensas e relações difíceis</span>
         <h1>Talvez ninguém tenha escutado você <em>de verdade</em></h1>
         <p class="lead">Se você passou a vida ouvindo que precisava se esforçar mais, sentir menos ou se encaixar, aqui pode falar no seu tempo, sem precisar se explicar. Atendo adolescentes, adultos e idosos, online, no Brasil e no exterior.</p>
         <div class="hero-actions">
           <a class="btn btn-primary btn-pill btn-lg js-wa" href="#contato">
-            Agendar minha primeira sessão
+            Agendar minha sessão inicial
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
           <a class="btn btn-ghost btn-pill btn-lg" href="#reconhece">Ver os temas que acolho</a>
         </div>
-        <p class="micro">Primeira sessão de 50 minutos por R$ 150. Sem compromisso: depois dela, você decide se quer continuar.</p>
+        <p class="micro">Sessão inicial de 50 minutos por R$ 150. Sem compromisso: depois dela, você decide se quer continuar. Você agenda pelo WhatsApp.</p>
       </div>
       <div class="hero-frame">
         <div class="portrait">
@@ -827,7 +857,6 @@
         <li>Relação com pessoas narcisistas</li>
         <li>Mãe ou pai narcisista</li>
         <li>Abuso psicológico e manipulação</li>
-        <li>Narcisismo</li>
         <li>Codependência</li>
         <li>Ciúme possessivo</li>
         <li>Dependência emocional</li>
@@ -900,7 +929,7 @@
     <div class="wrap">
       <div class="section-head measure">
         <span class="overline">Como funciona</span>
-        <h2>Do primeiro contato à sua primeira sessão</h2>
+        <h2>Do primeiro contato à sua sessão inicial</h2>
         <p class="lead">Na sessão, você fala do que quiser e eu escuto com atenção. Aos poucos, você vai entendendo melhor o que sente.</p>
       </div>
       <ol class="steps">
@@ -948,7 +977,7 @@
       <div class="section-head measure">
         <span class="overline">Valores</span>
         <h2>Comece com uma sessão. Siga no seu ritmo.</h2>
-        <p class="lead">A primeira sessão é avulsa. Depois dela, você decide se quer continuar e qual plano faz sentido. Todas as sessões são online, de 50 minutos. Você paga por Pix, cartão de crédito ou PayPal.</p>
+        <p class="lead">Comece pela sessão inicial. Depois dela, você decide se quer continuar e qual formato faz sentido. Todas as sessões são online, de 50 minutos. Você paga por Pix, cartão de crédito ou PayPal.</p>
       </div>
       <div class="first-session card">
         <div>
@@ -960,24 +989,14 @@
         <div class="first-side">
           <p class="price">R$ 150<small>50 minutos, online</small></p>
           <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Gostaria de agendar a sessão inicial." href="#contato">Agendar sessão inicial</a>
-        </div>
-      </div>
-      <div class="plans">
-        <article class="card plan">
-          <h3>Sessão avulsa</h3>
-          <p class="plan-for">Para a sessão inicial ou para horários flexíveis</p>
-          <p class="price">R$ 150<small>por sessão</small></p>
-          <ul>
-            <li>1 sessão de 50 minutos</li>
-            <li>Horário conforme a agenda</li>
-            <li>Pagamento antes da sessão</li>
-          </ul>
-          <a class="btn btn-ghost btn-pill js-wa" data-msg="Olá, Vanessa. Gostaria de agendar uma primeira sessão avulsa." href="#contato">Agendar sessão inicial</a>
           <div class="pay-links">
             <a class="pay" data-pay="avulsaCartao" href="#contato"><svg class="pay-ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h4"/></svg>Cartão</a>
             <a class="pay" data-pay="avulsaPaypal" href="#contato"><svg class="pay-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="#003087" d="M8.3 21.5H4.6a.5.5 0 0 1-.5-.6L6.9 3.1A.9.9 0 0 1 7.8 2.4h6.1c3.6 0 5.6 1.9 5 5.1-.7 3.8-3.4 5.6-7 5.6H9.7a.9.9 0 0 0-.9.8l-.5 3.4Z"/><path fill="#0070E0" d="M19.6 7.9c.8.8 1.1 2 .8 3.5-.7 3.6-3.2 5.3-6.7 5.3h-1.2a.8.8 0 0 0-.8.7l-.6 3.6a.6.6 0 0 1-.6.5H7.8a.4.4 0 0 1-.4-.5l.4-2.6h1.1l.4-2.6a.9.9 0 0 1 .9-.8h1.8c3.6 0 6.3-1.8 7-5.6l.6-1.5Z"/></svg><span class="pp-word"><b>Pay</b><i>Pal</i></span></a>
           </div>
-        </article>
+          <p class="first-after">Depois dela, sessões avulsas também custam R$ 150.</p>
+        </div>
+      </div>
+      <div class="plans">
         <article class="card plan featured">
           <span class="plan-tag">Para manter a regularidade</span>
           <h3>Plano mensal</h3>
@@ -1082,12 +1101,12 @@
       <div class="measure">
         <span class="overline">Quando você quiser</span>
         <h2>Você não precisa chegar com um diagnóstico, nem com as palavras certas.</h2>
-        <p class="lead" style="margin-top:1.5rem">Mande uma mensagem, do jeito que conseguir. Eu mesma respondo, com calma, e marcamos sua primeira sessão.</p>
+        <p class="lead" style="margin-top:1.5rem">Mande uma mensagem, do jeito que conseguir. Eu mesma respondo, com calma, e marcamos sua sessão inicial.</p>
       </div>
       <aside class="card contact-card">
         <ul class="contact-list">
           <li><span>WhatsApp</span><a class="js-wa" href="#contato">(51) 99349-7223</a></li>
-          <li><span>Primeira sessão</span><strong>R$ 150, 50 minutos, online</strong></li>
+          <li><span>Sessão inicial</span><strong>R$ 150, 50 minutos, online</strong></li>
           <li><span>Cartão ou PayPal</span><strong>Pelos botões em Valores</strong></li>
           <li><span>Pix (celular)</span><strong>51993497223</strong><small class="pix-info">Vanessa Ramos Torriani, Banco Inter</small></li>
         </ul>
@@ -1151,6 +1170,7 @@
   <div class="foot-bar"><div class="wrap">© <span id="ano">2026</span> Vanessa Torriani, psicanalista. Todos os direitos reservados.</div></div>
 </footer>
 
+<a class="mobile-cta js-wa" data-msg="Olá, Vanessa. Gostaria de agendar a sessão inicial." href="#contato"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.13.2-3.82-.8-3.24-1.27-5.3-4.57-5.46-4.78-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.64-.4.85-.4h.61c.2 0 .46-.07.72.55.27.64.9 2.2.98 2.36.08.16.13.35.03.56-.1.21-.16.34-.32.53-.16.19-.33.42-.48.56-.16.16-.32.33-.14.65.19.32.83 1.37 1.78 2.21 1.22 1.09 2.25 1.42 2.57 1.58.32.16.5.13.69-.08.19-.21.8-.93 1.01-1.25.21-.32.43-.27.72-.16.29.11 1.86.88 2.18 1.04.32.16.53.24.61.37.08.13.08.77-.16 1.45Z"/></svg><span>Agendar sessão inicial <small>R$ 150, 50 min</small></span></a>
 <a class="wa-float js-wa" href="#" aria-label="Conversar pelo WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.13.2-3.82-.8-3.24-1.27-5.3-4.57-5.46-4.78-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.64-.4.85-.4h.61c.2 0 .46-.07.72.55.27.64.9 2.2.98 2.36.08.16.13.35.03.56-.1.21-.16.34-.32.53-.16.19-.33.42-.48.56-.16.16-.32.33-.14.65.19.32.83 1.37 1.78 2.21 1.22 1.09 2.25 1.42 2.57 1.58.32.16.5.13.69-.08.19-.21.8-.93 1.01-1.25.21-.32.43-.27.72-.16.29.11 1.86.88 2.18 1.04.32.16.53.24.61.37.08.13.08.77-.16 1.45Z"/></svg>
 </a>
