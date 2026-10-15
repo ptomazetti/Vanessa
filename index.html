@@ -310,6 +310,9 @@
   .btn-light:hover { background: var(--linen); }
   @media (max-width: 900px) { .abroad { grid-template-columns: 1fr; padding: 1.75rem; gap: 1.25rem; } .abroad h3 { font-size: 22px; line-height: 30px; } }
   .overline.center { text-align: center; margin-bottom: 1.5rem; }
+  .types { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 1024px) { .types { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .types { grid-template-columns: 1fr; } }
   .types .card { text-align: center; padding: 2rem 1.5rem; }
   .types h3 { margin-bottom: .35rem; }
   .type-icon { width: 52px; height: 52px; border-radius: .9rem; background: var(--sand-tint); color: var(--primary); display: grid; place-items: center; margin: 0 auto 1rem; }
@@ -388,7 +391,7 @@
       <div class="measure">
         <span class="overline terra">Quem sou eu</span>
         <h2>Olá, eu sou a Vanessa</h2>
-        <p class="lead" style="margin-top:1.5rem">Sou <strong>psicanalista clínica e sistêmica</strong> e atendo adultos em consultório e online. <span class="todo">[Formação: instituição, ano e tempo de prática. Outras formações relevantes.]</span></p>
+        <p class="lead" style="margin-top:1.5rem">Sou <strong>psicanalista clínica e sistêmica</strong> e atendo adultos em consultório e online. Atuo com psicanálise clínica, psicologia sistêmica, terapia ABA e gerontologia, com sessões presenciais e terapia online. <span class="todo">[Instituições, anos e tempo de prática]</span></p>
         <p class="lead">Acredito que cada pessoa chega com uma história que não cabe em respostas prontas. Por isso a análise parte da sua fala, no seu ritmo, com atenção ao que se repete e ao que ainda não tem nome.</p>
         <p class="lead">Para mim, o consultório é um lugar de <span class="accent">escuta sem julgamento</span>. Recebo cada história com ética, sigilo e o cuidado que ela merece. <span class="todo">[frase pessoal da Vanessa, a confirmar]</span></p>
         <p class="badge">
@@ -465,18 +468,23 @@
       <div class="cards types">
         <article class="card">
           <span class="type-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.5-5.5 7-5.5s6.2 1.9 7 5.5"/></svg></span>
-          <h3>Análise individual</h3>
-          <p>Para adultos</p>
+          <h3>Psicanálise clínica</h3>
+          <p>Escuta da sua história a partir da fala livre</p>
         </article>
         <article class="card">
-          <span class="type-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8.5" cy="8.5" r="3"/><circle cx="15.5" cy="8.5" r="3"/><path d="M3 19c.6-3 2.7-4.6 5.5-4.6 1.4 0 2.6.4 3.5 1.1.9-.7 2.1-1.1 3.5-1.1 2.8 0 4.9 1.6 5.5 4.6"/></svg></span>
-          <h3><span class="todo">Segundo tipo</span></h3>
-          <p><span class="todo">Ex.: adolescentes ou casais, se ela atender</span></p>
+          <span class="type-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="8" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="12" cy="16" r="2.5"/><path d="M8 9.5l2.5 4.5M16 9.5l-2.5 4.5M8.5 8h7"/></svg></span>
+          <h3>Psicologia sistêmica</h3>
+          <p>Olha para a pessoa dentro das suas relações: família, casal, trabalho</p>
         </article>
         <article class="card">
-          <span class="type-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
-          <h3>Sessões online</h3>
-          <p>No Brasil e no exterior</p>
+          <span class="type-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18h4v-4H4zM10 18h4V10h-4zM16 18h4V6h-4z"/></svg></span>
+          <h3>Terapia ABA</h3>
+          <p>Análise do Comportamento Aplicada. <span class="todo">Público a confirmar</span></p>
+        </article>
+        <article class="card">
+          <span class="type-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z"/></svg></span>
+          <h3>Gerontologia</h3>
+          <p>Cuidado com as questões do envelhecimento. <span class="todo">Detalhar com a Vanessa</span></p>
         </article>
       </div>
 
