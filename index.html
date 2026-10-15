@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vanessa | Psicanalista</title>
-<meta name="description" content="Vanessa, psicanalista. Atendimento para adultos, presencial e online. Um espaço de escuta, com sigilo e sem pressa.">
+<title>Vanessa Torriani, psicanalista</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<meta name="description" content="Vanessa Torriani, psicanálise clínica e sistêmica. Atendimento para adultos, presencial e online. Um espaço de escuta, com sigilo e sem pressa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -314,6 +315,14 @@
   .type-icon { width: 52px; height: 52px; border-radius: .9rem; background: var(--sand-tint); color: var(--primary); display: grid; place-items: center; margin: 0 auto 1rem; }
   .type-icon svg { width: 24px; height: 24px; }
   .center-cta { text-align: center; margin-top: 2.5rem; }
+  .mark { width: 48px; height: 48px; border-radius: 9999px; object-fit: cover; border: 0; background: none; }
+  .brand small { text-transform: none; letter-spacing: .02em; font-size: 12px; }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-frame .portrait.emblem { background: #480A23; align-items: center; justify-content: center; }
+  .emblem img { object-fit: contain; padding: 8%; }
+  .foot { align-items: center; }
+  .modal-card ul.chips { padding-left: 0; margin-top: 0; }
+  .foot-logo { width: 120px; height: auto; border-radius: 1rem; }
   .todo { background: #FFF3C4; padding: 0 .2em; border-radius: .2em; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -326,8 +335,8 @@
 <header class="site">
   <div class="wrap nav">
     <a href="#inicio" class="brand">
-      <span class="mark" aria-hidden="true">V</span>
-      <span>Vanessa <span class="todo">Sobrenome</span><small>Psicanalista</small></span>
+      <img class="mark" src="img/logo-icone.png" alt="" width="48" height="48">
+      <span>Vanessa Torriani<small>Psicanálise clínica e sistêmica</small></span>
     </a>
     <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -351,7 +360,7 @@
   <section class="hero" id="inicio">
     <div class="wrap hero-grid">
       <div>
-        <span class="overline terra">Psicanalista · Presencial e online</span>
+        <span class="overline terra">Psicanálise clínica e sistêmica</span>
         <h1>Um espaço de escuta, cuidado e <em>tempo</em> para falar de si</h1>
         <p class="lead">Psicanálise para adultos que buscam autoconhecimento ou atravessam momentos difíceis: ansiedade, tristeza, luto, relações que se repetem e questões de autoestima. Atendimento presencial em <span class="todo">bairro, cidade</span> e online.</p>
         <div class="hero-actions">
@@ -363,31 +372,23 @@
         </div>
       </div>
       <div class="hero-frame">
-        <div class="portrait" role="img" aria-label="Espaço reservado para a foto principal">
-          <span>Foto principal: retrato da Vanessa ou imagem de natureza em luz quente</span>
+        <div class="portrait emblem">
+          <img src="img/logo-emblema.jpg" alt="Símbolo de Vanessa Torriani: uma árvore cujas copas formam um cérebro e um coração, dentro de uma mandala" width="720" height="720">
         </div>
       </div>
     </div>
   </section>
 
-  <div class="quote-band">
-    <div class="wrap">
-      <blockquote>
-        “Quem fala, de algum modo, já começou a se ouvir.”
-        <cite>Vanessa <span class="todo">(frase a confirmar)</span></cite>
-      </blockquote>
-    </div>
-  </div>
 
   <section id="sobre">
     <div class="wrap about-grid">
-      <div class="portrait about-photo" role="img" aria-label="Espaço reservado para a foto da Vanessa">
-        <span>Foto da Vanessa no consultório, sentada, luz natural</span>
+      <div class="portrait about-photo">
+        <img src="img/vanessa.jpg" alt="Vanessa Torriani, sorrindo, de óculos e cachecol azul" width="900" height="1120" loading="lazy">
       </div>
       <div class="measure">
         <span class="overline terra">Quem sou eu</span>
         <h2>Olá, eu sou a Vanessa</h2>
-        <p class="lead" style="margin-top:1.5rem">Sou <strong>psicanalista</strong> e atendo adultos em consultório e online. <span class="todo">[Formação: instituição, ano e tempo de prática. Outras formações relevantes.]</span></p>
+        <p class="lead" style="margin-top:1.5rem">Sou <strong>psicanalista clínica e sistêmica</strong> e atendo adultos em consultório e online. <span class="todo">[Formação: instituição, ano e tempo de prática. Outras formações relevantes.]</span></p>
         <p class="lead">Acredito que cada pessoa chega com uma história que não cabe em respostas prontas. Por isso a análise parte da sua fala, no seu ritmo, com atenção ao que se repete e ao que ainda não tem nome.</p>
         <p class="lead">Para mim, o consultório é um lugar de <span class="accent">escuta sem julgamento</span>. Recebo cada história com ética, sigilo e o cuidado que ela merece. <span class="todo">[frase pessoal da Vanessa, a confirmar]</span></p>
         <p class="badge">
@@ -452,7 +453,7 @@
         </div>
         <div>
           <h3>Mora fora do Brasil? A sessão acontece no seu fuso horário.</h3>
-          <p>Atendo brasileiros que vivem em outros países, com sessões online marcadas no horário local de onde você está. A mesma escuta, em português e no seu tempo. <span class="todo">(confirmar com a Vanessa)</span></p>
+          <p>Atendo brasileiros que vivem em outros países, com sessões online marcadas no horário local de onde você está. As sessões são em português. <span class="todo">(confirmar com a Vanessa)</span></p>
         </div>
         <a class="btn btn-light btn-pill btn-lg js-wa" href="#contato">
           Agendar do exterior
@@ -504,26 +505,22 @@
       <div class="section-head measure">
         <span class="overline">Abordagem</span>
         <h2>O que acontece numa análise</h2>
-        <p class="lead">A psicanálise não oferece receitas nem conselhos prontos. Ela abre espaço para que você descubra o sentido do seu sofrimento a partir da sua própria fala.</p>
+        <p class="lead">Na análise, você fala e eu escuto. Com o tempo, o sentido do que faz sofrer começa a aparecer na sua própria fala.</p>
       </div>
       <div class="cards">
         <article class="card">
-          <span class="num">i.</span>
           <h3>Fala livre</h3>
           <p>Você diz o que vier à cabeça, mesmo o que parece sem importância. Não existe assunto certo para levar à sessão.</p>
         </article>
         <article class="card">
-          <span class="num">ii.</span>
           <h3>Escuta atenta</h3>
           <p>Eu escuto o que se repete, os lapsos, os sonhos, as pausas. É ali que muitas vezes aparece o que você ainda não sabia sobre si.</p>
         </article>
         <article class="card">
-          <span class="num">iii.</span>
           <h3>Um percurso seu</h3>
           <p>Cada análise tem o seu ritmo. Não há prazo fixo: o tratamento dura o tempo que fizer sentido para você.</p>
         </article>
       </div>
-      <p class="reflection">Às vezes a pergunta que trazemos não é a que precisamos responder. Descobrir qual é já é parte do caminho.</p>
     </div>
   </section>
 
@@ -536,7 +533,7 @@
       <div class="faq">
         <details>
           <summary>Qual a diferença entre psicanálise e psicoterapia?</summary>
-          <p>A psicanálise é uma forma específica de tratamento criada por Freud. Ela trabalha com a fala livre e com aquilo que não sabemos sobre nós mesmos, o inconsciente. Não segue um protocolo fixo nem dá tarefas: o caminho se constrói a partir do que você traz.</p>
+          <p>A psicanálise é uma forma específica de tratamento criada por Freud. Ela trabalha com a fala livre e com aquilo que não sabemos sobre nós mesmos, o inconsciente. Cada tratamento parte do que você traz, sem protocolo fixo e sem tarefas para casa.</p>
         </details>
         <details>
           <summary>Como é a primeira sessão?</summary>
@@ -548,7 +545,7 @@
         </details>
         <details>
           <summary>A sessão online funciona igual à presencial?</summary>
-          <p>Sim. O que importa é a fala e a escuta. Peço apenas que você esteja num lugar onde possa falar à vontade, sem interrupções.</p>
+          <p>Sim. A análise acontece pela fala, e isso funciona bem por vídeo. Peço apenas que você esteja num lugar onde possa falar à vontade, sem interrupções.</p>
         </details>
         <details>
           <summary>Você atende por plano de saúde?</summary>
@@ -591,7 +588,8 @@
 <footer>
   <div class="wrap">
     <div class="foot">
-      <p>© <span id="ano">2026</span> Vanessa <span class="todo">Sobrenome</span> · Psicanalista</p>
+      <img class="foot-logo" src="img/logo.jpg" alt="Vanessa Torriani, psicanálise clínica e sistêmica" width="520" height="510" loading="lazy">
+      <p>© <span id="ano">2026</span> Vanessa Torriani, psicanalista</p>
       <p><a class="link-text" href="#inicio">Voltar ao topo</a></p>
     </div>
     <p class="crisis">Este site não oferece atendimento de urgência. Em caso de crise ou risco à vida, ligue para o CVV no 188 (24 horas, gratuito) ou procure o SAMU (192) ou o pronto-socorro mais próximo.</p>
