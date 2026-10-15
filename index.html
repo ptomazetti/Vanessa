@@ -295,6 +295,25 @@
     background: var(--surface); font-size: 15px; color: var(--ink-soft);
   }
   .badge svg { width: 18px; height: 18px; color: var(--sage); flex: none; }
+  .abroad {
+    display: grid; grid-template-columns: auto 1fr auto; gap: 1.75rem; align-items: center;
+    margin: 3rem 0 4rem; padding: 2.5rem; border-radius: 1.5rem;
+    background: var(--primary); color: #fff;
+  }
+  .abroad h3 { color: #fff; font-family: var(--serif); font-weight: 400; font-size: 28px; line-height: 36px; margin-bottom: .6rem; }
+  .abroad p { margin: 0; color: rgba(255,255,255,.88); max-width: 60ch; }
+  .abroad .todo { color: var(--ink); }
+  .abroad-icon { width: 72px; height: 72px; border-radius: 1rem; background: rgba(255,255,255,.16); display: grid; place-items: center; }
+  .abroad-icon svg { width: 34px; height: 34px; }
+  .btn-light { background: #fff; color: var(--primary); border: 1px solid #fff; white-space: nowrap; }
+  .btn-light:hover { background: var(--linen); }
+  @media (max-width: 900px) { .abroad { grid-template-columns: 1fr; padding: 1.75rem; gap: 1.25rem; } .abroad h3 { font-size: 22px; line-height: 30px; } }
+  .overline.center { text-align: center; margin-bottom: 1.5rem; }
+  .types .card { text-align: center; padding: 2rem 1.5rem; }
+  .types h3 { margin-bottom: .35rem; }
+  .type-icon { width: 52px; height: 52px; border-radius: .9rem; background: var(--sand-tint); color: var(--primary); display: grid; place-items: center; margin: 0 auto 1rem; }
+  .type-icon svg { width: 24px; height: 24px; }
+  .center-cta { text-align: center; margin-top: 2.5rem; }
   .todo { background: #FFF3C4; padding: 0 .2em; border-radius: .2em; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -423,11 +442,43 @@
           <h3>Por videochamada</h3>
           <p>Para quem mora longe, viaja muito ou prefere ser atendida de casa. Basta um lugar reservado e boa conexão.</p>
           <ul>
-            <li>Atendimento para brasileiros no Brasil e no exterior <span class="todo">(confirmar)</span></li>
             <li>Plataforma: <span class="todo">a confirmar</span></li>
           </ul>
         </article>
       </div>
+      <div class="abroad">
+        <div class="abroad-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>
+        </div>
+        <div>
+          <h3>Mora fora do Brasil? A sessão acontece no seu fuso horário.</h3>
+          <p>Atendo brasileiros que vivem em outros países, com sessões online marcadas no horário local de onde você está. A mesma escuta, em português e no seu tempo. <span class="todo">(confirmar com a Vanessa)</span></p>
+        </div>
+        <a class="btn btn-light btn-pill btn-lg js-wa" href="#contato">
+          Agendar do exterior
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <span class="overline center">Tipos de atendimento</span>
+      <div class="cards types">
+        <article class="card">
+          <span class="type-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.5-5.5 7-5.5s6.2 1.9 7 5.5"/></svg></span>
+          <h3>Análise individual</h3>
+          <p>Para adultos</p>
+        </article>
+        <article class="card">
+          <span class="type-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8.5" cy="8.5" r="3"/><circle cx="15.5" cy="8.5" r="3"/><path d="M3 19c.6-3 2.7-4.6 5.5-4.6 1.4 0 2.6.4 3.5 1.1.9-.7 2.1-1.1 3.5-1.1 2.8 0 4.9 1.6 5.5 4.6"/></svg></span>
+          <h3><span class="todo">Segundo tipo</span></h3>
+          <p><span class="todo">Ex.: adolescentes ou casais, se ela atender</span></p>
+        </article>
+        <article class="card">
+          <span class="type-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+          <h3>Sessões online</h3>
+          <p>No Brasil e no exterior</p>
+        </article>
+      </div>
+
       <div class="cards" style="margin-top:1.5rem">
         <article class="card">
           <h3>Duração</h3>
@@ -441,6 +492,9 @@
           <h3>Valores</h3>
           <p>Informados na conversa inicial. <span class="todo">Confirmar se emite recibo.</span></p>
         </article>
+      </div>
+      <div class="center-cta">
+        <a class="btn btn-primary btn-pill btn-lg js-wa" href="#contato">Agendar sessão</a>
       </div>
     </div>
   </section>
