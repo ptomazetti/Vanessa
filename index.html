@@ -394,6 +394,58 @@
   @media (max-width: 900px) { .final-grid { grid-template-columns: 1fr; gap: 2rem; } }
   .contact-card .btn svg { width: 20px; height: 20px; }
   @media (min-width: 901px) { .nav ul { gap: 1.75rem; } }
+
+  /* Ícones e seções novas */
+  .ico {
+    width: 46px; height: 46px; flex: none; border-radius: 9999px; display: grid; place-items: center;
+    background: linear-gradient(150deg, #FFFFFF 0%, #F4ECE4 100%); color: #70412F;
+    border: 1px solid #D9BF9A; box-shadow: 0 8px 18px -10px rgba(112, 65, 47, .45), inset 0 1px 0 #FFFFFF;
+  }
+  .ico svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; }
+  .proof-strip li { display: flex; align-items: center; gap: .85rem; }
+  .proof-strip .ico { width: 40px; height: 40px; }
+  .proof-strip .ico svg { width: 19px; height: 19px; }
+  .step-top { display: flex; align-items: center; gap: .85rem; margin-bottom: 1rem; }
+  .step-label { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #9A7A55; }
+  .abroad-icon { border: 1px solid rgba(239, 190, 149, .55); background: rgba(255, 255, 255, .08); border-radius: 9999px; }
+  .abroad-icon svg { fill: none; stroke: #F6DCC2; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+  .themes li::before { width: 7px; height: 7px; border-radius: 1px; background: #C9A26B; transform: rotate(45deg) translateY(-2px); }
+  .signs li::before { content: ""; width: 7px; height: 7px; border-radius: 1px; background: #C9A26B; transform: rotate(45deg); top: 1.2rem; left: .2rem; }
+  .gentle-note { margin-top: 1.5rem; max-width: 68ch; font-size: 15px; color: var(--ink-soft); }
+  .two-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .two-cards .card { display: flex; flex-direction: column; }
+  .two-cards .signs { flex: 1; margin-bottom: 1.5rem; }
+  .two-cards .btn { align-self: flex-start; }
+  .card-head { display: flex; align-items: center; gap: .85rem; margin-bottom: 1rem; }
+  .card-head h3 { margin: 0; }
+  .safety { display: flex; gap: 1rem; align-items: center; margin-top: 1.5rem; padding: 1.1rem 1.4rem; border-radius: 1.25rem; background: var(--sage-tint); color: #3A4B3F; }
+  .safety p { margin: 0; font-size: 15px; }
+  .elder-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 4rem; align-items: center; }
+  .themes.one-col { grid-template-columns: 1fr; margin-top: 1.5rem; }
+  .elder-card p { color: var(--ink-soft); }
+  .elder-card .btn { margin-top: .5rem; }
+  @media (max-width: 900px) { .two-cards, .elder-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+  .wa-float { background: #480A23; color: #F6DCC2; border: 1px solid rgba(239, 190, 149, .6); box-shadow: 0 12px 28px -10px rgba(72, 10, 35, .6); }
+  .wa-float:hover { background: #5E1230; }
+  .pay-links { display: flex; justify-content: center; gap: 1.25rem; margin-top: .9rem; }
+  .pay { font-size: 14px; font-weight: 600; color: var(--ink-soft); text-decoration: underline; text-decoration-color: #D9BF9A; text-underline-offset: 4px; }
+  .pay:hover { color: var(--primary); }
+  .pay-methods { margin: 1rem 0 0; max-width: 68ch; color: var(--ink-soft); }
+  .pay-methods strong { color: var(--ink); font-weight: 600; }
+  /* Ajustes de UX */
+  .brand { white-space: nowrap; }
+  .nav ul a { white-space: nowrap; }
+  @media (max-width: 1100px) and (min-width: 901px) { .nav ul { gap: 1.25rem; } .nav ul a { font-size: 14px; } }
+  .step-label { color: #7A5C3C; }
+  .pay-muted { font-size: 14px; color: var(--ink-soft); }
+  .also { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin-top: 1.75rem; font-size: 15px; color: var(--ink-soft); }
+  .also a { padding: .45rem .95rem; border-radius: 9999px; border: 1px solid #D9BF9A; background: var(--surface); color: var(--primary-deep); text-decoration: none; font-weight: 600; font-size: 14px; }
+  .also a:hover { background: var(--sand-tint); }
+  @media (max-width: 767px) {
+    .tabs { flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: .5rem; margin-right: calc(-1 * var(--margin)); padding-right: var(--margin); scrollbar-width: none; }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab { flex: none; scroll-snap-align: start; }
+  }
   .todo { background: #FFF3C4; padding: 0 .2em; border-radius: .2em; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -413,9 +465,9 @@
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <ul id="menu">
-      <li><a href="#reconhece">Você se reconhece?</a></li>
+      <li><a href="#reconhece">Temas</a></li>
       <li><a href="#como-funciona">Como funciona</a></li>
-      <li><a href="#sobre">Sobre mim</a></li>
+      <li><a href="#sobre">Sobre</a></li>
       <li><a href="#planos">Valores</a></li>
       <li><a href="#faq">Dúvidas</a></li>
     </ul>
@@ -437,7 +489,7 @@
             Agendar minha primeira sessão
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="btn btn-ghost btn-pill btn-lg" href="#reconhece">Ver se eu me reconheço</a>
+          <a class="btn btn-ghost btn-pill btn-lg" href="#reconhece">Ver se algo fala comigo</a>
         </div>
         <p class="micro">Primeira sessão de 50 minutos por R$ 150. Sem compromisso: depois dela, você decide se quer continuar.</p>
       </div>
@@ -451,92 +503,149 @@
 
   <div class="proof-strip">
     <ul class="wrap">
-      <li><strong>Online</strong> no Brasil e no exterior</li>
-      <li><strong>50 minutos</strong> com hora marcada</li>
-      <li><strong>Sigilo</strong> em tudo o que você contar</li>
-      <li><strong>Escuta</strong> sem julgamento</li>
+      <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg></span><span><strong>Online</strong> no Brasil e no exterior</span></li>
+      <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><strong>50 minutos</strong> com hora marcada</span></li>
+      <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2.5"/></svg></span><span><strong>Sigilo</strong> em tudo o que você contar</span></li>
+      <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.3-7-9.6A3.9 3.9 0 0 1 12 8a3.9 3.9 0 0 1 7 2.4C19 15.7 12 20 12 20Z"/></svg></span><span><strong>Escuta</strong> sem julgamento</span></li>
     </ul>
   </div>
 
   <section id="reconhece">
     <div class="wrap">
       <div class="section-head measure">
-        <span class="overline">Você se reconhece?</span>
-        <h2>Desconfia que pode ter TDAH, autismo ou outra condição?</h2>
-        <p class="lead">Escolha um tema e veja se algo faz sentido para você. Você não precisa de diagnóstico para começar a análise.</p>
+        <span class="overline">Para se reconhecer</span>
+        <h2>Às vezes, dar nome ao que você sente já traz alívio</h2>
+        <p class="lead">Escolha um tema e leia com calma. Não é um teste e não existe resposta certa. Se algo fizer sentido para você, a gente conversa.</p>
       </div>
       <p class="story">Já acompanhei muitas pessoas que chegaram com essas mesmas dúvidas. Elas se reconheceram, entenderam a própria história e aprenderam a usar a seu favor aquilo que antes só atrapalhava. A dificuldade continuou fazendo parte delas, mas virou também uma força.</p>
       <div class="tabs" role="tablist" aria-label="Temas">
         <button class="tab" role="tab" id="tab-tdah" aria-controls="painel-tdah" aria-selected="true">TDAH</button>
         <button class="tab" role="tab" id="tab-autismo" aria-controls="painel-autismo" aria-selected="false" tabindex="-1">Autismo</button>
+        <button class="tab" role="tab" id="tab-ansiedade" aria-controls="painel-ansiedade" aria-selected="false" tabindex="-1">Ansiedade e pânico</button>
+        <button class="tab" role="tab" id="tab-depressao" aria-controls="painel-depressao" aria-selected="false" tabindex="-1">Depressão</button>
         <button class="tab" role="tab" id="tab-borderline" aria-controls="painel-borderline" aria-selected="false" tabindex="-1">Borderline</button>
         <button class="tab" role="tab" id="tab-bipolar" aria-controls="painel-bipolar" aria-selected="false" tabindex="-1">Bipolaridade</button>
+        <button class="tab" role="tab" id="tab-burnout" aria-controls="painel-burnout" aria-selected="false" tabindex="-1">Burnout</button>
       </div>
       <div class="panel card" role="tabpanel" id="painel-tdah" aria-labelledby="tab-tdah">
         <div>
-          <h3>Você se reconhece em alguma destas perguntas?</h3>
+          <h3>Talvez você já tenha sentido algo assim</h3>
           <ul class="signs">
-            <li>Você se distrai com facilidade, mesmo com o que é importante para você?</li>
-            <li>Começa muitas coisas e tem dificuldade para terminar?</li>
-            <li>Esquece prazos, compromissos e objetos com frequência?</li>
-            <li>Sente uma inquietação constante, ou age por impulso e se arrepende depois?</li>
+            <li>A cabeça parece ter várias abas abertas ao mesmo tempo.</li>
+            <li>Você começa com vontade e, no meio do caminho, perde o fio.</li>
+            <li>Prazos e compromissos escapam, mesmo quando você se esforça.</li>
+            <li>Já ouviu muitas vezes que era desatenção ou falta de vontade.</li>
           </ul>
         </div>
         <div>
-          <h3>Como posso ajudar</h3>
-          <p>Muitos adultos só descobrem o TDAH depois de anos ouvindo que são desorganizados ou preguiçosos. Na análise, você entende como isso marcou sua história e sua autoestima. Se fizer sentido, indico profissionais para a avaliação e sigo com você depois do diagnóstico.</p>
+          <h3>Como posso acompanhar você</h3>
+          <p>Muita gente com TDAH passou anos se culpando. Na análise, você olha para a sua história com mais gentileza, entende o seu jeito de funcionar e encontra formas de viver bem com ele. Se fizer sentido, indico profissionais para a avaliação e sigo com você.</p>
           <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema TDAH. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
         </div>
       </div>
       <div class="panel card" role="tabpanel" id="painel-autismo" aria-labelledby="tab-autismo" hidden>
         <div>
-          <h3>Você se reconhece em alguma destas perguntas?</h3>
+          <h3>Talvez você já tenha sentido algo assim</h3>
           <ul class="signs">
-            <li>Situações sociais cansam muito ou parecem ter regras que ninguém explicou?</li>
-            <li>Barulho, luz, cheiros ou texturas incomodam mais você do que os outros?</li>
-            <li>Mudanças de rotina deixam você muito desconfortável?</li>
-            <li>Sente que passa o dia se adaptando ao jeito dos outros para se encaixar?</li>
+            <li>Estar com muitas pessoas cansa, mesmo quando você gosta delas.</li>
+            <li>Sons, luzes ou texturas incomodam mais do que parecem incomodar os outros.</li>
+            <li>Mudanças inesperadas tiram você do eixo.</li>
+            <li>Você sente que passa o dia se adaptando para caber.</li>
           </ul>
         </div>
         <div>
-          <h3>Como posso ajudar</h3>
-          <p>O autismo em adolescentes e adultos muitas vezes passa despercebido, principalmente quando a pessoa aprendeu a disfarçar o próprio jeito. Na análise, há espaço para falar do cansaço de se adaptar o tempo todo. Se fizer sentido, indico profissionais para a avaliação e sigo com você antes e depois dela.</p>
+          <h3>Como posso acompanhar você</h3>
+          <p>Muitos adultos autistas aprenderam a disfarçar o próprio jeito e chegam exaustos. Aqui você não precisa fingir. A análise abre espaço para entender o seu modo de sentir o mundo e cuidar do cansaço de se adaptar o tempo todo.</p>
           <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema autismo. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
+        </div>
+      </div>
+      <div class="panel card" role="tabpanel" id="painel-ansiedade" aria-labelledby="tab-ansiedade" hidden>
+        <div>
+          <h3>Talvez você já tenha sentido algo assim</h3>
+          <ul class="signs">
+            <li>A preocupação não desliga, nem na hora de dormir.</li>
+            <li>O coração acelera e o ar parece faltar, sem motivo aparente.</li>
+            <li>Você evita lugares ou situações com medo de passar mal.</li>
+            <li>A mente vai sempre para o pior cenário.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Como posso acompanhar você</h3>
+          <p>A ansiedade costuma falar de algo que ainda não encontrou palavras. Na análise, você descobre de onde vem esse alarme e, aos poucos, o corpo e a mente encontram mais calma.</p>
+          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema ansiedade e pânico. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
+        </div>
+      </div>
+      <div class="panel card" role="tabpanel" id="painel-depressao" aria-labelledby="tab-depressao" hidden>
+        <div>
+          <h3>Talvez você já tenha sentido algo assim</h3>
+          <ul class="signs">
+            <li>Coisas que antes davam prazer perderam a graça.</li>
+            <li>Levantar da cama ou responder uma mensagem custa muito.</li>
+            <li>Há um cansaço que o descanso não resolve.</li>
+            <li>A vida parece passar do outro lado de um vidro.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Como posso acompanhar você</h3>
+          <p>Ninguém precisa atravessar isso sem companhia. A análise é um lugar para colocar em palavras o que pesa, no seu tempo. Quando for importante, indico avaliação psiquiátrica e sigo ao seu lado.</p>
+          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema depressão. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
         </div>
       </div>
       <div class="panel card" role="tabpanel" id="painel-borderline" aria-labelledby="tab-borderline" hidden>
         <div>
-          <h3>Você se reconhece em alguma destas perguntas?</h3>
+          <h3>Talvez você já tenha sentido algo assim</h3>
           <ul class="signs">
-            <li>Suas emoções são muito intensas e mudam rápido?</li>
-            <li>Tem muito medo de abandono ou de rejeição?</li>
-            <li>Suas relações oscilam entre admiração e decepção?</li>
-            <li>Convive com uma sensação de vazio ou com atitudes impulsivas que machucam você?</li>
+            <li>O que você sente chega muito forte e muda rápido.</li>
+            <li>O medo de perder quem você ama aperta o peito.</li>
+            <li>Nas relações, você oscila entre muito perto e muito longe.</li>
+            <li>Às vezes vem um vazio difícil de explicar.</li>
           </ul>
         </div>
         <div>
-          <h3>Como posso ajudar</h3>
-          <p>Quem vive com o transtorno de personalidade borderline costuma sofrer muito nas relações e se sentir incompreendido. A análise oferece um vínculo estável, com horário fixo e regras claras, para que você entenda e organize o que sente. O tratamento costuma andar junto com acompanhamento psiquiátrico.</p>
+          <h3>Como posso acompanhar você</h3>
+          <p>Sentir com intensidade não é defeito. A análise oferece um vínculo estável, com horário fixo e combinados claros, para você entender e acolher o que sente. Muitas vezes esse cuidado anda junto com um psiquiatra, e eu caminho ao lado.</p>
           <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema borderline. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
         </div>
       </div>
       <div class="panel card" role="tabpanel" id="painel-bipolar" aria-labelledby="tab-bipolar" hidden>
         <div>
-          <h3>Você se reconhece em alguma destas perguntas?</h3>
+          <h3>Talvez você já tenha sentido algo assim</h3>
           <ul class="signs">
-            <li>Passa por períodos de muita energia, pouco sono e pensamentos acelerados?</li>
-            <li>Depois vêm fases de tristeza profunda e cansaço?</li>
-            <li>Já tomou decisões impulsivas em fases de euforia, como gastos ou rompimentos?</li>
-            <li>Sente que seu humor muda em ciclos que você não controla?</li>
+            <li>Há fases de muita energia, ideias rápidas e pouco sono.</li>
+            <li>Depois vêm períodos de cansaço e tristeza profunda.</li>
+            <li>Em alguns momentos, você toma decisões que depois não reconhece como suas.</li>
+            <li>O humor parece seguir ciclos que você não escolhe.</li>
           </ul>
         </div>
         <div>
-          <h3>Como posso ajudar</h3>
-          <p>O transtorno bipolar precisa de acompanhamento psiquiátrico. A análise caminha junto: ajuda você a reconhecer os sinais de cada fase, a lidar com o impacto nas relações e no trabalho e a construir uma rotina que proteja o seu tratamento.</p>
+          <h3>Como posso acompanhar você</h3>
+          <p>O tratamento da bipolaridade inclui acompanhamento psiquiátrico, e a análise caminha junto. Nela, você aprende a perceber os sinais de cada fase, cuidar das suas relações e construir uma rotina que proteja o seu bem-estar.</p>
           <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema bipolaridade. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
         </div>
       </div>
-      <p class="privacy">Diagnóstico de TDAH, autismo, borderline ou bipolaridade é feito por psiquiatra, neurologista ou psicólogo. Meu trabalho é escutar, ajudar você a entender o que vive, indicar avaliação quando for o caso e acompanhar o tratamento. Se houver pensamentos de se machucar, ligue agora para o CVV no 188.</p>
+      <div class="panel card" role="tabpanel" id="painel-burnout" aria-labelledby="tab-burnout" hidden>
+        <div>
+          <h3>Talvez você já tenha sentido algo assim</h3>
+          <ul class="signs">
+            <li>O trabalho ocupa a cabeça mesmo nos dias de folga.</li>
+            <li>O cansaço já está lá quando você acorda.</li>
+            <li>Pequenas tarefas viraram montanhas.</li>
+            <li>Você sente que se perdeu de si no meio das obrigações.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Como posso acompanhar você</h3>
+          <p>Esgotamento não é falta de força. Na análise, você entende o que trouxe você até aqui, revê o lugar do trabalho na sua vida e reaprende a cuidar de si.</p>
+          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema burnout. Gostaria de conversar." href="#contato">Quero conversar sobre isso</a>
+        </div>
+      </div>
+      <div class="also">
+        <span>Também acolho:</span>
+        <a href="#relacoes">Relacionamentos abusivos</a>
+        <a href="#idosos">Pessoas idosas e famílias</a>
+        <a href="#para-quem">Outros temas</a>
+      </div>
+      <p class="gentle-note">Aqui não fazemos diagnóstico. Quando for importante, indico profissionais de confiança para a avaliação e sigo com você durante todo o caminho. Se em algum momento você pensar em se machucar, ligue para o CVV no 188. É gratuito e funciona 24 horas.</p>
     </div>
   </section>
 
@@ -554,11 +663,74 @@
         <li>Relações que se repetem</li>
         <li>Conflitos na família</li>
         <li>Autoestima e mudanças de fase da vida</li>
+        <li>Dependência emocional</li>
+        <li>Traumas e situações difíceis do passado</li>
       </ul>
     </div>
   </section>
 
-  <section id="como-funciona">
+  <section id="relacoes">
+    <div class="wrap">
+      <div class="section-head measure">
+        <span class="overline">Relacionamentos abusivos</span>
+        <h2>Se o amor virou medo, você merece sair com segurança</h2>
+        <p class="lead">Nem sempre é fácil perceber. O abuso costuma começar aos poucos e confunde quem está dentro dele. Você não tem culpa, e não precisa decidir nada sozinha nem sozinho.</p>
+      </div>
+      <div class="two-cards">
+        <article class="card">
+          <div class="card-head"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.3-7-9.6A3.9 3.9 0 0 1 12 8a3.9 3.9 0 0 1 7 2.4C19 15.7 12 20 12 20Z"/></svg></span><h3>Alguns sinais</h3></div>
+          <ul class="signs">
+            <li>A pessoa controla seu celular, seu dinheiro, suas roupas ou com quem você fala.</li>
+            <li>Você foi se afastando de amigos e da família.</li>
+            <li>Há humilhações, críticas ou ameaças, seguidas de pedidos de desculpa.</li>
+            <li>Você passou a duvidar da sua memória e do que sente.</li>
+            <li>Você vive pisando em ovos para evitar brigas.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-head"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21v-8M12 13c0-4 3-7 8-7 0 4-3 7-8 7ZM12 15c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5Z"/></svg></span><h3>Como a análise ajuda a sair</h3></div>
+          <ul class="signs">
+            <li>Entender por que é tão difícil ir embora, sem culpa e sem pressa.</li>
+            <li>Reconstruir a autoestima e a confiança no que você sente.</li>
+            <li>Fortalecer a sua rede de apoio.</li>
+            <li>Pensar nos próximos passos com calma e segurança.</li>
+            <li>Cuidar das marcas que ficam depois, para não repetir a história.</li>
+          </ul>
+          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e gostaria de conversar sobre um relacionamento difícil." href="#contato">Conversar com sigilo</a>
+        </article>
+      </div>
+      <div class="safety">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <p>Se você está em perigo agora, ligue 190. Mulheres podem ligar para o 180, a Central de Atendimento à Mulher, gratuita e 24 horas. Violência contra pessoas idosas pode ser denunciada no Disque 100.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="idosos" class="tinted">
+    <div class="wrap elder-grid">
+      <div class="measure">
+        <span class="overline">Para pessoas idosas</span>
+        <h2>Envelhecer também merece escuta</h2>
+        <p class="lead" style="margin-top:1rem">Com formação em gerontologia, acolho pessoas idosas e suas famílias num tempo de muitas mudanças. Aqui há espaço para falar das perdas, das memórias e também dos desejos que continuam vivos.</p>
+        <ul class="themes one-col">
+          <li>Solidão e saudade</li>
+          <li>Luto de pessoas queridas</li>
+          <li>Aposentadoria e a busca de um novo sentido</li>
+          <li>Mudanças no corpo, na saúde e na memória</li>
+          <li>Relação com filhos e netos</li>
+          <li>Medo do futuro e da finitude</li>
+        </ul>
+      </div>
+      <aside class="card elder-card">
+        <div class="card-head"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3"/><path d="M3.5 19c.6-3 2.8-4.7 5.5-4.7s4.9 1.7 5.5 4.7"/><circle cx="17" cy="9.5" r="2.4"/><path d="M15.8 14.5c2.4 0 4.2 1.4 4.7 4"/></svg></span><h3>Online, sem complicação</h3></div>
+        <p>Se a tecnologia for uma barreira, alguém da família pode ajudar a abrir a chamada nas primeiras vezes. Depois, o espaço é só seu, com o mesmo sigilo.</p>
+        <p>Familiares também podem me procurar para entender como apoiar quem amam.</p>
+        <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Gostaria de agendar uma sessão para mim ou para um familiar idoso." href="#contato">Agendar para mim ou para um familiar</a>
+      </aside>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="tinted">
     <div class="wrap">
       <div class="section-head measure">
         <span class="overline">Como funciona</span>
@@ -567,25 +739,23 @@
       </div>
       <ol class="steps">
         <li class="card">
-          <span class="step-n">1</span>
+          <div class="step-top"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-4.5 3.5V17H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/><path d="M8 10h8M8 13h5"/></svg></span><span class="step-label">Passo 1</span></div>
           <h3>Você manda uma mensagem</h3>
           <p>Pelo WhatsApp. Não precisa explicar o motivo, só dizer que quer marcar.</p>
         </li>
         <li class="card">
-          <span class="step-n">2</span>
+          <div class="step-top"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6.5" width="13" height="11" rx="2.5"/><path d="m16 10.5 5-3v9l-5-3"/></svg></span><span class="step-label">Passo 2</span></div>
           <h3>Fazemos a primeira sessão</h3>
           <p>50 minutos por Google Meet, WhatsApp ou outra plataforma combinada. Você conta o que trouxe e tira suas dúvidas.</p>
         </li>
         <li class="card">
-          <span class="step-n">3</span>
+          <div class="step-top"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4M9 14.5l2 2 4-4"/></svg></span><span class="step-label">Passo 3</span></div>
           <h3>Você decide se quer seguir</h3>
           <p>Se quiser continuar, escolhe o plano e reserva um horário fixo na semana.</p>
         </li>
       </ol>
       <div class="abroad">
-        <div class="abroad-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>
-        </div>
+        <div class="abroad-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg></div>
         <div>
           <h3>Mora fora do Brasil? A sessão acontece no seu fuso horário.</h3>
           <p>Atendo brasileiros que vivem em outros países, em português, no horário local de onde você está. Falar da sua vida na sua língua faz diferença.</p>
@@ -598,7 +768,7 @@
     </div>
   </section>
 
-  <section id="sobre" class="tinted">
+  <section id="sobre">
     <div class="wrap about-grid">
       <div class="portrait about-photo emblem-card">
         <img src="img/logo-emblema.jpg" alt="Símbolo de Vanessa Torriani: uma árvore cujas copas formam um cérebro e um coração, dentro de uma mandala" width="720" height="720" loading="lazy">
@@ -623,7 +793,7 @@
       <div class="section-head measure">
         <span class="overline">Valores</span>
         <h2>Comece com uma sessão. Siga no seu ritmo.</h2>
-        <p class="lead">A primeira sessão é avulsa. Depois dela, você decide se quer continuar e qual plano faz sentido. Todas as sessões são online, de 50 minutos, com pagamento por Pix.</p>
+        <p class="lead">A primeira sessão é avulsa. Depois dela, você decide se quer continuar e qual plano faz sentido. Todas as sessões são online, de 50 minutos. Você paga por Pix, cartão de crédito ou PayPal.</p>
       </div>
       <div class="plans">
         <article class="card plan">
@@ -633,9 +803,13 @@
           <ul>
             <li>1 sessão de 50 minutos</li>
             <li>Horário conforme a agenda</li>
-            <li>Pix antes da sessão</li>
+            <li>Pagamento antes da sessão</li>
           </ul>
           <a class="btn btn-ghost btn-pill js-wa" data-msg="Olá, Vanessa. Gostaria de agendar uma primeira sessão avulsa." href="#contato">Agendar primeira sessão</a>
+          <div class="pay-links">
+            <a class="pay" data-pay="avulsaCartao" href="#contato">Pagar com cartão</a>
+            <a class="pay" data-pay="avulsaPaypal" href="#contato">Pagar com PayPal</a>
+          </div>
         </article>
         <article class="card plan featured">
           <span class="plan-tag">Para manter a regularidade</span>
@@ -645,23 +819,29 @@
           <ul>
             <li>4 sessões, uma por semana</li>
             <li>Seu horário fixo reservado</li>
-            <li>Pix no início do mês</li>
+            <li>Pagamento no início do mês</li>
           </ul>
           <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Tenho interesse no plano mensal." href="#contato">Reservar meu horário</a>
+          <div class="pay-links">
+            <a class="pay" data-pay="mensalCartao" href="#contato">Pagar com cartão</a>
+            <a class="pay" data-pay="mensalPaypal" href="#contato">Pagar com PayPal</a>
+          </div>
         </article>
         <article class="card plan">
-          <h3>Plano trimestral</h3>
-          <p class="plan-for">Para quem decidiu se dedicar ao processo</p>
-          <p class="price">R$ 1.500<small>por trimestre, R$ 125 por sessão</small></p>
+          <h3>Plano personalizado</h3>
+          <p class="plan-for">Para quem precisa de outro ritmo ou formato</p>
+          <p class="price">Sob consulta<small>valor combinado com você</small></p>
           <ul>
-            <li>12 sessões, uma por semana</li>
-            <li>Horário fixo por três meses</li>
-            <li>Pix à vista <span class="todo">ou em parcelas</span></li>
+            <li>Duas ou mais sessões por semana</li>
+            <li>Horários especiais e outros fusos</li>
+            <li>Formato pensado para o seu momento</li>
           </ul>
-          <a class="btn btn-ghost btn-pill js-wa" data-msg="Olá, Vanessa. Tenho interesse no plano trimestral." href="#contato">Quero o trimestral</a>
+          <a class="btn btn-ghost btn-pill js-wa" data-msg="Olá, Vanessa. Gostaria de conversar sobre um plano personalizado." href="#contato">Montar meu plano</a>
+          <div class="pay-links"><span class="pay-muted">Pix, cartão ou PayPal</span></div>
         </article>
       </div>
-      <p class="plan-note">A frequência é combinada com cada pessoa: em alguns momentos do tratamento pode ser indicado atender duas vezes por semana. Nesse caso, o plano é ajustado e o valor por sessão continua o do plano escolhido.</p>
+      <p class="plan-note">A frequência é combinada com cada pessoa: em alguns momentos do tratamento pode ser indicado atender duas vezes por semana. Nesse caso, montamos juntos um plano personalizado.</p>
+      <p class="pay-methods">Formas de pagamento: <strong>Pix</strong>, <strong>cartão de crédito</strong> pelo Stripe e <strong>PayPal</strong>. Para quem mora fora do Brasil, cartão internacional e PayPal funcionam bem.</p>
       <p class="privacy plan-rules"><strong>Faltas e remarcações:</strong> avise com pelo menos 24 horas de antecedência. Faltas ou avisos com menos de 24 horas são cobrados como sessão realizada, inclusive nos planos. Sessões dos planos valem só dentro do período contratado.</p>
     </div>
   </section>
@@ -698,8 +878,12 @@
           <p>Não há prazo fixo. Algumas pessoas ficam meses, outras anos. A decisão de encerrar é sempre conversada e respeita o seu momento.</p>
         </details>
         <details>
+          <summary>Quais são as formas de pagamento?</summary>
+          <p>Pix, cartão de crédito pelo Stripe e PayPal. Quem mora fora do Brasil pode usar cartão internacional ou PayPal.</p>
+        </details>
+        <details>
           <summary>Posso mudar de plano?</summary>
-          <p>Sim. Se for indicado aumentar ou diminuir a frequência, combinamos a mudança e ela vale a partir do mês ou do trimestre seguinte.</p>
+          <p>Sim. Se for indicado aumentar ou diminuir a frequência, combinamos a mudança e ela vale a partir do mês seguinte.</p>
         </details>
         <details>
           <summary>E se eu precisar faltar ou remarcar?</summary>
@@ -732,6 +916,7 @@
         <ul class="contact-list">
           <li><span>WhatsApp</span><a class="js-wa" href="#contato">(51) 99349-7223</a></li>
           <li><span>Primeira sessão</span><strong>R$ 150, 50 minutos, online</strong></li>
+          <li><span>Cartão ou PayPal</span><strong>Pelos botões na seção Valores</strong></li>
           <li><span>Pix (celular)</span><strong>51993497223</strong><small class="pix-info">Vanessa Ramos Torriani, Banco Inter</small></li>
         </ul>
         <a class="btn btn-primary btn-pill btn-lg js-wa" href="#contato">
@@ -761,7 +946,15 @@
 </a>
 
 <script>
-  // Trocar pelo número real da Vanessa (só dígitos, com 55 e DDD).
+  // Links de pagamento: trocar "[PREENCHER]" pelos links do Stripe e do PayPal.
+  // Enquanto um link não estiver preenchido, o botão abre o WhatsApp.
+  var PAGAMENTO = {
+    avulsaCartao: "[PREENCHER: link Stripe da sessão avulsa]",
+    avulsaPaypal: "[PREENCHER: link PayPal da sessão avulsa]",
+    mensalCartao: "[PREENCHER: link Stripe do plano mensal]",
+    mensalPaypal: "[PREENCHER: link PayPal do plano mensal]"
+  };
+  // Número da Vanessa (só dígitos, com 55 e DDD).
   var WHATSAPP = "5551993497223";
   var MSG = "Olá, Vanessa. Vi seu site e gostaria de agendar uma primeira conversa.";
   var waUrl = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MSG);
@@ -785,6 +978,14 @@
       var d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
       if (d) { var n = tabs[(i + d + tabs.length) % tabs.length]; selectTab(n); n.focus(); }
     });
+  });
+
+  document.querySelectorAll("[data-pay]").forEach(function (a) {
+    var link = PAGAMENTO[a.dataset.pay] || "";
+    var nome = a.dataset.pay.indexOf("Paypal") > -1 ? "PayPal" : "cartão";
+    var plano = a.dataset.pay.indexOf("mensal") === 0 ? "o plano mensal" : "a sessão avulsa";
+    a.href = link.indexOf("https://") === 0 ? link : "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Olá, Vanessa. Quero pagar " + plano + " com " + nome + ".");
+    a.target = "_blank"; a.rel = "noopener";
   });
 
   document.getElementById("ano").textContent = new Date().getFullYear();
