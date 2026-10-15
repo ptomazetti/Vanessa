@@ -552,6 +552,7 @@
   .between { display: flex; gap: 1.25rem; align-items: flex-start; margin: 2rem 0 0; padding: 1.75rem 2rem; border: 1px solid #E2B877; background: linear-gradient(120deg, #FFFFFF 0%, #FFF4E2 100%); }
   .between h3 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 28px; line-height: 36px; color: var(--primary-deep); margin-bottom: .6rem; }
   .between p { margin: 0 0 .6rem; color: var(--ink-soft); max-width: 66ch; }
+  .between .between-quote { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--primary); }
   .between .between-note { font-size: 15px; margin: 0; }
   @media (max-width: 767px) { .between { flex-direction: column; padding: 1.5rem; } .between h3 { font-size: 23px; line-height: 31px; } }
   .todo { background: #FFF3C4; padding: 0 .2em; border-radius: .2em; }
@@ -868,7 +869,8 @@
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-4.5 3.5V17H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/><path d="M8 10h8M8 13h5"/></svg></span>
         <div>
           <h3>Você não fica sem apoio entre uma sessão e outra</h3>
-          <p>Se algo apertar durante a semana, você pode me mandar uma mensagem pelo WhatsApp. Eu respondo em até 48 horas. Se for preciso, combinamos uma sessão extra.</p>
+          <p>Se algo apertar durante a semana, você pode me enviar dúvidas ou desabafos pelo WhatsApp e receber a minha resposta direta, em até 48 horas. Se for preciso, combinamos uma sessão extra.</p>
+          <p class="between-quote">É como ter uma escuta por perto, mesmo nos dias sem sessão.</p>
           <p class="between-note">Para emergências, ligue para o CVV no 188 ou para o SAMU no 192.</p>
         </div>
       </div>
