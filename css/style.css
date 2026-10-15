@@ -754,3 +754,19 @@
   #como-funciona .more-link { margin-top: 2rem; }
   @media (max-width: 767px) { .meet { grid-template-columns: 1fr; gap: 1.5rem; } .meet-img { max-width: 200px; } }
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  /* Telas pequenas (320 a 400 pixels) */
+  @media (max-width: 400px) {
+    .nav { gap: .5rem; }
+    .brand { gap: .55rem; min-width: 0; }
+    .mark { width: 40px; height: 40px; }
+    .brand > span { font-size: 19px; min-width: 0; }
+    .brand small { font-size: 11px; white-space: normal; line-height: 1.25; }
+    .menu-btn { padding: .55rem .7rem; }
+    .menu-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .mobile-cta small { display: none; }
+    .pay-dialog { padding: 1.25rem; }
+    .pay-dialog h2 { font-size: 24px; line-height: 32px; }
+    .pay-option { padding: .8rem; gap: .7rem; }
+  }
+  .panel > * { min-width: 0; }
+  @media (max-width: 767px) { .panel-wide { grid-template-columns: minmax(0, 1fr); } }
