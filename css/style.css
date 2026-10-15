@@ -770,3 +770,9 @@
   }
   .panel > * { min-width: 0; }
   @media (max-width: 767px) { .panel-wide { grid-template-columns: minmax(0, 1fr); } }
+  /* Fale comigo primeiro */
+  .talk-first { margin-top: 1.1rem; padding-top: 1.1rem; border-top: 1px solid var(--border); display: grid; gap: .6rem; }
+  .talk-first span { font-size: 15px; color: var(--ink-soft); }
+  .talk-first .btn { justify-content: center; }
+  .talk-link { display: inline-flex; align-items: center; min-height: 40px; font-size: 15px; font-weight: 600; color: var(--sage); text-underline-offset: 4px; }
+  .soft-note a { color: var(--primary); font-weight: 600; font-style: normal; text-underline-offset: 3px; }
