@@ -541,6 +541,14 @@
   .safety { background: #E4F1E7; color: #24402F; }
   .wa-float { background: linear-gradient(135deg, #5E1830, #8E2A47); color: #F6C77E; }
   .overline { color: var(--primary); }
+  .first-session { display: grid; grid-template-columns: 1fr auto; gap: 2.5rem; align-items: center; margin-bottom: 2rem; padding: 2rem 2.25rem; border: 1px solid #E2B877; background: linear-gradient(120deg, #FFFFFF 0%, #FFF4E2 100%); }
+  .first-session h3 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 30px; line-height: 38px; color: var(--primary-deep); margin-bottom: .75rem; }
+  .first-session p { color: var(--ink-soft); max-width: 60ch; }
+  .first-session .first-promise { color: var(--ink); font-weight: 600; margin-bottom: 0; }
+  .first-side { display: grid; gap: 1rem; justify-items: start; }
+  .first-side .price { margin: 0 !important; font-size: 36px; line-height: 1.1; }
+  .first-session p:not(.price) { margin: 0 0 .9rem; }
+  @media (max-width: 900px) { .first-session { grid-template-columns: 1fr; gap: 1.25rem; padding: 1.5rem; } .first-session h3 { font-size: 24px; line-height: 32px; } }
   .todo { background: #FFF3C4; padding: 0 .2em; border-radius: .2em; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -842,7 +850,7 @@
         </li>
         <li class="card">
           <div class="step-top"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6.5" width="13" height="11" rx="2.5"/><path d="m16 10.5 5-3v9l-5-3"/></svg></span><span class="step-label">Passo 2</span></div>
-          <h3>Fazemos a primeira sessão</h3>
+          <h3>Fazemos a sessão inicial</h3>
           <p>50 minutos por chamada de vídeo, no Google Meet, no WhatsApp ou onde for melhor para você. Você conta o que trouxe e tira suas dúvidas.</p>
         </li>
         <li class="card">
@@ -892,10 +900,22 @@
         <h2>Comece com uma sessão. Siga no seu ritmo.</h2>
         <p class="lead">A primeira sessão é avulsa. Depois dela, você decide se quer continuar e qual plano faz sentido. Todas as sessões são online, de 50 minutos. Você paga por Pix, cartão de crédito ou PayPal.</p>
       </div>
+      <div class="first-session card">
+        <div>
+          <span class="overline">Por onde começar</span>
+          <h3>Sessão inicial: escuta e direcionamento</h3>
+          <p>Uma sessão com tempo para entender suas dores, os padrões que se repetem e o que tem travado você. Sem pressa e sem julgamento.</p>
+          <p class="first-promise">Você sai com mais clareza sobre o que está vivendo e sobre os próximos passos do seu cuidado.</p>
+        </div>
+        <div class="first-side">
+          <p class="price">R$ 150<small>50 minutos, online</small></p>
+          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Gostaria de agendar a sessão inicial." href="#contato">Agendar sessão inicial</a>
+        </div>
+      </div>
       <div class="plans">
         <article class="card plan">
           <h3>Sessão avulsa</h3>
-          <p class="plan-for">Para a primeira sessão ou para horários flexíveis</p>
+          <p class="plan-for">Para a sessão inicial ou para horários flexíveis</p>
           <p class="price">R$ 150<small>por sessão</small></p>
           <ul>
             <li>1 sessão de 50 minutos</li>
@@ -963,8 +983,8 @@
           <p>Sim. A análise acontece pela fala, e isso funciona bem por vídeo. Para muitas pessoas com TDAH ou autismo, estar no próprio ambiente deixa a sessão mais confortável. Peço apenas um lugar reservado, sem interrupções.</p>
         </details>
         <details>
-          <summary>Como é a primeira sessão?</summary>
-          <p>É uma sessão de 50 minutos, por R$ 150. Você conta o que trouxe, tira suas dúvidas e sente se fica à vontade. Depois, decide com calma se quer continuar.</p>
+          <summary>Como é a sessão inicial?</summary>
+          <p>É uma sessão de escuta e direcionamento, de 50 minutos, por R$ 150. Você conta o que está vivendo, eu escuto sem pressa e, no fim, conversamos sobre os próximos passos. Depois, você decide com calma se quer continuar.</p>
         </details>
         <details>
           <summary>Qual a diferença entre psicanálise e psicoterapia?</summary>
