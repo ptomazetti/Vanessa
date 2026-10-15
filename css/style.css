@@ -746,3 +746,10 @@
     .hero h1, .page-head h1, .hero .lead, .page-head .lead, .hero-frame, .drawer, .pay-dialog[open] { animation: none !important; }
     .btn-primary:hover { transform: none; }
   }
+  /* Seção Conheça a Vanessa */
+  .meet { display: grid; grid-template-columns: 260px 1fr; gap: 3rem; align-items: center; }
+  .meet-img { aspect-ratio: 1 / 1; border-radius: 1.25rem; overflow: hidden; background: #480A23; }
+  .meet-img img { width: 100%; height: 100%; object-fit: contain; padding: 10%; }
+  .meet .lead { margin: .75rem 0 1.5rem; }
+  #como-funciona .more-link { margin-top: 2rem; }
+  @media (max-width: 767px) { .meet { grid-template-columns: 1fr; gap: 1.5rem; } .meet-img { max-width: 200px; } }
