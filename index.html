@@ -614,6 +614,11 @@
   }
   .first-side .pay-links { justify-content: flex-start; margin-top: 0; }
   .first-after { margin: 0 !important; font-size: 15px; color: var(--ink-soft); }
+  .hero-abroad { margin: -.5rem 0 1.25rem; }
+  .hero-abroad a { display: inline-flex; padding: .4rem .9rem; border-radius: 9999px; background: var(--sage-tint); color: #3A4B3F; font-size: 15px; font-weight: 600; text-decoration: none; }
+  .hero-abroad a:hover { background: rgba(93, 111, 98, .18); }
+  .skip { position: absolute; left: 16px; top: -60px; z-index: 100; padding: .7rem 1rem; border-radius: .5rem; background: var(--primary); color: #FFFFFF; text-decoration: none; }
+  .skip:focus { top: 12px; }
   .todo { background: #FFF3C4; padding: 0 .2em; border-radius: .2em; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -623,6 +628,7 @@
 
 <!-- Trechos marcados com a classe "todo" são dados a confirmar com a Vanessa. -->
 
+<a class="skip" href="#inicio">Pular para o conteúdo</a>
 <header class="site">
   <div class="wrap nav">
     <a href="#inicio" class="brand">
@@ -651,7 +657,7 @@
       <div>
         <span class="overline">Psicanálise online para TDAH, autismo, emoções intensas e relações difíceis</span>
         <h1>Talvez ninguém tenha escutado você <em>de verdade</em></h1>
-        <p class="lead">Se você passou a vida ouvindo que precisava se esforçar mais, sentir menos ou se encaixar, aqui pode falar no seu tempo, sem precisar se explicar. Atendo adolescentes, adultos e idosos, online, no Brasil e no exterior.</p>
+        <p class="lead">Se você passou a vida ouvindo que precisava se esforçar mais, sentir menos ou se encaixar, aqui pode falar no seu tempo, sem precisar se explicar. Psicanálise online, no Brasil e no exterior.</p>
         <div class="hero-actions">
           <a class="btn btn-primary btn-pill btn-lg js-wa" href="#contato">
             Agendar minha sessão inicial
@@ -659,6 +665,7 @@
           </a>
           <a class="btn btn-ghost btn-pill btn-lg" href="#reconhece">Ver os temas que acolho</a>
         </div>
+        <p class="hero-abroad"><a href="#como-funciona">Mora fora do Brasil? Atendo em português, no seu fuso horário.</a></p>
         <p class="micro">Sessão inicial de 50 minutos por R$ 150. Sem compromisso: depois dela, você decide se quer continuar. Você agenda pelo WhatsApp.</p>
       </div>
       <div class="hero-frame">
@@ -912,13 +919,10 @@
       <div class="others">
         <p class="also-title">Também acolho</p>
         <ul class="topic-chips">
-          <li>Ansiedade e angústia</li>
-          <li>Tristeza, vazio e desânimo</li>
           <li>Luto e perdas</li>
           <li>Relações que se repetem</li>
           <li>Conflitos na família</li>
           <li>Autoestima e mudanças de fase da vida</li>
-          <li>Traumas e situações difíceis do passado</li>
         </ul>
       </div>
       <div class="safety care-note"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><p>Aqui não fazemos diagnóstico. Quando for importante, indico profissionais de confiança para a avaliação e sigo com você durante todo o caminho. Se em algum momento você pensar em se machucar, ligue para o CVV no 188. É gratuito e funciona 24 horas.</p></div>
@@ -1184,6 +1188,18 @@
     mensalCartao: "[PREENCHER: link Stripe do plano mensal]",
     mensalPaypal: "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=vany.torriani%40gmail.com&item_name=Plano+mensal+de+psican%C3%A1lise+%284+sess%C3%B5es%29&amount=540.00&currency_code=BRL&no_shipping=1"
   };
+  // Medição: cole aqui o ID do Google Analytics (ex.: "G-XXXXXXX"). Vazio, nada é carregado.
+  var GA_ID = "";
+  if (GA_ID) {
+    var g = document.createElement("script"); g.async = true; g.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID; document.head.appendChild(g);
+    window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); };
+    gtag("js", new Date()); gtag("config", GA_ID);
+  }
+  function medir(nome, rotulo) { if (window.gtag) gtag("event", nome, { rotulo: rotulo }); }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest(".js-wa, [data-pay]");
+    if (a) medir(a.dataset.pay ? "clique_pagamento" : "clique_whatsapp", a.dataset.pay || a.textContent.trim().slice(0, 60));
+  });
   // Número da Vanessa (só dígitos, com 55 e DDD).
   var WHATSAPP = "5551993497223";
   var MSG = "Olá, Vanessa. Vi seu site e gostaria de agendar uma primeira conversa.";
