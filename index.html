@@ -555,6 +555,25 @@
   .between .between-quote { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--primary); }
   .between .between-note { font-size: 15px; margin: 0; }
   @media (max-width: 767px) { .between { flex-direction: column; padding: 1.5rem; } .between h3 { font-size: 23px; line-height: 31px; } }
+  /* Rodapé */
+  .site-foot { background: #480A23; color: #F3DCCB; padding: 0; border: 0; font-size: 16px; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 2.5rem; padding-top: 3.5rem; padding-bottom: 2.5rem; }
+  .foot-brand p { margin: 1rem 0 1.25rem; max-width: 34ch; color: #F3DCCB; }
+  .site-foot .foot-logo { width: 150px; border-radius: 0; }
+  .foot-cta { display: inline-flex; align-items: center; gap: .55rem; padding: .7rem 1.2rem; border-radius: 9999px; border: 1px solid #E2B877; color: #F6C77E; text-decoration: none; font-weight: 600; }
+  .foot-cta:hover { background: rgba(246, 199, 126, .12); }
+  .foot-cta svg, .foot-line svg { width: 18px; height: 18px; flex: none; }
+  .foot-col { display: flex; flex-direction: column; gap: .55rem; }
+  .foot-col h2 { font-family: var(--serif); font-size: 24px; line-height: 1.2; color: #FFFFFF; margin: 0 0 .6rem; }
+  .foot-col a { color: #F3DCCB; text-decoration: none; padding: .1rem 0; }
+  .foot-col a:hover { color: #F6C77E; text-decoration: underline; text-underline-offset: 4px; }
+  .foot-line { display: flex; gap: .6rem; align-items: flex-start; margin: 0 0 .6rem; }
+  .foot-line svg { margin-top: .25rem; color: #F6C77E; }
+  .foot-crisis { padding-top: 1.25rem; padding-bottom: 1.5rem; border-top: 1px solid rgba(243, 220, 203, .2); font-size: 15px; color: #E9C9B9; }
+  .foot-bar { background: #8E2A47; color: #FFFFFF; text-align: center; font-size: 15px; padding: .8rem 0; }
+  .site-foot :focus-visible { outline-color: #F6C77E; }
+  @media (max-width: 1000px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .foot-grid { grid-template-columns: 1fr; gap: 2rem; } }
   .todo { background: #FFF3C4; padding: 0 .2em; border-radius: .2em; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -1067,15 +1086,43 @@
 
 </main>
 
-<footer>
-  <div class="wrap">
-    <div class="foot">
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
       <img class="foot-logo" src="img/logo.jpg" alt="Vanessa Torriani, psicanálise clínica e sistêmica" width="520" height="510" loading="lazy">
-      <p>© <span id="ano">2026</span> Vanessa Torriani, psicanalista</p>
-      <p><a class="link-text" href="#inicio">Voltar ao topo</a></p>
+      <p>Psicanálise online para adolescentes, adultos e idosos. Um lugar para falar no seu tempo, sem julgamento.</p>
+      <a class="foot-cta js-wa" href="#contato"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.13.2-3.82-.8-3.24-1.27-5.3-4.57-5.46-4.78-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.64-.4.85-.4h.61c.2 0 .46-.07.72.55.27.64.9 2.2.98 2.36.08.16.13.35.03.56-.1.21-.16.34-.32.53-.16.19-.33.42-.48.56-.16.16-.32.33-.14.65.19.32.83 1.37 1.78 2.21 1.22 1.09 2.25 1.42 2.57 1.58.32.16.5.13.69-.08.19-.21.8-.93 1.01-1.25.21-.32.43-.27.72-.16.29.11 1.86.88 2.18 1.04.32.16.53.24.61.37.08.13.08.77-.16 1.45Z"/></svg>Agendar pelo WhatsApp</a>
     </div>
-    <p class="crisis">Este site não oferece atendimento de urgência. Em caso de crise ou risco à vida, ligue para o CVV no 188 (24 horas, gratuito) ou procure o SAMU (192) ou o pronto-socorro mais próximo.</p>
+    <nav class="foot-col" aria-label="Temas">
+      <h2>Temas</h2>
+      <a href="#reconhece" data-tab="tdah">TDAH</a>
+      <a href="#reconhece" data-tab="autismo">Autismo</a>
+      <a href="#reconhece" data-tab="ansiedade">Ansiedade e pânico</a>
+      <a href="#reconhece" data-tab="depressao">Depressão</a>
+      <a href="#reconhece" data-tab="borderline">Borderline</a>
+      <a href="#reconhece" data-tab="bipolar">Bipolaridade</a>
+      <a href="#reconhece" data-tab="burnout">Burnout</a>
+      <a href="#relacoes">Relacionamentos abusivos</a>
+      <a href="#idosos">Pessoas idosas</a>
+    </nav>
+    <nav class="foot-col" aria-label="Navegue">
+      <h2>Navegue</h2>
+      <a href="#inicio">Início</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#planos">Valores</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="foot-col">
+      <h2>Atendimento</h2>
+      <p class="foot-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span>Somente online, no Brasil e no exterior.</span></p>
+      <p class="foot-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Sessões de 50 minutos, com hora marcada. Respondo mensagens em até 48 horas.</span></p>
+      <p class="foot-line"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.13.2-3.82-.8-3.24-1.27-5.3-4.57-5.46-4.78-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.64-.4.85-.4h.61c.2 0 .46-.07.72.55.27.64.9 2.2.98 2.36.08.16.13.35.03.56-.1.21-.16.34-.32.53-.16.19-.33.42-.48.56-.16.16-.32.33-.14.65.19.32.83 1.37 1.78 2.21 1.22 1.09 2.25 1.42 2.57 1.58.32.16.5.13.69-.08.19-.21.8-.93 1.01-1.25.21-.32.43-.27.72-.16.29.11 1.86.88 2.18 1.04.32.16.53.24.61.37.08.13.08.77-.16 1.45Z"/></svg><span>(51) 99349-7223</span></p>
+    </div>
   </div>
+  <div class="foot-crisis wrap">Este site não oferece atendimento de urgência. Em caso de crise, ligue para o CVV no 188 (24 horas, gratuito) ou para o SAMU no 192.</div>
+  <div class="foot-bar"><div class="wrap">© <span id="ano">2026</span> Vanessa Torriani, psicanalista. Todos os direitos reservados.</div></div>
 </footer>
 
 <a class="wa-float js-wa" href="#" aria-label="Conversar pelo WhatsApp">
@@ -1109,6 +1156,9 @@
       document.getElementById(x.getAttribute("aria-controls")).hidden = !on;
     });
   }
+  document.querySelectorAll("[data-tab]").forEach(function (a) {
+    a.addEventListener("click", function () { var t = document.getElementById("tab-" + a.dataset.tab); if (t) selectTab(t); });
+  });
   tabs.forEach(function (t, i) {
     t.addEventListener("click", function () { selectTab(t); });
     t.addEventListener("keydown", function (e) {
