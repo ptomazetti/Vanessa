@@ -708,3 +708,41 @@
     .topic-card strong { font-size: 17px; line-height: 1.3; }
   }
   @media (max-width: 560px) { .topic-grid .topic-card:last-child:nth-child(odd) { grid-column: 1 / -1; } }
+  /* Páginas de temas, exterior e privacidade */
+  .crumb { text-decoration: none; }
+  .crumb:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .topic-page .panel { display: grid; }
+  .other-topics { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 2.5rem; align-items: center; }
+  .other-topics .also-title { width: 100%; margin: 0 0 .25rem; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--sage); }
+  .other-topics a { padding: .5rem 1rem; min-height: 40px; display: inline-flex; align-items: center; border: 1px solid var(--border); border-radius: 9999px; background: var(--surface); color: var(--ink); text-decoration: none; font-size: 15px; }
+  .other-topics a:hover { border-color: var(--primary); color: var(--primary); }
+  .topic-group { margin-bottom: 2rem; }
+  .topic-group .tab-group-label { margin-bottom: .75rem; }
+  .card-title { font-size: 24px; line-height: 32px; margin-bottom: 1rem; }
+  .two-cards .card .btn { margin-top: 1.25rem; }
+  .prose h2 { font-size: 24px; line-height: 32px; margin: 2rem 0 .6rem; }
+  .prose p { color: var(--ink-soft); }
+  .prose-date { margin-top: 2rem; font-size: 15px; }
+  .abroad-more { color: #FFFFFF; font-weight: 600; text-underline-offset: 3px; margin-left: .25rem; }
+  .foot-bar a { color: #FFFFFF; margin-left: .75rem; text-underline-offset: 3px; }
+  /* Efeitos simples */
+  .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .js .reveal.in { opacity: 1; transform: none; }
+  .hero h1, .page-head h1 { animation: subir .7s ease both; }
+  .hero .lead, .page-head .lead { animation: subir .7s .12s ease both; }
+  .hero-frame { animation: aparecer 1s .15s ease both; }
+  @keyframes subir { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  @keyframes aparecer { from { opacity: 0; } to { opacity: 1; } }
+  .drawer:not([hidden]) { animation: deslizar .32s cubic-bezier(.2, .8, .2, 1) both; }
+  .drawer-backdrop:not([hidden]) { animation: aparecer .3s ease both; }
+  @keyframes deslizar { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+  .pay-dialog[open] { animation: subir .28s ease both; }
+  .btn-primary { transition: background .2s ease, transform .2s ease, box-shadow .2s ease; }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 18px -10px rgba(112, 65, 47, .6); }
+  .card, .topic-card { transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease; }
+  .faq details[open] p, details.science[open] .science-body { animation: aparecer .35s ease both; }
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal { opacity: 1; transform: none; transition: none; }
+    .hero h1, .page-head h1, .hero .lead, .page-head .lead, .hero-frame, .drawer, .pay-dialog[open] { animation: none !important; }
+    .btn-primary:hover { transform: none; }
+  }

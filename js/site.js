@@ -99,3 +99,14 @@
     });
     dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
   }
+  // Efeitos simples: blocos abaixo da dobra aparecem ao rolar
+  (function () {
+    if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var alvos = document.querySelectorAll(".section-head, .card, .topic-card, .steps > li, .abroad, .final-band h2, .other-topics, .faq details");
+    var io = new IntersectionObserver(function (itens) {
+      itens.forEach(function (it) { if (it.isIntersecting) { it.target.classList.add("in"); io.unobserve(it.target); } });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    alvos.forEach(function (el, i) {
+      if (el.getBoundingClientRect().top > innerHeight) { el.classList.add("reveal"); el.style.transitionDelay = (i % 3) * 70 + "ms"; io.observe(el); }
+    });
+  })();

@@ -9,13 +9,14 @@
 <meta name="theme-color" content="#480A23">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Vanessa Torriani, psicanalista">
-<meta property="og:description" content="Psicanálise online para TDAH, autismo e emoções intensas. Um lugar para falar no seu tempo, sem julgamento.">
-<meta property="og:image" content="https://ptomazetti.github.io/Vanessa/img/logo.jpg">
+<meta property="og:title" content="Temas | Vanessa Torriani, psicanalista">
+<meta property="og:description" content="TDAH, autismo, borderline, bipolaridade, ansiedade, depressão, burnout, relações abusivas e envelhecimento: como a psicanálise pode ajudar.">
+<meta property="og:image" content="https://ptomazetti.github.io/Vanessa/img/og.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 
@@ -43,18 +44,19 @@
       <li><a href="sobre.html">Sobre</a></li>
       <li><a href="temas.html" aria-current="page">Temas</a>
         <ul class="drawer-sub">
-          <li><a href="temas.html#tdah">TDAH</a></li>
-          <li><a href="temas.html#autismo">Autismo</a></li>
-          <li><a href="temas.html#borderline">Emoções intensas (borderline)</a></li>
-          <li><a href="temas.html#bipolar">Altos e baixos do humor (bipolaridade)</a></li>
-          <li><a href="temas.html#ansiedade">Ansiedade e pânico</a></li>
-          <li><a href="temas.html#depressao">Depressão</a></li>
-          <li><a href="temas.html#burnout">Burnout</a></li>
-          <li><a href="temas.html#relacoes">Relações abusivas e narcisismo</a></li>
-          <li><a href="temas.html#idosos">Pessoas idosas e famílias</a></li>
+          <li><a href="tdah.html">TDAH</a></li>
+          <li><a href="autismo.html">Autismo</a></li>
+          <li><a href="borderline.html">Emoções intensas (borderline)</a></li>
+          <li><a href="bipolaridade.html">Altos e baixos do humor (bipolaridade)</a></li>
+          <li><a href="ansiedade.html">Ansiedade e pânico</a></li>
+          <li><a href="depressao.html">Depressão</a></li>
+          <li><a href="burnout.html">Burnout</a></li>
+          <li><a href="relacionamentos-abusivos.html">Relações abusivas e narcisismo</a></li>
+          <li><a href="pessoas-idosas.html">Pessoas idosas e famílias</a></li>
         </ul>
       </li>
       <li><a href="servicos.html">Serviços e valores</a></li>
+      <li><a href="brasileiros-no-exterior.html">Brasileiros no exterior</a></li>
       <li><a href="duvidas.html">Dúvidas</a></li>
   </ul>
   <a data-book="inicial" class="js-book btn btn-primary" href="servicos.html">Agendar sessão inicial</a>
@@ -69,253 +71,36 @@
       <p class="lead">Escolha um tema e leia com calma. Não é um teste e não existe resposta certa. Se algo fizer sentido para você, a gente conversa.</p>
     </div>
   </div>
-  <section id="reconhece">
+  <section class="topic-hub">
     <div class="wrap">
-      <div class="tab-groups">
-        <div class="tab-group">
-          <span class="tab-group-label">Neurodivergência e humor</span>
-          <div class="tabs" role="tablist" aria-label="Neurodivergência e humor">
-            <button class="tab" role="tab" id="tab-tdah" aria-controls="painel-tdah" aria-selected="true">TDAH</button>
-            <button class="tab" role="tab" id="tab-autismo" aria-controls="painel-autismo" aria-selected="false" tabindex="-1">Autismo</button>
-            <button class="tab" role="tab" id="tab-borderline" aria-controls="painel-borderline" aria-selected="false" tabindex="-1">Emoções intensas (borderline)</button>
-            <button class="tab" role="tab" id="tab-bipolar" aria-controls="painel-bipolar" aria-selected="false" tabindex="-1">Altos e baixos do humor (bipolaridade)</button>
-          </div>
-        </div>
-        <div class="tab-group">
-          <span class="tab-group-label">Emoções</span>
-          <div class="tabs" role="tablist" aria-label="Emoções">
-            <button class="tab" role="tab" id="tab-ansiedade" aria-controls="painel-ansiedade" aria-selected="false" tabindex="-1">Ansiedade e pânico</button>
-            <button class="tab" role="tab" id="tab-depressao" aria-controls="painel-depressao" aria-selected="false" tabindex="-1">Depressão</button>
-            <button class="tab" role="tab" id="tab-burnout" aria-controls="painel-burnout" aria-selected="false" tabindex="-1">Burnout</button>
-          </div>
-        </div>
-        <div class="tab-group">
-          <span class="tab-group-label">Relações</span>
-          <div class="tabs" role="tablist" aria-label="Relações">
-            <button class="tab" role="tab" id="tab-relacoes" aria-controls="painel-relacoes" aria-selected="false" tabindex="-1">Relacionamentos abusivos e narcisismo</button>
-          </div>
-        </div>
-        <div class="tab-group">
-          <span class="tab-group-label">Fases da vida</span>
-          <div class="tabs" role="tablist" aria-label="Fases da vida">
-            <button class="tab" role="tab" id="tab-idosos" aria-controls="painel-idosos" aria-selected="false" tabindex="-1">Pessoas idosas e famílias</button>
-          </div>
+      <div class="topic-group">
+        <p class="tab-group-label">Neurodivergência e humor</p>
+        <div class="topic-grid">
+          <a class="topic-card" href="tdah.html"><strong>TDAH</strong>Cabeça acelerada e foco que escapa.</a>
+          <a class="topic-card" href="autismo.html"><strong>Autismo</strong>O cansaço de se adaptar o tempo todo.</a>
+          <a class="topic-card" href="borderline.html"><strong>Emoções intensas (borderline)</strong>Tudo chega forte e muda rápido.</a>
+          <a class="topic-card" href="bipolaridade.html"><strong>Altos e baixos do humor (bipolaridade)</strong>Quando o humor muda de fase sem pedir licença.</a>
         </div>
       </div>
-      <div class="panel card" role="tabpanel" id="painel-tdah" aria-labelledby="tab-tdah">
-        <div>
-          <h3>Talvez você já tenha sentido algo assim</h3>
-          <ul class="signs">
-            <li>A cabeça parece ter várias abas abertas ao mesmo tempo.</li>
-            <li>Você começa com vontade e, no meio do caminho, perde o fio.</li>
-            <li>Prazos e compromissos escapam, mesmo quando você se esforça.</li>
-          </ul>
+      <div class="topic-group">
+        <p class="tab-group-label">Emoções</p>
+        <div class="topic-grid">
+          <a class="topic-card" href="ansiedade.html"><strong>Ansiedade e pânico</strong>Quando a preocupação não desliga.</a>
+          <a class="topic-card" href="depressao.html"><strong>Depressão</strong>Quando tudo perde a graça.</a>
+          <a class="topic-card" href="burnout.html"><strong>Burnout</strong>Quando o trabalho tomou conta de tudo.</a>
         </div>
-        <div>
-          <h3>Como posso acompanhar você</h3>
-          <p>Muita gente com TDAH passou anos se culpando. Na análise, você olha para a sua história com mais gentileza, entende o seu jeito de funcionar e encontra formas de viver bem com ele. Se fizer sentido, indico profissionais para a avaliação e sigo com você.</p>
-          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema TDAH. Gostaria de conversar." href="servicos.html#contato">Quero conversar sobre isso</a>
-        </div>
-        <details class="science panel-full">
-          <summary><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>O que diz a ciência</summary>
-          <div class="science-body">
-            <p>O NIMH, instituto de saúde mental dos Estados Unidos, define o TDAH como um transtorno do neurodesenvolvimento, com um padrão persistente de desatenção, hiperatividade e/ou impulsividade. Ele começa na infância e, em muitas pessoas, continua na vida adulta, afetando trabalho, estudos e relações. Existem tratamentos eficazes para os sintomas.</p>
-            <p class="science-src">Fonte: <a href="https://www.nimh.nih.gov/health/publications/adhd-what-you-need-to-know" target="_blank" rel="noopener">NIMH: ADHD, what you need to know</a></p>
-          </div>
-        </details>
       </div>
-      <div class="panel card" role="tabpanel" id="painel-autismo" aria-labelledby="tab-autismo" hidden>
-        <div>
-          <h3>Talvez você já tenha sentido algo assim</h3>
-          <ul class="signs">
-            <li>Estar com muitas pessoas cansa, mesmo quando você gosta delas.</li>
-            <li>Sons, luzes ou texturas incomodam mais do que parecem incomodar os outros.</li>
-            <li>Mudanças inesperadas tiram você do eixo.</li>
-          </ul>
+      <div class="topic-group">
+        <p class="tab-group-label">Relações</p>
+        <div class="topic-grid">
+          <a class="topic-card" href="relacionamentos-abusivos.html"><strong>Relações abusivas e narcisismo</strong>Quando o amor virou medo.</a>
         </div>
-        <div>
-          <h3>Como posso acompanhar você</h3>
-          <p>Muitos adultos autistas aprenderam a disfarçar o próprio jeito e chegam exaustos. Aqui você não precisa fingir. A análise abre espaço para entender o seu modo de sentir o mundo e cuidar do cansaço de se adaptar o tempo todo.</p>
-          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema autismo. Gostaria de conversar." href="servicos.html#contato">Quero conversar sobre isso</a>
-        </div>
-        <details class="science panel-full">
-          <summary><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>O que diz a ciência</summary>
-          <div class="science-body">
-            <p>Segundo a Organização Mundial da Saúde, o autismo é uma condição do neurodesenvolvimento que envolve diferenças na comunicação e na interação social e interesses ou comportamentos mais restritos e repetitivos. Em 2021, cerca de 1 em cada 127 pessoas no mundo era autista. Muitas recebem o diagnóstico só bem mais tarde, já adultas.</p>
-            <p class="science-src">Fonte: <a href="https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders" target="_blank" rel="noopener">OMS: Autism</a></p>
-          </div>
-        </details>
       </div>
-      <div class="panel card" role="tabpanel" id="painel-borderline" aria-labelledby="tab-borderline" hidden>
-        <div>
-          <h3>Talvez você já tenha sentido algo assim</h3>
-          <ul class="signs">
-            <li>O que você sente chega muito forte e muda rápido.</li>
-            <li>O medo de perder quem você ama aperta o peito.</li>
-            <li>Nas relações, você oscila entre muito perto e muito longe.</li>
-          </ul>
+      <div class="topic-group">
+        <p class="tab-group-label">Fases da vida</p>
+        <div class="topic-grid">
+          <a class="topic-card" href="pessoas-idosas.html"><strong>Pessoas idosas e famílias</strong>Escuta para envelhecer com cuidado.</a>
         </div>
-        <div>
-          <h3>Como posso acompanhar você</h3>
-          <p>Sentir com intensidade não é defeito. A análise oferece um vínculo estável, com horário fixo e combinados claros, para você entender e acolher o que sente. Muitas vezes esse cuidado anda junto com um psiquiatra, e eu caminho ao lado.</p>
-          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema borderline. Gostaria de conversar." href="servicos.html#contato">Quero conversar sobre isso</a>
-        </div>
-        <details class="science panel-full">
-          <summary><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>O que diz a ciência</summary>
-          <div class="science-body">
-            <p>O transtorno de personalidade borderline é marcado por instabilidade persistente no humor, nas relações, na autoimagem e no comportamento. Uma revisão publicada no JAMA em 2023 estima que ele afete de 0,7% a 2,7% dos adultos nos Estados Unidos e aponta a psicoterapia, incluindo a terapia psicodinâmica, como tratamento de escolha.</p>
-            <p class="science-src">Fonte: <a href="https://pubmed.ncbi.nlm.nih.gov/36853245/" target="_blank" rel="noopener">JAMA, 2023: Borderline Personality Disorder, a review</a></p>
-          </div>
-        </details>
-      </div>
-      <div class="panel card" role="tabpanel" id="painel-bipolar" aria-labelledby="tab-bipolar" hidden>
-        <div>
-          <h3>Talvez você já tenha sentido algo assim</h3>
-          <ul class="signs">
-            <li>Há fases de muita energia, ideias rápidas e pouco sono.</li>
-            <li>Depois vêm períodos de cansaço e tristeza profunda.</li>
-            <li>Em alguns momentos, você toma decisões que depois não reconhece como suas.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Como posso acompanhar você</h3>
-          <p>O tratamento da bipolaridade inclui acompanhamento psiquiátrico, e a análise caminha junto. Nela, você aprende a perceber os sinais de cada fase, cuidar das suas relações e construir uma rotina que proteja o seu bem-estar.</p>
-          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema bipolaridade. Gostaria de conversar." href="servicos.html#contato">Quero conversar sobre isso</a>
-        </div>
-        <details class="science panel-full">
-          <summary><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>O que diz a ciência</summary>
-          <div class="science-body">
-            <p>A OMS descreve o transtorno bipolar como uma condição que afeta o humor, a energia, a atividade e o pensamento, com episódios de mania ou hipomania e episódios de depressão. Cerca de 1 em cada 200 pessoas no mundo vive com bipolaridade, segundo dados de 2021.</p>
-            <p class="science-src">Fonte: <a href="https://www.who.int/news-room/fact-sheets/detail/bipolar-disorder" target="_blank" rel="noopener">OMS: Bipolar disorder</a></p>
-          </div>
-        </details>
-      </div>
-      <div class="panel card" role="tabpanel" id="painel-ansiedade" aria-labelledby="tab-ansiedade" hidden>
-        <div>
-          <h3>Talvez você já tenha sentido algo assim</h3>
-          <ul class="signs">
-            <li>A preocupação não desliga, nem na hora de dormir.</li>
-            <li>O coração acelera e o ar parece faltar, sem motivo aparente.</li>
-            <li>Você evita lugares ou situações com medo de passar mal.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Como posso acompanhar você</h3>
-          <p>A ansiedade costuma falar de algo que ainda não encontrou palavras. Na análise, você descobre de onde vem esse alarme e, aos poucos, o corpo e a mente encontram mais calma.</p>
-          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema ansiedade e pânico. Gostaria de conversar." href="servicos.html#contato">Quero conversar sobre isso</a>
-        </div>
-        <details class="science panel-full">
-          <summary><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>O que diz a ciência</summary>
-          <div class="science-body">
-            <p>Segundo a OMS, cerca de 4,4% da população mundial vive com um transtorno de ansiedade. Em 2021, eram 359 milhões de pessoas. Só cerca de 1 em cada 4 pessoas que precisam de cuidado recebe algum tratamento.</p>
-            <p class="science-src">Fonte: <a href="https://www.who.int/news-room/fact-sheets/detail/anxiety-disorders" target="_blank" rel="noopener">OMS: Anxiety disorders</a></p>
-          </div>
-        </details>
-      </div>
-      <div class="panel card" role="tabpanel" id="painel-depressao" aria-labelledby="tab-depressao" hidden>
-        <div>
-          <h3>Talvez você já tenha sentido algo assim</h3>
-          <ul class="signs">
-            <li>Coisas que antes davam prazer perderam a graça.</li>
-            <li>Levantar da cama ou responder uma mensagem custa muito.</li>
-            <li>Há um cansaço que o descanso não resolve.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Como posso acompanhar você</h3>
-          <p>Ninguém precisa atravessar isso sem companhia. A análise é um lugar para colocar em palavras o que pesa, no seu tempo. Quando for importante, indico avaliação psiquiátrica e sigo ao seu lado.</p>
-          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema depressão. Gostaria de conversar." href="servicos.html#contato">Quero conversar sobre isso</a>
-        </div>
-        <details class="science panel-full">
-          <summary><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>O que diz a ciência</summary>
-          <div class="science-body">
-            <p>A OMS estima que cerca de 5,7% dos adultos no mundo vivam com depressão, e ela é mais comum entre as mulheres. A depressão é diferente da tristeza do dia a dia: dura semanas e afeta várias áreas da vida, como o sono, a energia, o trabalho e as relações.</p>
-            <p class="science-src">Fonte: <a href="https://www.who.int/news-room/fact-sheets/detail/depression" target="_blank" rel="noopener">OMS: Depressive disorder</a></p>
-          </div>
-        </details>
-      </div>
-      <div class="panel card" role="tabpanel" id="painel-burnout" aria-labelledby="tab-burnout" hidden>
-        <div>
-          <h3>Talvez você já tenha sentido algo assim</h3>
-          <ul class="signs">
-            <li>O trabalho ocupa a cabeça mesmo nos dias de folga.</li>
-            <li>O cansaço já está lá quando você acorda.</li>
-            <li>Pequenas tarefas viraram montanhas.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Como posso acompanhar você</h3>
-          <p>Esgotamento não é falta de força. Na análise, você entende o que trouxe você até aqui, revê o lugar do trabalho na sua vida e reaprende a cuidar de si.</p>
-          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e me identifiquei com o tema burnout. Gostaria de conversar." href="servicos.html#contato">Quero conversar sobre isso</a>
-        </div>
-        <details class="science panel-full">
-          <summary><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>O que diz a ciência</summary>
-          <div class="science-body">
-            <p>Na CID-11, a classificação internacional da OMS, o burnout é um fenômeno ocupacional, e não uma doença. É uma síndrome causada por estresse crônico no trabalho que não foi bem administrado, com três marcas: exaustão, distanciamento mental ou cinismo em relação ao trabalho e sensação de menor eficácia profissional.</p>
-            <p class="science-src">Fonte: <a href="https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases" target="_blank" rel="noopener">OMS: Burn-out, an occupational phenomenon</a></p>
-          </div>
-        </details>
-      </div>
-      <div class="panel card panel-wide" role="tabpanel" id="painel-relacoes" aria-labelledby="tab-relacoes" hidden>
-        <div class="panel-intro">
-          <h3>Se o amor virou medo, você merece sair com segurança</h3>
-          <p>O abuso costuma começar aos poucos e confunde quem está dentro dele. Você não tem culpa, e não precisa decidir nada sozinha nem sozinho.</p>
-          <ul class="topic-chips" aria-label="Temas que acolho nesta área">
-        <li>Relação com pessoas narcisistas</li>
-        <li>Mãe ou pai narcisista</li>
-        <li>Abuso psicológico e manipulação</li>
-        <li>Codependência</li>
-        <li>Ciúme possessivo</li>
-        <li>Dependência emocional</li>
-      </ul>
-        </div>
-        <div>
-          <h3>Alguns sinais</h3>
-          <ul class="signs"><li>A pessoa controla seu celular, seu dinheiro, suas roupas ou com quem você fala.</li><li>Você foi se afastando de amigos e da família.</li><li>Há humilhações, críticas ou ameaças, seguidas de pedidos de desculpa.</li><li>Você passou a duvidar da sua memória e do que sente. Isso também se chama gaslighting.</li></ul>
-        </div>
-        <div>
-          <h3>Como a análise ajuda a sair</h3>
-          <ul class="signs"><li>Entender por que é tão difícil ir embora, sem culpa e sem pressa.</li><li>Reconstruir a autoestima e a confiança no que você sente.</li><li>Fortalecer a sua rede de apoio.</li></ul>
-          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Vi seu site e gostaria de conversar sobre um relacionamento difícil." href="servicos.html#contato">Conversar com sigilo</a>
-        </div>
-        <div class="safety panel-full">
-          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
-        <p>Se você está em perigo agora, ligue 190. Mulheres podem ligar para o 180, a Central de Atendimento à Mulher, gratuita e 24 horas. Violência contra pessoas idosas pode ser denunciada no Disque 100.</p>
-        </div>
-        <details class="science panel-full">
-          <summary><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>O que diz a ciência</summary>
-          <div class="science-body">
-            <p>O DSM-5, manual de diagnósticos da psiquiatria, descreve o transtorno de personalidade narcisista como um padrão duradouro de grandiosidade, necessidade de admiração e falta de empatia. Expressões como "mãe narcisista" não são diagnósticos, mas ajudam a nomear relações marcadas por esses traços. A OMS inclui o abuso psicológico e o comportamento controlador na definição de violência entre parceiros.</p>
-            <p class="science-src">Fonte: <a href="https://www.ncbi.nlm.nih.gov/books/NBK556001/" target="_blank" rel="noopener">StatPearls (NCBI): Narcissistic Personality Disorder</a> e <a href="https://www.who.int/news-room/fact-sheets/detail/violence-against-women" target="_blank" rel="noopener">OMS: Violence against women</a></p>
-          </div>
-        </details>
-      </div>
-      <div class="panel card" role="tabpanel" id="painel-idosos" aria-labelledby="tab-idosos" hidden>
-        <div>
-          <h3>Envelhecer também merece escuta</h3>
-          <p>Tenho formação em gerontologia, que é o cuidado com o envelhecimento. Acolho pessoas idosas e suas famílias num tempo de muitas mudanças.</p>
-          <ul class="signs">
-          <li>Solidão e saudade</li>
-          <li>Luto de pessoas queridas</li>
-          <li>Aposentadoria e a busca de um novo sentido</li>
-          <li>Mudanças no corpo, na saúde e na memória</li>
-          <li>Relação com filhos e netos</li>
-          <li>Medo do futuro e da finitude</li>
-        </ul>
-        </div>
-        <div>
-          <h3>Online, sem complicação</h3>
-          <p>Se a tecnologia for uma barreira, alguém da família pode ajudar a abrir a chamada nas primeiras vezes. Depois, o espaço é só seu, com o mesmo sigilo.</p>
-          <p>Familiares também podem me procurar para entender como apoiar quem amam.</p>
-          <a class="btn btn-primary btn-pill js-wa" data-msg="Olá, Vanessa. Gostaria de agendar uma sessão para mim ou para um familiar idoso." href="servicos.html#contato">Agendar para mim ou para um familiar</a>
-        </div>
-        <details class="science panel-full">
-          <summary><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5ZM8 7.5h8M8 11h6"/></svg></span>O que diz a ciência</summary>
-          <div class="science-body">
-            <p>Segundo a OMS, cerca de 14% dos adultos com 70 anos ou mais vivem com um transtorno mental, mais comumente ansiedade ou depressão. Envelhecer traz perdas e mudanças reais, e cuidar da saúde emocional nessa fase faz parte de envelhecer bem.</p>
-            <p class="science-src">Fonte: <a href="https://www.who.int/news-room/fact-sheets/detail/mental-health-of-older-adults" target="_blank" rel="noopener">OMS: Mental health of older adults</a></p>
-          </div>
-        </details>
       </div>
       <div class="safety care-note"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><p>Aqui não fazemos diagnóstico. Quando for importante, indico profissionais de confiança para a avaliação e sigo com você durante todo o caminho. Se em algum momento você pensar em se machucar, ligue para o CVV no 188. É gratuito e funciona 24 horas.</p></div>
     </div>
@@ -332,24 +117,24 @@
     <nav class="foot-col" aria-label="Temas">
       <h2>Temas</h2>
       <a href="index.html">Psicanálise online</a>
-      <a href="temas.html#tdah">TDAH</a>
-      <a href="temas.html#autismo">Autismo</a>
-      <a href="temas.html#ansiedade">Ansiedade e pânico</a>
-      <a href="temas.html#depressao">Depressão</a>
-      <a href="temas.html#borderline">Emoções intensas (borderline)</a>
-      <a href="temas.html#bipolar">Altos e baixos do humor (bipolaridade)</a>
-      <a href="temas.html#burnout">Burnout</a>
-      <a href="temas.html#idosos">Pessoas idosas</a>
+      <a href="tdah.html">TDAH</a>
+      <a href="autismo.html">Autismo</a>
+      <a href="ansiedade.html">Ansiedade e pânico</a>
+      <a href="depressao.html">Depressão</a>
+      <a href="borderline.html">Emoções intensas (borderline)</a>
+      <a href="bipolaridade.html">Altos e baixos do humor (bipolaridade)</a>
+      <a href="burnout.html">Burnout</a>
+      <a href="pessoas-idosas.html">Pessoas idosas</a>
     </nav>
     <nav class="foot-col" aria-label="Relações">
       <h2>Relações</h2>
-      <a href="temas.html#relacoes">Relacionamento abusivo</a>
-      <a href="temas.html#relacoes">Mãe narcisista</a>
-      <a href="temas.html#relacoes">Narcisismo</a>
-      <a href="temas.html#relacoes">Codependência</a>
-      <a href="temas.html#relacoes">Ciúme possessivo</a>
-      <a href="temas.html#relacoes">Abuso psicológico</a>
-      <a href="temas.html#relacoes">Dependência emocional</a>
+      <a href="relacionamentos-abusivos.html">Relacionamento abusivo</a>
+      <a href="relacionamentos-abusivos.html">Mãe narcisista</a>
+      <a href="relacionamentos-abusivos.html">Narcisismo</a>
+      <a href="relacionamentos-abusivos.html">Codependência</a>
+      <a href="relacionamentos-abusivos.html">Ciúme possessivo</a>
+      <a href="relacionamentos-abusivos.html">Abuso psicológico</a>
+      <a href="relacionamentos-abusivos.html">Dependência emocional</a>
     </nav>
     <nav class="foot-col" aria-label="Navegue">
       <h2>Navegue</h2>
@@ -358,6 +143,7 @@
       <a href="temas.html">Temas</a>
       <a href="servicos.html">Serviços e valores</a>
       <a href="servicos.html#familias">Casais e famílias</a>
+      <a href="brasileiros-no-exterior.html">No exterior</a>
       <a href="duvidas.html">Dúvidas</a>
       <a href="servicos.html#contato">Contato</a>
     </nav>
@@ -369,7 +155,7 @@
     </div>
   </div>
   <div class="foot-crisis wrap">Este site não oferece atendimento de urgência. Em caso de crise, ligue para o CVV no 188 (24 horas, gratuito) ou para o SAMU no 192.</div>
-  <div class="foot-bar"><div class="wrap">© <span id="ano">2026</span> Vanessa Torriani, psicanalista. Todos os direitos reservados.</div></div>
+  <div class="foot-bar"><div class="wrap">© <span id="ano">2026</span> Vanessa Torriani, psicanalista. Todos os direitos reservados. <a href="privacidade.html">Política de privacidade</a></div></div>
 </footer>
 
 <a data-book="inicial" class="js-book mobile-cta" href="servicos.html#contato"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.13.2-3.82-.8-3.24-1.27-5.3-4.57-5.46-4.78-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.64-.4.85-.4h.61c.2 0 .46-.07.72.55.27.64.9 2.2.98 2.36.08.16.13.35.03.56-.1.21-.16.34-.32.53-.16.19-.33.42-.48.56-.16.16-.32.33-.14.65.19.32.83 1.37 1.78 2.21 1.22 1.09 2.25 1.42 2.57 1.58.32.16.5.13.69-.08.19-.21.8-.93 1.01-1.25.21-.32.43-.27.72-.16.29.11 1.86.88 2.18 1.04.32.16.53.24.61.37.08.13.08.77-.16 1.45Z"/></svg><span>Agendar sessão inicial <small>R$ 150, 50 min</small></span></a>
