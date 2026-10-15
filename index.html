@@ -358,6 +358,12 @@
   .signs li { padding: .7rem 0 .7rem 1.6rem; border-bottom: 1px solid var(--border); position: relative; }
   .signs li::before { content: "?"; position: absolute; left: 0; top: .7rem; font-family: var(--serif); font-style: italic; color: var(--primary); }
   @media (max-width: 767px) { .panel { grid-template-columns: 1fr; gap: 1.5rem; } .tab { padding: .7rem 1.1rem; font-size: 14px; } }
+  .story {
+    margin: -1rem 0 2.5rem; max-width: 62ch; padding: 1.25rem 1.5rem;
+    background: var(--surface); border: 1px solid var(--border); border-left: 2px solid var(--sage); border-radius: 1.25rem;
+    font-family: var(--serif); font-size: 20px; line-height: 32px; color: var(--ink);
+  }
+  @media (max-width: 767px) { .story { font-size: 18px; line-height: 28px; } }
   .todo { background: #FFF3C4; padding: 0 .2em; border-radius: .2em; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -471,6 +477,7 @@
         <h2>Desconfia que pode ter TDAH, autismo ou outra condição?</h2>
         <p class="lead">Escolha um tema e veja se algo faz sentido para você. Não é um teste nem um diagnóstico: é um primeiro passo para conversar.</p>
       </div>
+      <p class="story">Já acompanhei muitas pessoas que chegaram com essas mesmas dúvidas. Elas se reconheceram, entenderam a própria história e aprenderam a usar a seu favor aquilo que antes só atrapalhava. A dificuldade continuou fazendo parte delas, mas virou também uma força.</p>
       <div class="tabs" role="tablist" aria-label="Temas">
         <button class="tab" role="tab" id="tab-tdah" aria-controls="painel-tdah" aria-selected="true">TDAH</button>
         <button class="tab" role="tab" id="tab-autismo" aria-controls="painel-autismo" aria-selected="false" tabindex="-1">Autismo</button>
