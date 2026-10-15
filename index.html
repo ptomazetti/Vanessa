@@ -64,7 +64,7 @@
   .overline {
     font-size: 13px; line-height: 18px; font-weight: 600;
     letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--sage); margin-bottom: 1rem; display: block;
+    color: var(--primary); margin-bottom: 1rem; display: block;
   }
 
   /* Buttons */
@@ -125,7 +125,7 @@
     .nav .btn { display: none; }
   }
 
-  section { padding: 5rem 0; }
+  section { padding: 5rem 0; scroll-margin-top: 84px; }
   @media (max-width: 767px) { section { padding: 3.5rem 0; } }
   .section-head { margin-bottom: 2.5rem; }
   .section-head p { margin-top: 1rem; }
@@ -252,6 +252,49 @@
   .wa-float:hover { background: var(--primary-hover); }
   .wa-float svg { width: 26px; height: 26px; }
 
+  /* Ajustes inspirados na referência */
+  .brand { display: flex; align-items: center; gap: .75rem; line-height: 1.1; }
+  .mark {
+    width: 44px; height: 44px; border-radius: 9999px; flex: none;
+    display: grid; place-items: center;
+    background: radial-gradient(circle at 35% 30%, #F2E0CD, #D5C4B2 70%);
+    color: var(--primary); font-family: var(--serif); font-style: italic; font-size: 24px;
+    border: 1px solid var(--border);
+  }
+  .brand small { margin-top: 3px; }
+  .overline.terra { color: var(--primary); }
+  .btn-pill { border-radius: 9999px; }
+  .btn-lg { padding: 1.1rem 2.1rem; font-size: 16px; }
+  .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--sand); }
+  .btn-ghost:hover { background: var(--sage-wash); }
+  .nav { height: 84px; }
+  @media (max-width: 900px) { .nav ul { top: 84px; } }
+  .hero h1 { font-size: 64px; line-height: 74px; }
+  .hero .lead { max-width: 56ch; }
+  @media (max-width: 767px) { .hero h1 { font-size: 38px; line-height: 46px; } }
+  .hero-frame { position: relative; padding: 1rem 1rem 0 2.5rem; }
+  .hero-frame::before {
+    content: ""; position: absolute; inset: 0 0 -1rem 0;
+    background: var(--sand-tint); border: 1px solid var(--border);
+    border-radius: 2rem; transform: rotate(-2.5deg); z-index: 0;
+  }
+  .hero-frame .portrait { position: relative; z-index: 1; border-radius: 1.75rem; aspect-ratio: 4 / 5;
+    background: linear-gradient(170deg, #F2E0CD 0%, #E3B98F 45%, #8C5845 120%); }
+  @media (max-width: 900px) { .hero-frame { max-width: 440px; padding: .75rem .75rem 0 1.5rem; } }
+  .wa-float { background: #25D366; width: 60px; height: 60px; }
+  .wa-float:hover { background: #1EBE5A; }
+  .wa-float svg { width: 30px; height: 30px; }
+
+  .about-grid { align-items: center; }
+  .about-photo { aspect-ratio: 4 / 5 !important; border-radius: 1.75rem; }
+  #sobre strong { color: var(--ink); font-weight: 600; }
+  .accent { color: var(--primary); }
+  .badge {
+    display: inline-flex; align-items: center; gap: .6rem; margin-top: 1rem;
+    padding: .7rem 1.25rem; border: 1px solid var(--border); border-radius: 9999px;
+    background: var(--surface); font-size: 15px; color: var(--ink-soft);
+  }
+  .badge svg { width: 18px; height: 18px; color: var(--sage); flex: none; }
   .todo { background: #FFF3C4; padding: 0 .2em; border-radius: .2em; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -263,18 +306,24 @@
 
 <header class="site">
   <div class="wrap nav">
-    <a href="#inicio" class="brand">Vanessa <span class="todo">Sobrenome</span><small>Psicanalista</small></a>
+    <a href="#inicio" class="brand">
+      <span class="mark" aria-hidden="true">V</span>
+      <span>Vanessa <span class="todo">Sobrenome</span><small>Psicanalista</small></span>
+    </a>
     <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <ul id="menu">
       <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#psicanalise">A psicanálise</a></li>
-      <li><a href="#atendimento">Atendimento</a></li>
-      <li><a href="#duvidas">Dúvidas</a></li>
-      <li><a href="#contato">Contato</a></li>
+      <li><a href="#para-quem">Para quem é</a></li>
+      <li><a href="#modalidades">Modalidades</a></li>
+      <li><a href="#abordagem">Abordagem</a></li>
+      <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a class="btn btn-primary js-wa" href="#contato">Agendar conversa</a>
+    <a class="btn btn-primary btn-pill js-wa" href="#contato">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.13.2-3.82-.8-3.24-1.27-5.3-4.57-5.46-4.78-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.64-.4.85-.4h.61c.2 0 .46-.07.72.55.27.64.9 2.2.98 2.36.08.16.13.35.03.56-.1.21-.16.34-.32.53-.16.19-.33.42-.48.56-.16.16-.32.33-.14.65.19.32.83 1.37 1.78 2.21 1.22 1.09 2.25 1.42 2.57 1.58.32.16.5.13.69-.08.19-.21.8-.93 1.01-1.25.21-.32.43-.27.72-.16.29.11 1.86.88 2.18 1.04.32.16.53.24.61.37.08.13.08.77-.16 1.45Z"/></svg>
+      WhatsApp
+    </a>
   </div>
 </header>
 
@@ -283,24 +332,21 @@
   <section class="hero" id="inicio">
     <div class="wrap hero-grid">
       <div>
-        <span class="overline">Psicanálise para adultos · presencial e online</span>
-        <h1>Um lugar para falar do que <em>pesa</em>, no seu tempo.</h1>
-        <p class="lead">Ansiedade, luto, relações que se repetem, uma sensação de vazio difícil de nomear. Na análise, você fala livremente e escuta a si mesma de outro jeito. Eu acompanho esse percurso com cuidado e sigilo.</p>
+        <span class="overline terra">Psicanalista · Presencial e online</span>
+        <h1>Um espaço de escuta, cuidado e <em>tempo</em> para falar de si</h1>
+        <p class="lead">Psicanálise para adultos que buscam autoconhecimento ou atravessam momentos difíceis: ansiedade, tristeza, luto, relações que se repetem e questões de autoestima. Atendimento presencial em <span class="todo">bairro, cidade</span> e online.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary js-wa" href="#contato">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.13.2-3.82-.8-3.24-1.27-5.3-4.57-5.46-4.78-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.64-.4.85-.4h.61c.2 0 .46-.07.72.55.27.64.9 2.2.98 2.36.08.16.13.35.03.56-.1.21-.16.34-.32.53-.16.19-.33.42-.48.56-.16.16-.32.33-.14.65.19.32.83 1.37 1.78 2.21 1.22 1.09 2.25 1.42 2.57 1.58.32.16.5.13.69-.08.19-.21.8-.93 1.01-1.25.21-.32.43-.27.72-.16.29.11 1.86.88 2.18 1.04.32.16.53.24.61.37.08.13.08.77-.16 1.45Z"/></svg>
+          <a class="btn btn-primary btn-pill btn-lg js-wa" href="#contato">
             Agendar primeira conversa
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="btn btn-secondary" href="#psicanalise">Como funciona a análise</a>
+          <a class="btn btn-ghost btn-pill btn-lg" href="#abordagem">Conhecer minha abordagem</a>
         </div>
-        <ul class="chips" aria-label="Formas de atendimento">
-          <li class="chip">Atendimento presencial</li>
-          <li class="chip">Sessões online</li>
-          <li class="chip terra">Adultos</li>
-        </ul>
       </div>
-      <div class="portrait" role="img" aria-label="Espaço reservado para a foto da Vanessa">
-        <span>Foto da Vanessa: retrato com luz natural, fundo neutro</span>
+      <div class="hero-frame">
+        <div class="portrait" role="img" aria-label="Espaço reservado para a foto principal">
+          <span>Foto principal: retrato da Vanessa ou imagem de natureza em luz quente</span>
+        </div>
       </div>
     </div>
   </section>
@@ -316,56 +362,27 @@
 
   <section id="sobre">
     <div class="wrap about-grid">
-      <div class="portrait" role="img" aria-label="Espaço reservado para a foto do consultório">
-        <span>Foto do consultório: poltronas, luz suave</span>
+      <div class="portrait about-photo" role="img" aria-label="Espaço reservado para a foto da Vanessa">
+        <span>Foto da Vanessa no consultório, sentada, luz natural</span>
       </div>
       <div class="measure">
-        <span class="overline">Sobre mim</span>
-        <h2>Sou a Vanessa, psicanalista.</h2>
-        <p class="lead" style="margin-top:1.5rem">Atendo adultos que sentem que algo se repete na vida e não sabem bem por quê. Meu trabalho é escutar sem julgamento, com atenção ao que você diz e ao que escapa no meio da fala.</p>
-        <p>Cheguei à psicanálise <span class="todo">[contar aqui, em duas ou três frases, o caminho da Vanessa até a clínica]</span>. Sigo em formação permanente, com análise pessoal, supervisão e estudo teórico, que são a base ética de quem pratica a psicanálise.</p>
-        <dl class="facts">
-          <div><dt>Formação</dt><dd><span class="todo">Instituição e ano</span></dd></div>
-          <div><dt>Orientação</dt><dd><span class="todo">Freudiana / lacaniana, a confirmar</span></dd></div>
-          <div><dt>Graduação</dt><dd><span class="todo">Curso e instituição</span></dd></div>
-          <div><dt>Consultório</dt><dd><span class="todo">Bairro, cidade</span></dd></div>
-        </dl>
+        <span class="overline terra">Quem sou eu</span>
+        <h2>Olá, eu sou a Vanessa</h2>
+        <p class="lead" style="margin-top:1.5rem">Sou <strong>psicanalista</strong> e atendo adultos em consultório e online. <span class="todo">[Formação: instituição, ano e tempo de prática. Outras formações relevantes.]</span></p>
+        <p class="lead">Acredito que cada pessoa chega com uma história que não cabe em respostas prontas. Por isso a análise parte da sua fala, no seu ritmo, com atenção ao que se repete e ao que ainda não tem nome.</p>
+        <p class="lead">Para mim, o consultório é um lugar de <span class="accent">escuta sem julgamento</span>. Recebo cada história com ética, sigilo e o cuidado que ela merece. <span class="todo">[frase pessoal da Vanessa, a confirmar]</span></p>
+        <p class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
+          Formação em psicanálise: <strong class="todo">instituição</strong>
+        </p>
       </div>
     </div>
   </section>
 
-  <section id="psicanalise" class="tinted">
+  <section id="para-quem" class="tinted">
     <div class="wrap">
       <div class="section-head measure">
-        <span class="overline">A psicanálise</span>
-        <h2>O que acontece numa análise</h2>
-        <p class="lead">A psicanálise não oferece receitas nem conselhos prontos. Ela abre espaço para que você descubra o sentido do seu sofrimento a partir da sua própria fala.</p>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <span class="num">i.</span>
-          <h3>Fala livre</h3>
-          <p>Você diz o que vier à cabeça, mesmo o que parece sem importância. Não existe assunto certo para levar à sessão.</p>
-        </article>
-        <article class="card">
-          <span class="num">ii.</span>
-          <h3>Escuta atenta</h3>
-          <p>Eu escuto o que se repete, os lapsos, os sonhos, as pausas. É ali que muitas vezes aparece o que você ainda não sabia sobre si.</p>
-        </article>
-        <article class="card">
-          <span class="num">iii.</span>
-          <h3>Um percurso seu</h3>
-          <p>Cada análise tem o seu ritmo. Não há prazo fixo: o tratamento dura o tempo que fizer sentido para você.</p>
-        </article>
-      </div>
-      <p class="reflection">Às vezes a pergunta que trazemos não é a que precisamos responder. Descobrir qual é já é parte do caminho.</p>
-    </div>
-  </section>
-
-  <section id="quando">
-    <div class="wrap">
-      <div class="section-head measure">
-        <span class="overline">Quando procurar</span>
+        <span class="overline">Para quem é</span>
         <h2>Algumas razões que trazem as pessoas até aqui</h2>
         <p class="lead">Não é preciso estar em crise para começar. Um incômodo persistente já é motivo suficiente.</p>
       </div>
@@ -384,10 +401,10 @@
     </div>
   </section>
 
-  <section id="atendimento" class="tinted">
+  <section id="modalidades">
     <div class="wrap">
       <div class="section-head measure">
-        <span class="overline">Atendimento</span>
+        <span class="overline">Modalidades</span>
         <h2>Presencial ou online, com o mesmo cuidado</h2>
         <p class="lead">O primeiro passo é uma conversa inicial, para você conhecer a forma de trabalho e decidir se quer começar.</p>
       </div>
@@ -428,10 +445,38 @@
     </div>
   </section>
 
-  <section id="duvidas">
+  <section id="abordagem" class="tinted">
     <div class="wrap">
       <div class="section-head measure">
-        <span class="overline">Dúvidas frequentes</span>
+        <span class="overline">Abordagem</span>
+        <h2>O que acontece numa análise</h2>
+        <p class="lead">A psicanálise não oferece receitas nem conselhos prontos. Ela abre espaço para que você descubra o sentido do seu sofrimento a partir da sua própria fala.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="num">i.</span>
+          <h3>Fala livre</h3>
+          <p>Você diz o que vier à cabeça, mesmo o que parece sem importância. Não existe assunto certo para levar à sessão.</p>
+        </article>
+        <article class="card">
+          <span class="num">ii.</span>
+          <h3>Escuta atenta</h3>
+          <p>Eu escuto o que se repete, os lapsos, os sonhos, as pausas. É ali que muitas vezes aparece o que você ainda não sabia sobre si.</p>
+        </article>
+        <article class="card">
+          <span class="num">iii.</span>
+          <h3>Um percurso seu</h3>
+          <p>Cada análise tem o seu ritmo. Não há prazo fixo: o tratamento dura o tempo que fizer sentido para você.</p>
+        </article>
+      </div>
+      <p class="reflection">Às vezes a pergunta que trazemos não é a que precisamos responder. Descobrir qual é já é parte do caminho.</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head measure">
+        <span class="overline">Perguntas frequentes</span>
         <h2>Antes de começar</h2>
       </div>
       <div class="faq">
