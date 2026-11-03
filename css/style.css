@@ -795,3 +795,4 @@
 @media (max-width: 360px) { .foot-col h2 { font-size: 18px; } }
 .hub-paths h3 { margin-bottom: 1.25rem; } .hub-paths .soft-note { margin-top: 1.25rem; }
 .crumb { display: inline-block; padding: 13px 0; margin: -13px 0; }
+@media (max-width: 767px) { #especializacao .topic-card:nth-child(n+5) { display: none; } }
