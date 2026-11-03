@@ -776,3 +776,8 @@
   .talk-first .btn { justify-content: center; }
   .talk-link { display: inline-flex; align-items: center; min-height: 40px; font-size: 15px; font-weight: 600; color: var(--sage); text-underline-offset: 4px; }
   .soft-note a { color: var(--primary); font-weight: 600; font-style: normal; text-underline-offset: 3px; }
+
+/* Grupos de temas na página inicial */
+.topic-group + .topic-group { margin-top: 3rem; }
+.topic-group h3 { font-family: var(--serif); font-weight: 500; font-size: 26px; color: var(--ink); margin: 0 0 .4rem; }
+.topic-group-intro { margin: 0 0 1.25rem; color: var(--ink-soft); max-width: 62ch; }
