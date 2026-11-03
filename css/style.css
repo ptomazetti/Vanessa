@@ -781,3 +781,4 @@
 .topic-group + .topic-group { margin-top: 3rem; }
 .topic-group h3 { font-family: var(--serif); font-weight: 500; font-size: 26px; color: var(--ink); margin: 0 0 .4rem; }
 .topic-group-intro { margin: 0 0 1.25rem; color: var(--ink-soft); max-width: 62ch; }
+@media (max-width: 360px) { .topic-grid { grid-template-columns: 1fr; } }
