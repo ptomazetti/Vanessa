@@ -782,3 +782,9 @@
 .topic-group h3 { font-family: var(--serif); font-weight: 500; font-size: 26px; color: var(--ink); margin: 0 0 .4rem; }
 .topic-group-intro { margin: 0 0 1.25rem; color: var(--ink-soft); max-width: 62ch; }
 @media (max-width: 360px) { .topic-grid { grid-template-columns: 1fr; } }
+/* Painel do grupo de autoconhecimento e dica de WhatsApp nos cartões */
+.topic-panel { background: var(--sage-wash); border: 1px solid var(--border); border-radius: 1.5rem; padding: 2rem; }
+.topic-panel h3 { color: var(--sage); }
+.card-hint { display: block; margin-top: .6rem; font-size: 14px; font-weight: 600; color: var(--primary); }
+@media (max-width: 767px) { .topic-panel { padding: 1.25rem 1rem; border-radius: 1.1rem; } }
+#autoconhecimento, #especializacao { scroll-margin-top: 110px; }
