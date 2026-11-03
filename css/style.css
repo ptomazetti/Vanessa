@@ -787,3 +787,10 @@
 .topic-panel h3 { color: var(--sage); }
 @media (max-width: 767px) { .topic-panel { padding: 1.25rem 1rem; border-radius: 1.1rem; } }
 #autoconhecimento, #especializacao { scroll-margin-top: 110px; }
+.hub-paths { margin-top: 3rem; }
+.hub-paths .topic-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 560px) { .hub-paths .topic-grid { grid-template-columns: 1fr; } }
+.page-head .soft-note { margin-top: 1rem; }
+.foot-grid > * { min-width: 0; }
+@media (max-width: 360px) { .foot-col h2 { font-size: 18px; } }
+.hub-paths h3 { margin-bottom: 1.25rem; } .hub-paths .soft-note { margin-top: 1.25rem; }
