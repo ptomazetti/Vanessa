@@ -837,9 +837,6 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 90; pointer-event
 /* ===== Cartões de tema: fundo pastel, ícone desenhado à mão e "Ler" ===== */
 .topic-card { --tint: #E7ECF8; --ink-ic: #3552B8; display: flex; flex-direction: column; position: relative;
   background: var(--tint); border: 1px solid rgba(39, 36, 34, .07); border-radius: 1.25rem; padding: 1.25rem 1.4rem 1.1rem; }
-.topic-grid .topic-card:nth-child(4n+2) { --tint: #FBE8D9; --ink-ic: #984812; }
-.topic-grid .topic-card:nth-child(4n+3) { --tint: #F7EFD2; --ink-ic: #735507; }
-.topic-grid .topic-card:nth-child(4n+4) { --tint: #F7E3E7; --ink-ic: #A8404F; }
 .topic-card::before { content: ""; display: block; width: 34px; height: 34px; margin-bottom: .7rem; background: var(--ink-ic);
   -webkit-mask: var(--icon, none) center / contain no-repeat; mask: var(--icon, none) center / contain no-repeat; }
 .topic-card::after { content: "Ler \2192"; margin-top: auto; padding-top: .8rem; align-self: flex-end; font-size: 14px; font-weight: 600; color: var(--ink-ic); }
@@ -869,3 +866,9 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 90; pointer-event
 .hub-paths .topic-grid { --cols: 2; }
 @media (max-width: 560px) { .hub-paths .topic-grid { --cols: 1; } }
 @media (max-width: 360px) { .topic-grid { --cols: 1; } }
+
+/* Cada tema tem sempre a mesma cor, em qualquer página */
+.topic-card[href="autoconhecimento.html"], .topic-card[href="ressignificar-a-historia.html"], .topic-card[href="tdah.html"], .topic-card[href="depressao.html"], .topic-card[href="relacionamentos-abusivos.html"] { --tint: #E7ECF8; --ink-ic: #3552B8; }
+.topic-card[href="fortalecimento-do-feminino.html"], .topic-card[href="mudancas-e-recomecos.html"], .topic-card[href="autismo.html"], .topic-card[href="bipolaridade.html"] { --tint: #FBE8D9; --ink-ic: #984812; }
+.topic-card[href="fortalecimento-do-masculino.html"], .topic-card[href="brasileiros-no-exterior.html"], .topic-card[href="borderline.html"] { --tint: #F7EFD2; --ink-ic: #735507; }
+.topic-card[href="casais-e-familias.html"], .topic-card[href="ansiedade.html"], .topic-card[href="burnout.html"], .topic-card[href="pessoas-idosas.html"] { --tint: #F7E3E7; --ink-ic: #A8404F; }
