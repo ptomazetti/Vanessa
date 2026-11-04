@@ -880,3 +880,4 @@ p, li, .lead, dd { text-wrap: pretty; }
 @media (max-width: 900px) { .proof-strip ul { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .proof-strip li > span:last-child { min-width: 0; }
 @media (max-width: 360px) { .proof-strip ul { grid-template-columns: minmax(0, 1fr); } }
+.about-photo img { width: 100%; height: 100%; object-fit: cover; }
