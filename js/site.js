@@ -99,6 +99,19 @@
     });
     dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
   }
+
+  // Mantém as duas últimas palavras juntas, para nenhuma palavra ficar sozinha na última linha.
+  (function () {
+    var alvos = document.querySelectorAll(".proof-strip li > span:last-child, main h1, main h2, main h3, main p, main li, .topic-card strong, .btn, .foot-cta, .foot-col a, .foot-brand p, .final-band h2, .drawer-note");
+    alvos.forEach(function (el) {
+      var tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT), n, ultimo = null;
+      while ((n = tw.nextNode())) { if (/\S/.test(n.textContent)) ultimo = n; }
+      if (!ultimo || el.textContent.trim().split(/\s+/).length < 3) return;
+      var t = ultimo.textContent.replace(/\s+$/, ""), i = t.lastIndexOf(" ");
+      if (ultimo.textContent.indexOf("\u00A0") !== -1) return;
+      if (i > 0 && t.length - i < 22) ultimo.textContent = t.slice(0, i) + "\u00A0" + t.slice(i + 1) + ultimo.textContent.slice(t.length);
+    });
+  })();
   // Efeitos simples: blocos abaixo da dobra aparecem ao rolar
   (function () {
     if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
