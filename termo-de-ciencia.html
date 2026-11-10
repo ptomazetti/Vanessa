@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Termo de Ciência e Compromisso | Vanessa Torriani, psicanalista</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<meta name="theme-color" content="#480A23">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF9F5;
+    --card:#FFFFFF;
+    --field:#FDFBF8;
+    --ink:#272422;
+    --muted:#52443F;
+    --accent:#8C5845;
+    --accent-hover:#774737;
+    --accent-soft:#F2EBE3;
+    --sage:#5D6F62;
+    --wine:#480A23;
+    --wine-text:#F3DCCB;
+    --gold:#F6C77E;
+    --orange:#E8893A;
+    --line:#E7DFD5;
+    --error:#A23B32;
+    --ok:#5D6F62;
+    --serif:"Playfair Display",Georgia,serif;
+    --sans:"Plus Jakarta Sans",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .topbar{background:rgba(251,249,245,.92);border-bottom:1px solid var(--line)}
+  .topbar-in{max-width:720px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;gap:.75rem}
+  .mark{width:44px;height:44px;border-radius:9999px;object-fit:cover;flex:none}
+  .brand-name{font-family:var(--serif);font-size:21px;line-height:1.1;color:var(--ink)}
+  .brand-name small{display:block;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--sage);margin-top:3px}
+  .wrap{max-width:720px;margin:0 auto;padding:36px 18px 48px}
+  header.page{text-align:center;margin-bottom:28px}
+  .overline{
+    display:inline-flex;align-items:center;gap:.5rem;
+    font-size:13px;line-height:18px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--accent);margin:0 0 12px;
+  }
+  .overline::before{content:"";width:14px;height:14px;flex:none;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23E8893A%22%3E%3Cpath d=%22M12 1c.8 5.6 3.4 8.2 11 11-7.6 2.8-10.2 5.4-11 11-.8-5.6-3.4-8.2-11-11 7.6-2.8 10.2-5.4 11-11Z%22/%3E%3C/svg%3E") center/contain no-repeat}
+  h1{
+    font-family:var(--serif);font-weight:400;font-size:40px;line-height:1.2;
+    letter-spacing:-.015em;margin:0 0 10px;text-wrap:balance;
+  }
+  @media (max-width:560px){h1{font-size:30px}}
+  .subtitle{color:var(--muted);margin:0;font-size:17px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:1.25rem;
+    padding:28px 24px;margin-bottom:20px;
+    box-shadow:0 12px 32px -8px rgba(39,36,34,.06),0 4px 12px -2px rgba(39,36,34,.03);
+  }
+  .card h2{
+    font-family:var(--serif);font-weight:400;
+    font-size:24px;line-height:1.25;margin:0 0 16px;
+  }
+  .preamble{margin:0 0 22px}
+  .clause{margin:0 0 20px}
+  .clause:last-child{margin-bottom:0}
+  .clause h3{
+    font-family:var(--sans);
+    font-size:13px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--accent);margin:0 0 6px;font-weight:600;
+  }
+  .clause p{margin:0}
+  .clause ol{margin:8px 0 0;padding-left:22px}
+  .clause ol li{margin-bottom:4px}
+  .clause ol{list-style:lower-alpha}
+
+  .field{margin-bottom:16px}
+  label.lbl{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+  .req{color:var(--accent)}
+  input[type=text],input[type=email],input[type=tel]{
+    width:100%;font:inherit;color:var(--ink);
+    padding:12px 14px;border:1px solid var(--line);border-radius:.5rem;
+    background:var(--field);outline:none;transition:border-color .15s, box-shadow .15s;
+  }
+  input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .hint{font-size:13px;color:var(--muted);margin-top:4px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+  @media (max-width:560px){.row{grid-template-columns:1fr}}
+
+  .check{
+    display:flex;gap:12px;align-items:flex-start;
+    padding:14px;border:1px solid var(--line);border-radius:.75rem;
+    margin-bottom:12px;cursor:pointer;background:var(--field);
+  }
+  .check input{width:20px;height:20px;margin:2px 0 0;flex:0 0 auto;accent-color:var(--accent)}
+  .check span{font-size:15px}
+
+  .sig-box{
+    position:relative;border:1.5px dashed var(--accent);border-radius:.75rem;
+    background:#FFFFFF;height:190px;overflow:hidden;
+  }
+  #sig{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair}
+  .sig-line{
+    position:absolute;left:24px;right:24px;bottom:42px;
+    border-bottom:1px solid var(--line);pointer-events:none;
+  }
+  .sig-placeholder{
+    position:absolute;left:0;right:0;bottom:14px;text-align:center;
+    font-size:13px;color:var(--muted);pointer-events:none;
+  }
+  .sig-actions{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+  .meta{font-size:13px;color:var(--muted)}
+  .btn-link{
+    background:none;border:none;color:var(--accent);font:inherit;font-size:14px;font-weight:600;
+    cursor:pointer;padding:4px 0;text-decoration:underline;text-underline-offset:4px;white-space:nowrap;
+  }
+
+  .submit{
+    width:100%;font:inherit;font-size:16px;font-weight:600;
+    padding:16px;border:1px solid var(--accent);border-radius:9999px;cursor:pointer;
+    background:var(--accent);color:#FFFFFF;transition:background .2s, border-color .2s, opacity .15s;
+  }
+  .submit:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+  .submit:disabled{opacity:.6;cursor:default}
+  :focus-visible{outline:2px solid rgba(140,88,69,.45);outline-offset:2px}
+  .msg{margin-top:12px;font-size:14px;text-align:center;min-height:20px}
+  .msg.error{color:var(--error)}
+
+  .success{text-align:center;padding:40px 24px}
+  .success .tick{
+    width:56px;height:56px;border-radius:50%;margin:0 auto 16px;
+    background:var(--accent-soft);color:var(--ok);
+    display:flex;align-items:center;justify-content:center;font-size:28px;
+  }
+  .success h2{margin-bottom:8px}
+  .success p{color:var(--muted);margin:0 0 6px}
+
+  footer.foot{background:var(--wine);color:var(--wine-text);text-align:center;font-size:14px;padding:20px 18px}
+  footer.foot strong{display:block;font-family:var(--serif);font-weight:400;font-size:18px;color:#FFFFFF;margin-bottom:2px}
+  .hidden{display:none !important}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-in">
+    <img class="mark" src="img/logo-icone.webp" alt="" width="44" height="44">
+    <span class="brand-name">Vanessa Torriani<small>Psicanálise clínica e sistêmica</small></span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="page">
+    <p class="overline">Atendimento psicanalítico</p>
+    <h1>Termo de Ciência e Compromisso</h1>
+    <p class="subtitle">Normas para a realização do atendimento psicanalítico</p>
+  </header>
+
+  <section class="card" id="termo">
+    <p class="preamble">
+      Pelo presente instrumento, o(a) paciente abaixo identificado(a) declara ter lido,
+      compreendido e aceito as normas que regem o atendimento psicanalítico, cuja observância
+      constitui condição indispensável para a realização das sessões.
+    </p>
+
+    <div class="clause">
+      <h3>1. Do respeito mútuo</h3>
+      <p>
+        O processo analítico exige responsabilidade, disponibilidade emocional, respeito mútuo
+        e condições mínimas para que possa se desenvolver. Ofensas, agressões verbais, ameaças,
+        intimidações ou quaisquer comportamentos desrespeitosos dirigidos à psicanalista não serão tolerados.
+      </p>
+    </div>
+
+    <div class="clause">
+      <h3>2. Das condições para o atendimento</h3>
+      <p>O setting analítico é um espaço regido por regras próprias. Não será realizado atendimento ao(à) paciente que:</p>
+      <ol>
+        <li>se apresente sob efeito de álcool ou de outras substâncias psicoativas;</li>
+        <li>consuma bebida alcoólica ou fume durante a sessão;</li>
+        <li>se apresente sem camiseta ou com vestimenta inadequada ao contexto do atendimento.</li>
+      </ol>
+    </div>
+
+    <div class="clause">
+      <h3>3. Do ambiente</h3>
+      <p>
+        O(a) paciente deverá participar da sessão em ambiente reservado, silencioso e livre de
+        interrupções. Ruídos excessivos, música e interferência de animais inviabilizam a
+        realização do atendimento.
+      </p>
+    </div>
+
+    <div class="clause">
+      <h3>4. Do descumprimento</h3>
+      <p>
+        Verificado o descumprimento de qualquer das normas previstas neste termo, a sessão será
+        cancelada, sem direito a reembolso do valor pago. A psicanalista reserva-se, ainda, o direito
+        de não disponibilizar novos horários ao(à) paciente que não respeite os limites
+        estabelecidos para o exercício de sua atividade profissional.
+      </p>
+    </div>
+
+    <div class="clause">
+      <h3>5. Da proteção de dados</h3>
+      <p>
+        Os dados pessoais informados neste termo serão utilizados exclusivamente para registro e
+        comprovação da ciência e da concordância do(a) paciente com as normas aqui estabelecidas,
+        sendo tratados com sigilo, nos termos da Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais).
+      </p>
+    </div>
+  </section>
+
+  <form class="card" id="form" name="termo-ciencia" method="POST"
+        data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" novalidate>
+    <input type="hidden" name="form-name" value="termo-ciencia">
+    <input type="hidden" name="versao_termo" value="v1 (novembro de 2026)">
+    <input type="hidden" name="data_hora_assinatura" id="data_hora">
+    <input type="file" name="assinatura" id="assinatura_file" class="hidden" tabindex="-1" aria-hidden="true">
+    <p class="hidden"><label>Não preencher: <input name="bot-field"></label></p>
+
+    <h2>Identificação do(a) paciente</h2>
+
+    <div class="field">
+      <label class="lbl" for="nome">Nome completo <span class="req">*</span></label>
+      <input type="text" id="nome" name="nome_completo" autocomplete="name" required minlength="5">
+    </div>
+
+    <div class="field">
+      <label class="lbl" for="documento">CPF ou documento de identificação <span class="req">*</span></label>
+      <input type="text" id="documento" name="documento" inputmode="text" required minlength="5">
+      <div class="hint">Pacientes residentes fora do Brasil podem informar o número do passaporte ou documento local.</div>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <label class="lbl" for="email">E-mail <span class="req">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label class="lbl" for="telefone">Telefone / WhatsApp <span class="req">*</span></label>
+        <input type="tel" id="telefone" name="telefone" autocomplete="tel" required minlength="8">
+      </div>
+    </div>
+
+    <h2 style="margin-top:12px">Declaração</h2>
+
+    <label class="check">
+      <input type="checkbox" name="declaracao_ciencia" value="Sim" required>
+      <span>Declaro que li integralmente este termo, compreendi o seu conteúdo e concordo com todas as normas nele estabelecidas.</span>
+    </label>
+
+    <label class="check">
+      <input type="checkbox" name="consentimento_lgpd" value="Sim" required>
+      <span>Autorizo o tratamento dos meus dados pessoais para a finalidade descrita na cláusula 5.</span>
+    </label>
+
+    <h2 style="margin-top:20px">Assinatura</h2>
+
+    <div class="sig-box">
+      <canvas id="sig" aria-label="Área de assinatura"></canvas>
+      <div class="sig-line"></div>
+      <div class="sig-placeholder" id="sigPlaceholder">Assine aqui com o dedo ou o mouse</div>
+    </div>
+    <div class="sig-actions">
+      <span class="meta" id="dataExibida"></span>
+      <button type="button" class="btn-link" id="limpar">Limpar assinatura</button>
+    </div>
+
+    <div style="margin-top:24px">
+      <button type="submit" class="submit" id="enviar">Assinar e enviar</button>
+      <div class="msg" id="msg" role="alert"></div>
+    </div>
+  </form>
+
+  <section class="card success hidden" id="sucesso">
+    <div class="tick">✓</div>
+    <h2>Termo assinado com sucesso</h2>
+    <p id="sucessoNome"></p>
+    <p id="sucessoData"></p>
+  </section>
+
+</div>
+
+<footer class="foot">
+  <strong>Vanessa Torriani</strong>
+  Documento assinado eletronicamente.
+</footer>
+
+<script>
+(function(){
+  var canvas = document.getElementById('sig');
+  var ctx = canvas.getContext('2d');
+  var placeholder = document.getElementById('sigPlaceholder');
+  var drawing = false, hasInk = false, last = null, lastWidth = 0;
+
+  function setupCanvas(){
+    var rect = canvas.getBoundingClientRect();
+    if (Math.round(rect.width) === lastWidth) return;
+    lastWidth = Math.round(rect.width);
+    var ratio = Math.max(window.devicePixelRatio || 1, 1);
+    canvas.width = rect.width * ratio;
+    canvas.height = rect.height * ratio;
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    ctx.lineWidth = 2.2;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.strokeStyle = '#1B2A35';
+    hasInk = false;
+    placeholder.classList.remove('hidden');
+  }
+
+  function pos(e){
+    var r = canvas.getBoundingClientRect();
+    return { x: e.clientX - r.left, y: e.clientY - r.top };
+  }
+
+  canvas.addEventListener('pointerdown', function(e){
+    e.preventDefault();
+    canvas.setPointerCapture(e.pointerId);
+    drawing = true;
+    last = pos(e);
+    ctx.beginPath();
+    ctx.arc(last.x, last.y, ctx.lineWidth / 2, 0, Math.PI * 2);
+    ctx.fillStyle = ctx.strokeStyle;
+    ctx.fill();
+    hasInk = true;
+    placeholder.classList.add('hidden');
+  });
+  canvas.addEventListener('pointermove', function(e){
+    if (!drawing) return;
+    e.preventDefault();
+    var p = pos(e);
+    ctx.beginPath();
+    ctx.moveTo(last.x, last.y);
+    ctx.lineTo(p.x, p.y);
+    ctx.stroke();
+    last = p;
+  });
+  ['pointerup','pointercancel','pointerleave'].forEach(function(ev){
+    canvas.addEventListener(ev, function(){ drawing = false; });
+  });
+
+  document.getElementById('limpar').addEventListener('click', function(){
+    lastWidth = 0;
+    setupCanvas();
+  });
+
+  window.addEventListener('resize', setupCanvas);
+  setupCanvas();
+
+  function agoraBrasilia(){
+    return new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+  }
+  function dataExtenso(){
+    return new Date().toLocaleDateString('pt-BR', { day:'numeric', month:'long', year:'numeric', timeZone:'America/Sao_Paulo' });
+  }
+  document.getElementById('dataExibida').textContent = 'Data: ' + dataExtenso();
+
+  function exportarAssinatura(){
+    return new Promise(function(resolve){
+      var out = document.createElement('canvas');
+      var rect = canvas.getBoundingClientRect();
+      out.width = Math.round(rect.width * 2);
+      out.height = Math.round(rect.height * 2);
+      var o = out.getContext('2d');
+      o.fillStyle = '#FFFFFF';
+      o.fillRect(0, 0, out.width, out.height);
+      o.drawImage(canvas, 0, 0, out.width, out.height);
+      out.toBlob(resolve, 'image/png');
+    });
+  }
+
+  var form = document.getElementById('form');
+  var msg = document.getElementById('msg');
+  var btn = document.getElementById('enviar');
+
+  function erro(t){ msg.className = 'msg error'; msg.textContent = t; }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    msg.textContent = '';
+
+    if (!form.checkValidity()){
+      var invalido = form.querySelector(':invalid');
+      if (invalido && invalido.type === 'checkbox'){
+        erro('Para prosseguir, confirme as duas declarações.');
+        invalido.focus();
+      } else {
+        form.reportValidity();
+        erro('Preencha corretamente todos os campos obrigatórios.');
+      }
+      return;
+    }
+    if (!hasInk){
+      erro('Por favor, registre a sua assinatura no campo indicado.');
+      canvas.scrollIntoView({ behavior:'smooth', block:'center' });
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+
+    var registro = agoraBrasilia() + ' (horário de Brasília) | ' + new Date().toISOString();
+    document.getElementById('data_hora').value = registro;
+
+    exportarAssinatura().then(function(blob){
+      var fd = new FormData(form);
+      var nome = document.getElementById('nome').value.trim();
+      var arquivo = 'assinatura-' + nome.toLowerCase()
+        .normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '.png';
+      fd.set('assinatura', blob, arquivo);
+
+      return fetch('/', { method:'POST', body: fd }).then(function(res){
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        form.classList.add('hidden');
+        document.getElementById('termo').classList.add('hidden');
+        document.getElementById('sucessoNome').textContent = 'Obrigada, ' + nome + '. A sua concordância foi registrada.';
+        document.getElementById('sucessoData').textContent = 'Assinado em ' + agoraBrasilia() + ' (horário de Brasília).';
+        document.getElementById('sucesso').classList.remove('hidden');
+        window.scrollTo({ top:0, behavior:'smooth' });
+      });
+    }).catch(function(){
+      btn.disabled = false;
+      btn.textContent = 'Assinar e enviar';
+      erro('Não foi possível enviar o termo. Verifique a sua conexão e tente novamente.');
+    });
+  });
+})();
+</script>
+</body>
+</html>
