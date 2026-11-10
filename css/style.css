@@ -888,3 +888,4 @@ p, li, .lead, dd { text-wrap: pretty; }
 .cred-chip { border-radius: 1rem; align-items: flex-start; line-height: 1.45; }
 .cred-chip::before { margin-top: .2rem; }
 @media (max-width: 560px) { .spec-badge { position: static; align-self: flex-start; margin: -.2rem 0 .5rem; } }
+.pendente { background: #FFF3B0; color: #5A4300; padding: 0 .25rem; border-radius: .25rem; font-weight: 600; }
