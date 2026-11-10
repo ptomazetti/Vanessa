@@ -207,8 +207,54 @@
     .rule-body ul{padding-left:20px}
   }
   .check input[type=radio]{accent-color:var(--accent)}
-  .ouvir{display:inline-flex;gap:6px;align-items:center;margin:0 0 14px;text-decoration:none;border-bottom:1px solid currentColor;padding:2px 0}
+  .ouvir{display:flex;width:fit-content;gap:6px;align-items:center;margin:0 0 14px;text-decoration:underline;text-underline-offset:4px}
+  .btn-link{min-height:44px}
+  .check:has(input:checked){border-color:var(--accent);background:#FFFFFF}
+  .check input:focus-visible{outline:2px solid rgba(140,88,69,.45);outline-offset:3px}
   .ouvir.falando{color:var(--sage)}
+
+  /* ===== Cor, textura e formas (mesma linguagem do site) ===== */
+  body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.08;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .2 0 0 0 0 .15 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  header.page{position:relative;isolation:isolate}
+  header.page::before{content:"";position:absolute;inset:-30px -40px -10px;z-index:-1;pointer-events:none;opacity:.5;
+    background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22 fill=%22%23E8893A%22%3E%3Cpath d=%22M142.6 90.4Q145.3 100.0 145.4 111.0Q145.6 122.0 138.7 130.9Q131.7 139.8 119.8 137.2Q107.9 134.6 100.4 132.7Q93.0 130.8 83.3 131.9Q73.6 133.1 69.1 125.1Q64.5 117.1 54.7 108.5Q44.9 100.0 49.2 88.8Q53.5 77.6 61.5 69.7Q69.5 61.7 79.4 57.6Q89.4 53.5 100.3 52.0Q111.3 50.5 116.7 61.4Q122.2 72.2 131.0 76.5Q139.9 80.8 142.6 90.4Z%22/%3E%3Ccircle cx=%22146.5%22 cy=%22175.6%22 r=%222.9%22/%3E%3Ccircle cx=%22125.4%22 cy=%2245.0%22 r=%227.0%22/%3E%3Ccircle cx=%2262.7%22 cy=%22161.3%22 r=%228.0%22/%3E%3Ccircle cx=%22159.7%22 cy=%22107.0%22 r=%228.4%22/%3E%3Ccircle cx=%2239.0%22 cy=%2296.6%22 r=%228.9%22/%3E%3Ccircle cx=%22158.4%22 cy=%2279.7%22 r=%225.3%22/%3E%3Ccircle cx=%22145.4%22 cy=%22151.5%22 r=%226.5%22/%3E%3Ccircle cx=%22142.2%22 cy=%22169.9%22 r=%222.8%22/%3E%3Ccircle cx=%22140.7%22 cy=%22175.4%22 r=%225.1%22/%3E%3Cpath d=%22M65.1 119.5L31.9 138.1%22 stroke=%22%23E8893A%22 stroke-width=%224.8%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M60.4 105.8L22.8 111.3%22 stroke=%22%23E8893A%22 stroke-width=%224.2%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M139.3 107.6L176.6 114.9%22 stroke=%22%23E8893A%22 stroke-width=%225.2%22 stroke-linecap=%22round%22/%3E%3C/svg%3E") right -10px top -6px / 150px no-repeat, url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 60%22 fill=%22none%22 stroke=%22%233552B8%22 stroke-width=%222.5%22 stroke-linecap=%22round%22%3E%3Cpath d=%22M4 40c18-30 34-30 30-8s-18 20-10 4 30-26 42-6 6 22-2 10 24-30 52-14%22/%3E%3C/svg%3E") left 2% bottom 0 / 110px no-repeat, url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22 fill=%22%23E3B341%22%3E%3Cpath d=%22M138.7 92.9Q148.1 100.0 143.8 109.5Q139.6 119.1 134.8 128.4Q130.1 137.8 119.2 137.1Q108.3 136.4 98.0 145.1Q87.7 153.8 76.5 148.6Q65.4 143.4 59.9 132.7Q54.5 121.9 59.2 111.0Q64.0 100.0 61.0 89.9Q58.0 79.8 66.2 73.9Q74.5 68.0 82.9 65.2Q91.4 62.3 102.3 52.2Q113.2 42.2 125.5 47.4Q137.8 52.6 133.6 69.2Q129.4 85.9 138.7 92.9Z%22/%3E%3Ccircle cx=%22150.1%22 cy=%2239.6%22 r=%225.0%22/%3E%3Ccircle cx=%2283.0%22 cy=%22179.1%22 r=%225.5%22/%3E%3Ccircle cx=%2268.4%22 cy=%2225.9%22 r=%223.4%22/%3E%3Ccircle cx=%22110.2%22 cy=%229.2%22 r=%228.8%22/%3E%3Ccircle cx=%2255.0%22 cy=%2261.1%22 r=%222.5%22/%3E%3Ccircle cx=%22159.9%22 cy=%22167.1%22 r=%224.5%22/%3E%3Ccircle cx=%2241.0%22 cy=%22166.0%22 r=%224.5%22/%3E%3Ccircle cx=%2230.6%22 cy=%2277.9%22 r=%222.9%22/%3E%3Ccircle cx=%2225.2%22 cy=%2256.1%22 r=%223.5%22/%3E%3Cpath d=%22M106.4 139.5L112.5 177.0%22 stroke=%22%23E3B341%22 stroke-width=%224.2%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M138.9 109.2L175.9 117.9%22 stroke=%22%23E3B341%22 stroke-width=%224.5%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M116.6 63.6L132.3 29.0%22 stroke=%22%23E3B341%22 stroke-width=%225.0%22 stroke-linecap=%22round%22/%3E%3C/svg%3E") left 8% top -14px / 70px no-repeat}
+  @media (max-width:560px){.rule.open .rule-body{padding:12px 14px 14px;margin-left:-6px;margin-right:-6px}.rule-body ul{padding-left:20px}header.page::before{inset:-24px -12px 0;background-size:100px,0,0;background-position:right -28px top -18px,left -10px bottom -6px,0 0;opacity:.4}}
+  h1 em{font-style:normal;white-space:nowrap;padding-bottom:8px;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 16%22 preserveAspectRatio=%22none%22 fill=%22none%22 stroke=%22%23E8893A%22 stroke-width=%224%22 stroke-linecap=%22round%22%3E%3Cpath d=%22M3 10C25 3 40 14 62 8S100 3 122 9 160 13 197 5%22/%3E%3C/svg%3E") left bottom / 100% 12px no-repeat}
+  .wrap{overflow-x:clip}
+  .rule{background:var(--tint);border-color:rgba(39,36,34,.07)}
+  .rule h3{align-items:center}
+  .rule-ic{width:44px;height:44px;flex:none;border-radius:14px;background:#FFFFFF;position:relative;box-shadow:0 2px 6px -3px rgba(39,36,34,.25)}
+  .rule-ic::after{content:"";position:absolute;inset:9px;background:var(--ink-ic);-webkit-mask:var(--icon) center/contain no-repeat;mask:var(--icon) center/contain no-repeat}
+  .rule.done .rule-ic{background:var(--ink-ic)}
+  .rule.done .rule-ic::after{background:#FFFFFF}
+  .rule-title small{display:block;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--ink-ic);margin-bottom:1px}
+  .rule-ok{color:var(--ink-ic)}
+  .rule.open{background:var(--tint);border-color:var(--ink-ic);box-shadow:0 14px 28px -18px rgba(39,36,34,.45)}
+  .rule.open .rule-body{background:#FFFFFF;border-radius:12px;padding:16px 18px 18px;margin-top:14px}
+  .rule-btn{background:var(--ink-ic);border-color:var(--ink-ic)}
+  .rule-btn:hover{background:var(--ink-ic);filter:brightness(.92)}
+  .rule-btn:disabled{background:var(--tint);border-color:transparent;color:var(--ink);filter:none}
+  .rule-done{color:var(--ink-ic);margin-left:56px}
+  .ouvir{color:var(--ink-ic)}
+  .rule.locked-rule{opacity:.6}
+  .progress{height:12px;background:#EFE6DE}
+  .progress span{background:linear-gradient(90deg,#E8893A,#E3B341 50%,#5D6F62)}
+  .steps li::before{background:#FBE8D9;color:#984812}
+  .steps li:nth-child(2)::before{background:#F7EFD2;color:#735507}
+  .steps li:nth-child(3)::before{background:#E6EEE8;color:#3F5446}
+  #form h2,.success h2{position:relative}
+  #form > h2::before,#blocoResp > h2::before{content:"";display:inline-block;width:14px;height:14px;margin-right:10px;vertical-align:2px;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23E8893A%22%3E%3Cpath d=%22M12 1c.8 5.6 3.4 8.2 11 11-7.6 2.8-10.2 5.4-11 11-.8-5.6-3.4-8.2-11-11 7.6-2.8 10.2-5.4 11-11Z%22/%3E%3C/svg%3E") center/contain no-repeat}
+  .success{position:relative;overflow:hidden;isolation:isolate}
+  .success::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.35;pointer-events:none;
+    background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22 fill=%22%233552B8%22%3E%3Cpath d=%22M145.5 87.9Q140.8 100.0 136.5 107.7Q132.2 115.5 131.8 127.5Q131.5 139.4 119.4 136.0Q107.4 132.6 98.5 139.2Q89.5 145.9 81.7 139.4Q73.8 132.9 72.0 123.6Q70.3 114.3 62.0 107.2Q53.8 100.0 62.3 93.0Q70.8 85.9 71.7 75.8Q72.5 65.6 82.6 66.5Q92.6 67.5 100.1 67.2Q107.6 66.9 117.4 66.3Q127.3 65.8 138.7 70.8Q150.1 75.9 145.5 87.9Z%22/%3E%3Ccircle cx=%22146.7%22 cy=%22146.0%22 r=%226.6%22/%3E%3Ccircle cx=%22173.5%22 cy=%2275.0%22 r=%225.1%22/%3E%3Ccircle cx=%22158.9%22 cy=%2291.1%22 r=%228.1%22/%3E%3Ccircle cx=%2284.5%22 cy=%22161.0%22 r=%223.3%22/%3E%3Ccircle cx=%2269.2%22 cy=%22180.0%22 r=%223.7%22/%3E%3Ccircle cx=%2230.5%22 cy=%2260.9%22 r=%224.9%22/%3E%3Ccircle cx=%2242.6%22 cy=%2282.2%22 r=%222.9%22/%3E%3Ccircle cx=%22122.2%22 cy=%22178.0%22 r=%225.3%22/%3E%3Ccircle cx=%2269.4%22 cy=%22171.7%22 r=%225.4%22/%3E%3Cpath d=%22M87.7 138.1L76.0 174.2%22 stroke=%22%233552B8%22 stroke-width=%225.4%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M87.4 62.0L75.4 26.0%22 stroke=%22%233552B8%22 stroke-width=%223.7%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M64.3 82.0L30.4 64.8%22 stroke=%22%233552B8%22 stroke-width=%224.6%22 stroke-linecap=%22round%22/%3E%3C/svg%3E") left -30px top -20px / 130px no-repeat, url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22 fill=%22%23E8893A%22%3E%3Cpath d=%22M142.6 90.4Q145.3 100.0 145.4 111.0Q145.6 122.0 138.7 130.9Q131.7 139.8 119.8 137.2Q107.9 134.6 100.4 132.7Q93.0 130.8 83.3 131.9Q73.6 133.1 69.1 125.1Q64.5 117.1 54.7 108.5Q44.9 100.0 49.2 88.8Q53.5 77.6 61.5 69.7Q69.5 61.7 79.4 57.6Q89.4 53.5 100.3 52.0Q111.3 50.5 116.7 61.4Q122.2 72.2 131.0 76.5Q139.9 80.8 142.6 90.4Z%22/%3E%3Ccircle cx=%22146.5%22 cy=%22175.6%22 r=%222.9%22/%3E%3Ccircle cx=%22125.4%22 cy=%2245.0%22 r=%227.0%22/%3E%3Ccircle cx=%2262.7%22 cy=%22161.3%22 r=%228.0%22/%3E%3Ccircle cx=%22159.7%22 cy=%22107.0%22 r=%228.4%22/%3E%3Ccircle cx=%2239.0%22 cy=%2296.6%22 r=%228.9%22/%3E%3Ccircle cx=%22158.4%22 cy=%2279.7%22 r=%225.3%22/%3E%3Ccircle cx=%22145.4%22 cy=%22151.5%22 r=%226.5%22/%3E%3Ccircle cx=%22142.2%22 cy=%22169.9%22 r=%222.8%22/%3E%3Ccircle cx=%22140.7%22 cy=%22175.4%22 r=%225.1%22/%3E%3Cpath d=%22M65.1 119.5L31.9 138.1%22 stroke=%22%23E8893A%22 stroke-width=%224.8%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M60.4 105.8L22.8 111.3%22 stroke=%22%23E8893A%22 stroke-width=%224.2%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M139.3 107.6L176.6 114.9%22 stroke=%22%23E8893A%22 stroke-width=%225.2%22 stroke-linecap=%22round%22/%3E%3C/svg%3E") right -30px bottom -10px / 150px no-repeat, url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22 fill=%22%23E3B341%22%3E%3Cpath d=%22M138.7 92.9Q148.1 100.0 143.8 109.5Q139.6 119.1 134.8 128.4Q130.1 137.8 119.2 137.1Q108.3 136.4 98.0 145.1Q87.7 153.8 76.5 148.6Q65.4 143.4 59.9 132.7Q54.5 121.9 59.2 111.0Q64.0 100.0 61.0 89.9Q58.0 79.8 66.2 73.9Q74.5 68.0 82.9 65.2Q91.4 62.3 102.3 52.2Q113.2 42.2 125.5 47.4Q137.8 52.6 133.6 69.2Q129.4 85.9 138.7 92.9Z%22/%3E%3Ccircle cx=%22150.1%22 cy=%2239.6%22 r=%225.0%22/%3E%3Ccircle cx=%2283.0%22 cy=%22179.1%22 r=%225.5%22/%3E%3Ccircle cx=%2268.4%22 cy=%2225.9%22 r=%223.4%22/%3E%3Ccircle cx=%22110.2%22 cy=%229.2%22 r=%228.8%22/%3E%3Ccircle cx=%2255.0%22 cy=%2261.1%22 r=%222.5%22/%3E%3Ccircle cx=%22159.9%22 cy=%22167.1%22 r=%224.5%22/%3E%3Ccircle cx=%2241.0%22 cy=%22166.0%22 r=%224.5%22/%3E%3Ccircle cx=%2230.6%22 cy=%2277.9%22 r=%222.9%22/%3E%3Ccircle cx=%2225.2%22 cy=%2256.1%22 r=%223.5%22/%3E%3Cpath d=%22M106.4 139.5L112.5 177.0%22 stroke=%22%23E3B341%22 stroke-width=%224.2%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M138.9 109.2L175.9 117.9%22 stroke=%22%23E3B341%22 stroke-width=%224.5%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M116.6 63.6L132.3 29.0%22 stroke=%22%23E3B341%22 stroke-width=%225.0%22 stroke-linecap=%22round%22/%3E%3C/svg%3E") right 18% top 10px / 60px no-repeat}
+  .success .tick{background:#E6EEE8;color:#3F5446}
+  @media (max-width:380px){.rule-ic{width:38px;height:38px;border-radius:12px}.rule-ic::after{inset:8px}.rule-done{margin-left:48px}.rule.open .rule-body{padding:14px}}
+  .rule[data-rule="1"]{--tint:#E7ECF8;--ink-ic:#3552B8;--icon:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%221.7%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 20s-7-4.3-7-9.5A3.8 3.8 0 0 1 12 8a3.8 3.8 0 0 1 7 2.5C19 15.7 12 20 12 20Z%22/%3E%3C/svg%3E")}
+  .rule[data-rule="2"]{--tint:#FBE8D9;--ink-ic:#984812;--icon:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%221.7%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 5h16v11H4ZM2 19.5h20M10 16v3.5M14 16v3.5%22/%3E%3C/svg%3E")}
+  .rule[data-rule="3"]{--tint:#F7EFD2;--ink-ic:#735507;--icon:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%221.7%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 6h16v14H4ZM4 10.5h16M8.5 3.5v5M15.5 3.5v5%22/%3E%3C/svg%3E")}
+  .rule[data-rule="4"]{--tint:#E6EEE8;--ink-ic:#3F5446;--icon:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%221.7%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M6 11h12v9H6ZM8.5 11V8a3.5 3.5 0 0 1 7 0v3%22/%3E%3C/svg%3E")}
+  .rule[data-rule="5"]{--tint:#F7E3E7;--ink-ic:#A8404F;--icon:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%221.7%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3.5 21.5 20H2.5ZM12 10v4.5M12 17.2v.3%22/%3E%3C/svg%3E")}
+  .rule[data-rule="6"]{--tint:#E7ECF8;--ink-ic:#3552B8;--icon:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%221.7%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6ZM9 12l2 2 4-4%22/%3E%3C/svg%3E")}
   .hidden{display:none !important}
 </style>
 </head>
@@ -224,31 +270,31 @@
 
   <header class="page">
     <p class="overline">Para todos os pacientes</p>
-    <h1>Termo de compromisso</h1>
+    <h1>Termo de <em>compromisso</em></h1>
     <p class="subtitle">Os combinados das nossas sessões</p>
   </header>
 
   <section class="card" id="termo">
     <p class="preamble">
-      Oi! Antes de seguirmos, quero combinar algumas coisas com você.
-      Esses combinados valem para todos os meus pacientes, de quem está chegando agora a quem está comigo há anos.
-      Eles passam a valer no dia em que você assina.
+      Oi! Quero combinar algumas coisas com você.
+      Elas valem para todos os meus pacientes, novos e de longa data, a partir do dia em que você assina.
+      Leva uns 3 minutos.
     </p>
     <ol class="steps">
-      <li>Leia os 8 combinados com calma, um de cada vez.</li>
+      <li>Leia os combinados com calma, um de cada vez.</li>
       <li>Preencha seus dados.</li>
       <li>Assine e envie.</li>
     </ol>
     <p class="preamble">Se tiver alguma dúvida, me mande uma mensagem antes de assinar. Eu respondo com calma.</p>
     <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
-    <p class="progress-txt" id="progressTxt" aria-live="polite">0 de 8 combinados aceitos</p>
+    <p class="progress-txt" id="progressTxt" aria-live="polite">0 de 6 combinados aceitos</p>
 
     <div class="rule" data-rule="1">
-      <h3 tabindex="-1"><span class="rule-num">1</span><span class="rule-title">Respeito</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <h3 tabindex="-1"><span class="rule-ic" aria-hidden="true"></span><span class="rule-title"><small>Combinado 1 de 6</small>Respeito</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
       <div class="rule-body">
       <ul>
-        <li>A análise só acontece quando existe respeito dos dois lados.</li>
-        <li>Não aceito ofensas, gritos, ameaças ou qualquer falta de respeito comigo.</li>
+        <li>A análise só acontece com respeito dos dois lados.</li>
+        <li>Não aceito ofensas, gritos, ameaças ou falta de respeito comigo.</li>
       </ul>
       <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
       <button type="button" class="rule-btn">Entendi e concordo</button>
@@ -257,13 +303,14 @@
     </div>
 
     <div class="rule" data-rule="2">
-      <h3 tabindex="-1"><span class="rule-num">2</span><span class="rule-title">Como você vem para a sessão</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <h3 tabindex="-1"><span class="rule-ic" aria-hidden="true"></span><span class="rule-title"><small>Combinado 2 de 6</small>Na hora da sessão</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
       <div class="rule-body">
-      <p>Para a sessão acontecer, peço que você esteja:</p>
+      <p>Para a sessão acontecer, peço que você:</p>
       <ul>
-        <li>sem efeito de álcool ou de drogas;</li>
-        <li>sem beber e sem fumar durante a sessão;</li>
-        <li>de camiseta, com uma roupa que combine com o nosso encontro.</li>
+        <li>esteja sem efeito de álcool ou de drogas;</li>
+        <li>não beba e não fume durante a sessão;</li>
+        <li>esteja de camiseta, com uma roupa que combine com o nosso encontro;</li>
+        <li>fique num lugar calmo e reservado, sem barulho, música, animais ou alguém interrompendo.</li>
       </ul>
       <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
       <button type="button" class="rule-btn">Entendi e concordo</button>
@@ -272,13 +319,13 @@
     </div>
 
     <div class="rule" data-rule="3">
-      <h3 tabindex="-1"><span class="rule-num">3</span><span class="rule-title">O lugar da sessão</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <h3 tabindex="-1"><span class="rule-ic" aria-hidden="true"></span><span class="rule-title"><small>Combinado 3 de 6</small>Faltas e remarcações</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
       <div class="rule-body">
-      <p>Peço que você faça a sessão num lugar:</p>
       <ul>
-        <li>calmo e reservado;</li>
-        <li>sem ninguém interrompendo;</li>
-        <li>sem barulho alto, música ou animais atrapalhando.</li>
+        <li>Precisa faltar ou remarcar? Me avise com pelo menos 24 horas de antecedência.</li>
+        <li>Se o aviso vier depois, ou se você faltar, a sessão é cobrada normalmente, também no plano mensal.</li>
+        <li>As sessões do plano valem dentro do mês contratado.</li>
+        <li>Assim o seu horário fica guardado só para você.</li>
       </ul>
       <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
       <button type="button" class="rule-btn">Entendi e concordo</button>
@@ -287,39 +334,11 @@
     </div>
 
     <div class="rule" data-rule="4">
-      <h3 tabindex="-1"><span class="rule-num">4</span><span class="rule-title">Faltas e remarcações</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
-      <div class="rule-body">
-      <ul>
-        <li>Se precisar faltar ou remarcar, me avise com pelo menos 24 horas de antecedência.</li>
-        <li>Se o aviso vier depois disso, ou se você faltar, a sessão é cobrada normalmente, também no plano mensal.</li>
-        <li>As sessões do plano valem dentro do mês contratado.</li>
-        <li>Esse combinado guarda o seu horário só para você.</li>
-      </ul>
-      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
-      <button type="button" class="rule-btn">Entendi e concordo</button>
-      </div>
-      <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
-    </div>
-
-    <div class="rule" data-rule="5">
-      <h3 tabindex="-1"><span class="rule-num">5</span><span class="rule-title">Sigilo</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <h3 tabindex="-1"><span class="rule-ic" aria-hidden="true"></span><span class="rule-title"><small>Combinado 4 de 6</small>Sigilo e contato</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
       <div class="rule-body">
       <ul>
         <li>Tudo o que você fala nas sessões fica entre nós.</li>
-        <li>O sigilo é um compromisso ético do meu trabalho.</li>
-      </ul>
-      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
-      <button type="button" class="rule-btn">Entendi e concordo</button>
-      </div>
-      <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
-    </div>
-
-    <div class="rule" data-rule="6">
-      <h3 tabindex="-1"><span class="rule-num">6</span><span class="rule-title">Entre as sessões</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
-      <div class="rule-body">
-      <ul>
-        <li>Você pode me mandar dúvidas ou desabafos pelo WhatsApp.</li>
-        <li>Eu respondo em até 48 horas.</li>
+        <li>Entre as sessões, pode me mandar dúvidas ou desabafos pelo WhatsApp. Eu respondo em até 48 horas.</li>
         <li>Em uma emergência, ligue para o CVV no 188 ou para o SAMU no 192.</li>
       </ul>
       <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
@@ -328,8 +347,8 @@
       <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
     </div>
 
-    <div class="rule" data-rule="7">
-      <h3 tabindex="-1"><span class="rule-num">7</span><span class="rule-title">Se um combinado não for cumprido</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+    <div class="rule" data-rule="5">
+      <h3 tabindex="-1"><span class="rule-ic" aria-hidden="true"></span><span class="rule-title"><small>Combinado 5 de 6</small>Se um combinado não for cumprido</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
       <div class="rule-body">
       <ul>
         <li>Eu encerro a sessão na hora.</li>
@@ -343,12 +362,12 @@
       <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
     </div>
 
-    <div class="rule" data-rule="8">
-      <h3 tabindex="-1"><span class="rule-num">8</span><span class="rule-title">Seus dados</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+    <div class="rule" data-rule="6">
+      <h3 tabindex="-1"><span class="rule-ic" aria-hidden="true"></span><span class="rule-title"><small>Combinado 6 de 6</small>Seus dados</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
       <div class="rule-body">
       <ul>
         <li>Uso seus dados só para registrar que você aceitou estes combinados.</li>
-        <li>Eles ficam guardados com segurança no sistema de formulários do site (Netlify) e uma cópia fica comigo, pelo tempo necessário para comprovar este termo.</li>
+        <li>Eles ficam guardados com segurança no sistema de formulários do site (Netlify), e uma cópia fica comigo, pelo tempo necessário para comprovar este termo.</li>
         <li>Você pode pedir para ver, corrigir ou apagar seus dados quando quiser. É só me mandar uma mensagem.</li>
         <li>Tudo segue a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).</li>
       </ul>
@@ -360,12 +379,12 @@
 
   </section>
 
-  <p class="locked" id="locked">Aceite os 8 combinados acima para preencher os dados e assinar.</p>
+  <p class="locked" id="locked">Aceite os 6 combinados acima para preencher os dados e assinar.</p>
 
   <form class="card hidden" id="form" name="termo-ciencia" method="POST"
         data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" novalidate>
     <input type="hidden" name="form-name" value="termo-ciencia">
-    <input type="hidden" name="versao_termo" value="v5, 8 combinados e responsável legal (novembro de 2026)">
+    <input type="hidden" name="versao_termo" value="v6, 6 combinados (novembro de 2026)">
     <input type="hidden" name="data_hora_assinatura" id="data_hora">
     <input type="hidden" name="regra_1_aceita_em" id="aceite_1">
     <input type="hidden" name="regra_2_aceita_em" id="aceite_2">
@@ -373,8 +392,6 @@
     <input type="hidden" name="regra_4_aceita_em" id="aceite_4">
     <input type="hidden" name="regra_5_aceita_em" id="aceite_5">
     <input type="hidden" name="regra_6_aceita_em" id="aceite_6">
-    <input type="hidden" name="regra_7_aceita_em" id="aceite_7">
-    <input type="hidden" name="regra_8_aceita_em" id="aceite_8">
     <input type="file" name="assinatura" id="assinatura_file" class="hidden" tabindex="-1" aria-hidden="true">
     <input type="file" name="termo_pdf" id="termo_pdf_file" class="hidden" tabindex="-1" aria-hidden="true">
     <p class="hidden"><label>Não preencher: <input name="bot-field"></label></p>
@@ -438,7 +455,7 @@
 
     <label class="check">
       <input type="checkbox" name="declaracao_ciencia" value="Sim" required>
-      <span>Li os 8 combinados, entendi e concordo com todos.</span>
+      <span>Li os 6 combinados, entendi e concordo com todos.</span>
     </label>
 
     <label class="check">
@@ -448,7 +465,7 @@
 
     <label class="check">
       <input type="checkbox" name="consentimento_lgpd" value="Sim" required>
-      <span>Aceito que os dados deste termo sejam usados como explica o combinado 8.</span>
+      <span>Aceito que os dados deste termo sejam usados como explica o combinado 6.</span>
     </label>
 
     <h2 style="margin-top:20px">Sua assinatura</h2>
@@ -593,7 +610,7 @@
     linha('Versão: ' + form.querySelector('[name=versao_termo]').value, 9, 'normal', [82, 68, 63], 4);
     linha('Estes combinados valem para todos os pacientes, novos e de longa data. Eles passam a valer no dia em que o paciente assina.', 11, 'normal', null, 4);
     regras.forEach(function(r, k){
-      linha((k + 1) + '. ' + r.querySelector('.rule-title').textContent, 12, 'bold', [140, 88, 69], 1);
+      linha((k + 1) + '. ' + r.querySelector('.rule-title').lastChild.textContent, 12, 'bold', [140, 88, 69], 1);
       var lead = r.querySelector('.rule-body > p');
       if (lead) linha(lead.textContent.trim(), 11);
       Array.prototype.forEach.call(r.querySelectorAll('li'), function(li){ linha('-  ' + li.textContent.trim(), 11); });
@@ -612,9 +629,9 @@
     linha('E-mail: ' + (val('email') || 'não informado'), 11);
     linha('Telefone: ' + val('telefone'), 11, 'normal', null, 3);
     linha('Confirmações', 13, 'bold', [72, 10, 35], 1);
-    linha('[x] Li os 8 combinados, entendi e concordo com todos.', 11);
+    linha('[x] Li os 6 combinados, entendi e concordo com todos.', 11);
     linha('[x] Entendi que, se um combinado não for cumprido, a sessão conta como realizada e o valor não é devolvido.', 11);
-    linha('[x] Aceito que os dados deste termo sejam usados como explica o combinado 8.', 11, 'normal', null, 4);
+    linha('[x] Aceito que os dados deste termo sejam usados como explica o combinado 6.', 11, 'normal', null, 4);
     var iw = W * 0.45, ih = iw * sig.h / sig.w;
     if (y + ih + 20 > 285){ doc.addPage(); y = 22; }
     linha('Assinatura', 13, 'bold', [72, 10, 35], 1);
@@ -696,7 +713,7 @@
       var r = b.closest('.rule');
       if (b.classList.contains('falando')){ speechSynthesis.cancel(); return; }
       speechSynthesis.cancel();
-      var partes = [r.querySelector('.rule-title').textContent + '.'];
+      var partes = [r.querySelector('.rule-title').lastChild.textContent + '.'];
       var lead = r.querySelector('.rule-body > p'); if (lead) partes.push(lead.textContent);
       Array.prototype.forEach.call(r.querySelectorAll('li'), function(li){ partes.push(li.textContent); });
       var u = new SpeechSynthesisUtterance(partes.join(' '));
@@ -712,7 +729,7 @@
   // Regras uma a uma
   var regras = Array.prototype.slice.call(document.querySelectorAll('.rule'));
   var aceitas = 0;
-  var ESPERA = 3; // segundos de leitura antes de liberar o botão
+  var ESPERA = 2; // segundos de leitura antes de liberar o botão
   function abrir(i){
     regras.forEach(function(r, k){
       r.classList.toggle('open', k === i);
@@ -734,7 +751,12 @@
   }
   function progresso(){
     document.getElementById('progressBar').style.width = (aceitas / regras.length * 100) + '%';
-    document.getElementById('progressTxt').textContent = aceitas + ' de ' + regras.length + ' combinados aceitos';
+    var falta = regras.length - aceitas, extra = '';
+    if (aceitas === 0) extra = '';
+    else if (falta === 1) extra = ' · só mais um!';
+    else if (falta === 0) extra = ' · tudo certo!';
+    else if (aceitas >= regras.length / 2) extra = ' · falta pouco';
+    document.getElementById('progressTxt').textContent = aceitas + ' de ' + regras.length + ' combinados aceitos' + extra;
   }
   regras.forEach(function(r, k){
     r.querySelector('.rule-btn').addEventListener('click', function(){
