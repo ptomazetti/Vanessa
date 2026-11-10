@@ -144,6 +144,27 @@
 
   footer.foot{background:var(--wine);color:var(--wine-text);text-align:center;font-size:14px;padding:20px 18px}
   footer.foot strong{display:block;font-family:var(--serif);font-weight:400;font-size:18px;color:#FFFFFF;margin-bottom:2px}
+
+  .progress{height:10px;border-radius:9999px;background:var(--accent-soft);overflow:hidden;margin:0 0 6px}
+  .progress span{display:block;height:100%;width:0;background:var(--sage);transition:width .3s}
+  .progress-txt{font-size:16px;color:var(--muted);margin:0 0 18px;font-weight:600}
+  .rule{border:1px solid var(--line);border-radius:1rem;padding:16px 18px;margin-bottom:12px;background:var(--field)}
+  .rule h3{display:flex;align-items:center;gap:12px;margin:0;font-family:var(--sans);font-size:19px;line-height:1.35;font-weight:600;color:var(--ink);outline:none}
+  .rule-num{width:34px;height:34px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-size:17px}
+  .rule-ok{display:none;margin-left:auto;color:var(--ok);font-size:22px}
+  .rule-body{display:none;margin-top:12px}
+  .rule-body p{margin:0 0 6px}
+  .rule-body ul{margin:0 0 16px;padding-left:24px}
+  .rule-body li{margin-bottom:8px}
+  .rule.open{background:var(--card);border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .rule.open .rule-body{display:block}
+  .rule.done .rule-ok{display:block}
+  .rule.done .rule-num{background:var(--sage);color:#FFFFFF}
+  .rule.locked-rule{opacity:.55}
+  .rule-btn{font:inherit;font-size:17px;font-weight:600;padding:12px 22px;border-radius:9999px;border:1px solid var(--sage);background:var(--sage);color:#FFFFFF;cursor:pointer;width:100%}
+  .rule-btn:hover{background:#4E5F53}
+  .rule-done{margin:8px 0 0 46px;font-size:16px;color:var(--ok);font-weight:600}
+  .locked{text-align:center;color:var(--muted);font-weight:600;margin:0 0 20px}
   .hidden{display:none !important}
 </style>
 </head>
@@ -165,59 +186,91 @@
 
   <section class="card" id="termo">
     <p class="preamble">
-      Este termo explica as regras das sessões. Leia com calma.
-      Se tiver alguma dúvida, pergunte antes de assinar.
-      Para fazer as sessões, você precisa concordar com estas regras.
+      São 5 regras. Leia uma de cada vez, com calma.
+      Depois de ler, toque em "Entendi e concordo" para ir para a próxima.
+      Se tiver dúvida, pergunte à Vanessa antes de continuar.
     </p>
+    <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+    <p class="progress-txt" id="progressTxt" aria-live="polite">0 de 5 regras aceitas</p>
 
-    <div class="clause">
-      <h3>1. Respeito</h3>
-      <p>
-        A análise só funciona com respeito dos dois lados.
-        Não são aceitos ofensas, gritos, ameaças ou qualquer falta de respeito com a psicanalista.
-      </p>
-    </div>
-
-    <div class="clause">
-      <h3>2. Como você deve estar</h3>
-      <p>Não haverá sessão se você:</p>
+    <div class="rule" data-rule="1">
+      <h3 tabindex="-1"><span class="rule-num">1</span><span class="rule-title">Respeito</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <div class="rule-body">
       <ul>
-        <li>estiver sob efeito de álcool ou de drogas;</li>
-        <li>beber ou fumar durante a sessão;</li>
-        <li>estiver sem camiseta ou com roupa que não combina com a sessão.</li>
+        <li>A análise precisa de respeito dos dois lados.</li>
+        <li>Não são aceitos ofensas, gritos, ameaças ou falta de respeito com a psicanalista.</li>
       </ul>
+      <button type="button" class="rule-btn">Entendi e concordo</button>
+      </div>
+      <p class="rule-done hidden">Aceita. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
     </div>
 
-    <div class="clause">
-      <h3>3. O lugar da sessão</h3>
-      <p>
-        Faça a sessão num lugar calmo e reservado, onde ninguém interrompa.
-        Barulho alto, música ou animais atrapalhando impedem a sessão.
-      </p>
+    <div class="rule" data-rule="2">
+      <h3 tabindex="-1"><span class="rule-num">2</span><span class="rule-title">Como você deve estar na sessão</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <div class="rule-body">
+      <p>Na sessão, você precisa estar:</p>
+      <ul>
+        <li>sem efeito de álcool ou de drogas;</li>
+        <li>sem beber e sem fumar;</li>
+        <li>de camiseta, com roupa que combine com a sessão.</li>
+      </ul>
+      <button type="button" class="rule-btn">Entendi e concordo</button>
+      </div>
+      <p class="rule-done hidden">Aceita. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
     </div>
 
-    <div class="clause">
-      <h3>4. Se uma regra não for cumprida</h3>
-      <p>
-        A sessão termina na hora. O valor pago não é devolvido.
-        Se as regras forem desrespeitadas, a psicanalista pode deixar de marcar novas sessões com você.
-      </p>
+    <div class="rule" data-rule="3">
+      <h3 tabindex="-1"><span class="rule-num">3</span><span class="rule-title">O lugar da sessão</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <div class="rule-body">
+      <p>Faça a sessão num lugar:</p>
+      <ul>
+        <li>calmo e reservado;</li>
+        <li>sem ninguém interrompendo;</li>
+        <li>sem barulho alto, música ou animais atrapalhando.</li>
+      </ul>
+      <button type="button" class="rule-btn">Entendi e concordo</button>
+      </div>
+      <p class="rule-done hidden">Aceita. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
     </div>
 
-    <div class="clause">
-      <h3>5. Seus dados</h3>
-      <p>
-        Seus dados servem só para registrar que você leu e aceitou este termo.
-        Eles ficam em sigilo, como manda a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).
-      </p>
+    <div class="rule" data-rule="4">
+      <h3 tabindex="-1"><span class="rule-num">4</span><span class="rule-title">Se uma regra não for cumprida</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <div class="rule-body">
+      <ul>
+        <li>A sessão termina na hora.</li>
+        <li>O valor pago não é devolvido.</li>
+        <li>A psicanalista pode deixar de marcar novas sessões com você.</li>
+      </ul>
+      <button type="button" class="rule-btn">Entendi e concordo</button>
+      </div>
+      <p class="rule-done hidden">Aceita. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
+    </div>
+
+    <div class="rule" data-rule="5">
+      <h3 tabindex="-1"><span class="rule-num">5</span><span class="rule-title">Seus dados</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <div class="rule-body">
+      <ul>
+        <li>Seus dados servem só para registrar que você aceitou este termo.</li>
+        <li>Eles ficam em sigilo, como manda a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).</li>
+      </ul>
+      <button type="button" class="rule-btn">Entendi e concordo</button>
+      </div>
+      <p class="rule-done hidden">Aceita. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
     </div>
   </section>
 
-  <form class="card" id="form" name="termo-ciencia" method="POST"
+  <p class="locked" id="locked">Aceite as 5 regras acima para preencher seus dados e assinar.</p>
+
+  <form class="card hidden" id="form" name="termo-ciencia" method="POST"
         data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" novalidate>
     <input type="hidden" name="form-name" value="termo-ciencia">
-    <input type="hidden" name="versao_termo" value="v2, linguagem simples (novembro de 2026)">
+    <input type="hidden" name="versao_termo" value="v3, regras aceitas uma a uma (novembro de 2026)">
     <input type="hidden" name="data_hora_assinatura" id="data_hora">
+    <input type="hidden" name="regra_1_aceita_em" id="aceite_1">
+    <input type="hidden" name="regra_2_aceita_em" id="aceite_2">
+    <input type="hidden" name="regra_3_aceita_em" id="aceite_3">
+    <input type="hidden" name="regra_4_aceita_em" id="aceite_4">
+    <input type="hidden" name="regra_5_aceita_em" id="aceite_5">
     <input type="file" name="assinatura" id="assinatura_file" class="hidden" tabindex="-1" aria-hidden="true">
     <p class="hidden"><label>Não preencher: <input name="bot-field"></label></p>
 
@@ -249,7 +302,7 @@
 
     <label class="check">
       <input type="checkbox" name="declaracao_ciencia" value="Sim" required>
-      <span>Li este termo, entendi e concordo com as regras.</span>
+      <span>Li as 5 regras, entendi e concordo com todas.</span>
     </label>
 
     <label class="check">
@@ -379,10 +432,62 @@
 
   function erro(t){ msg.className = 'msg error'; msg.textContent = t; }
 
+
+  // Regras uma a uma
+  var regras = Array.prototype.slice.call(document.querySelectorAll('.rule'));
+  var aceitas = 0;
+  function abrir(i){
+    regras.forEach(function(r, k){
+      r.classList.toggle('open', k === i);
+      r.classList.toggle('locked-rule', k > aceitas);
+    });
+  }
+  function progresso(){
+    document.getElementById('progressBar').style.width = (aceitas / regras.length * 100) + '%';
+    document.getElementById('progressTxt').textContent = aceitas + ' de ' + regras.length + ' regras aceitas';
+  }
+  regras.forEach(function(r, k){
+    r.querySelector('.rule-btn').addEventListener('click', function(){
+      var n = k + 1;
+      if (!r.classList.contains('done')){
+        r.classList.add('done');
+        document.getElementById('aceite_' + n).value = agoraBrasilia() + ' (horário de Brasília) | ' + new Date().toISOString();
+        aceitas++;
+        progresso();
+      }
+      r.querySelector('.rule-done').classList.remove('hidden');
+      if (aceitas < regras.length){
+        var prox = regras[aceitas];
+        abrir(aceitas);
+        prox.querySelector('h3').focus();
+        prox.scrollIntoView({ behavior:'smooth', block:'center' });
+      } else {
+        abrir(-1);
+        document.getElementById('locked').classList.add('hidden');
+        form.classList.remove('hidden');
+        lastWidth = 0;
+        setupCanvas();
+        var h = form.querySelector('h2');
+        h.setAttribute('tabindex', '-1');
+        h.focus();
+        form.scrollIntoView({ behavior:'smooth', block:'start' });
+      }
+    });
+    r.querySelector('.rule-reread').addEventListener('click', function(){
+      abrir(r.classList.contains('open') ? -1 : k);
+    });
+  });
+  abrir(0);
+  progresso();
+
   form.addEventListener('submit', function(e){
     e.preventDefault();
     msg.textContent = '';
 
+    if (aceitas < regras.length){
+      erro('Falta aceitar alguma regra.');
+      return;
+    }
     if (!form.checkValidity()){
       var invalido = form.querySelector(':invalid');
       if (invalido && invalido.type === 'checkbox'){
