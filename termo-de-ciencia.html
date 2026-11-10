@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Termo de compromisso | Vanessa Torriani, psicanalista</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<meta name="theme-color" content="#480A23">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF9F5;
+    --card:#FFFFFF;
+    --field:#FDFBF8;
+    --ink:#272422;
+    --muted:#52443F;
+    --accent:#8C5845;
+    --accent-hover:#774737;
+    --accent-soft:#F2EBE3;
+    --sage:#5D6F62;
+    --wine:#480A23;
+    --wine-text:#F3DCCB;
+    --gold:#F6C77E;
+    --orange:#E8893A;
+    --line:#E7DFD5;
+    --error:#A23B32;
+    --ok:#5D6F62;
+    --col:720px;
+    --serif:"Playfair Display",Georgia,serif;
+    --sans:"Plus Jakarta Sans",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:18px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .topbar{background:rgba(251,249,245,.92);border-bottom:1px solid var(--line)}
+  .topbar-in{max-width:var(--col);margin:0 auto;padding:12px 18px;display:flex;align-items:center;gap:.75rem}
+  .mark{width:44px;height:44px;border-radius:9999px;object-fit:cover;flex:none}
+  .brand-name{font-family:var(--serif);font-size:21px;line-height:1.1;color:var(--ink)}
+  .brand-name small{display:block;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--sage);margin-top:3px}
+  .wrap{max-width:var(--col);margin:0 auto;padding:36px 18px 48px}
+  header.page{text-align:center;margin-bottom:28px}
+  .overline{
+    display:inline-flex;align-items:center;gap:.5rem;
+    font-size:16px;line-height:22px;font-weight:600;
+    color:var(--accent);margin:0 0 12px;
+  }
+  .overline::before{content:"";width:14px;height:14px;flex:none;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23E8893A%22%3E%3Cpath d=%22M12 1c.8 5.6 3.4 8.2 11 11-7.6 2.8-10.2 5.4-11 11-.8-5.6-3.4-8.2-11-11 7.6-2.8 10.2-5.4 11-11Z%22/%3E%3C/svg%3E") center/contain no-repeat}
+  h1{
+    font-family:var(--serif);font-weight:400;font-size:40px;line-height:1.2;
+    letter-spacing:-.015em;margin:0 0 10px;text-wrap:balance;
+  }
+  @media (max-width:560px){h1{font-size:30px}}
+  .subtitle{color:var(--muted);margin:0;font-size:17px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:1.25rem;
+    padding:28px 24px;margin-bottom:20px;
+    box-shadow:0 12px 32px -8px rgba(39,36,34,.06),0 4px 12px -2px rgba(39,36,34,.03);
+  }
+  .card h2{
+    font-family:var(--serif);font-weight:400;
+    font-size:24px;line-height:1.25;margin:0 0 16px;
+  }
+  .preamble{margin:0 0 14px}
+  .steps{margin:0 0 14px;padding:0;list-style:none;counter-reset:s}
+  .steps li{counter-increment:s;display:flex;gap:10px;align-items:center;margin-bottom:8px;font-weight:600}
+  .steps li::before{content:counter(s);width:28px;height:28px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-size:15px}
+  .clause{margin:0 0 26px}
+  .clause:last-child{margin-bottom:0}
+  .clause h3{
+    font-family:var(--sans);
+    font-size:19px;line-height:1.4;
+    color:var(--accent);margin:0 0 6px;font-weight:600;
+  }
+  .clause p{margin:0}
+  .clause ul{margin:8px 0 0;padding-left:24px}
+  .clause ul li{margin-bottom:6px}
+
+  .field{margin-bottom:16px}
+  label.lbl{display:block;font-size:17px;font-weight:600;margin-bottom:6px}
+  .req{color:var(--accent)}
+  input[type=text],input[type=email],input[type=tel]{
+    width:100%;font:inherit;color:var(--ink);
+    padding:12px 14px;border:1px solid var(--line);border-radius:.5rem;
+    background:var(--field);outline:none;transition:border-color .15s, box-shadow .15s;
+  }
+  input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .hint{font-size:16px;color:var(--muted);margin-top:4px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+  @media (max-width:560px){.row{grid-template-columns:1fr}}
+
+  .check{
+    display:flex;gap:12px;align-items:flex-start;
+    padding:14px;border:1px solid var(--line);border-radius:.75rem;
+    margin-bottom:12px;cursor:pointer;background:var(--field);
+  }
+  .check input{width:26px;height:26px;margin:0;flex:0 0 auto;accent-color:var(--accent)}
+  .check span{font-size:17px}
+
+  .sig-box{
+    position:relative;border:1.5px dashed var(--accent);border-radius:.75rem;
+    background:#FFFFFF;height:190px;overflow:hidden;
+  }
+  #sig{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair}
+  .sig-line{
+    position:absolute;left:24px;right:24px;bottom:42px;
+    border-bottom:1px solid var(--line);pointer-events:none;
+  }
+  .sig-placeholder{
+    position:absolute;left:0;right:0;bottom:14px;text-align:center;
+    font-size:15px;color:var(--muted);pointer-events:none;
+  }
+  .sig-actions{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:4px 16px;margin-top:8px}
+  .meta{font-size:15px;color:var(--muted)}
+  .btn-link{
+    background:none;border:none;color:var(--accent);font:inherit;font-size:16px;font-weight:600;
+    cursor:pointer;padding:4px 0;text-decoration:underline;text-underline-offset:4px;white-space:nowrap;
+  }
+
+  .submit{
+    width:100%;font:inherit;font-size:16px;font-weight:600;
+    padding:16px;border:1px solid var(--accent);border-radius:9999px;cursor:pointer;
+    background:var(--accent);color:#FFFFFF;transition:background .2s, border-color .2s, opacity .15s;
+  }
+  .submit:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+  .submit:disabled{opacity:.6;cursor:default}
+  :focus-visible{outline:2px solid rgba(140,88,69,.45);outline-offset:2px}
+  .msg{margin-top:12px;font-size:17px;font-weight:600;text-align:center;min-height:20px}
+  .msg.error{color:var(--error)}
+
+  .success{text-align:center;padding:40px 24px}
+  .success .tick{
+    width:56px;height:56px;border-radius:50%;margin:0 auto 16px;
+    background:var(--accent-soft);color:var(--ok);
+    display:flex;align-items:center;justify-content:center;font-size:28px;
+  }
+  .success h2{margin-bottom:8px}
+  .success p{color:var(--muted);margin:0 0 6px}
+  .pdf-btn{display:inline-block;width:auto;margin:22px auto 10px;padding:15px 32px;text-decoration:none}
+  .success .pdf-note{font-size:16px}
+
+  footer.foot{background:var(--wine);color:var(--wine-text);text-align:center;font-size:14px;padding:20px 18px}
+  footer.foot strong{display:block;font-family:var(--serif);font-weight:400;font-size:18px;color:#FFFFFF;margin-bottom:2px}
+
+  .progress{height:10px;border-radius:9999px;background:var(--accent-soft);overflow:hidden;margin:0 0 6px}
+  .progress span{display:block;height:100%;width:0;background:var(--sage);transition:width .3s}
+  .progress-txt{font-size:16px;color:var(--muted);margin:0 0 18px;font-weight:600}
+  .rule{border:1px solid var(--line);border-radius:1rem;padding:16px 18px;margin-bottom:12px;background:var(--field)}
+  .rule h3{display:flex;align-items:center;gap:12px;margin:0;font-family:var(--sans);font-size:19px;line-height:1.35;font-weight:600;color:var(--ink);outline:none}
+  .rule-num{width:34px;height:34px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-size:17px}
+  .rule-ok{display:none;margin-left:auto;color:var(--ok);font-size:22px}
+  .rule-body{display:none;margin-top:12px}
+  .rule-body p{margin:0 0 6px}
+  .rule-body ul{margin:0 0 16px;padding-left:24px}
+  .rule-body li{margin-bottom:8px}
+  .rule.open{background:var(--card);border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .rule.open .rule-body{display:block}
+  .rule.done .rule-ok{display:block}
+  .rule.done .rule-num{background:var(--sage);color:#FFFFFF}
+  .rule.locked-rule{opacity:.7}
+  .rule.done .rule-btn{display:none}
+  .rule-btn:disabled{background:var(--accent-soft);border-color:var(--line);color:var(--muted);cursor:default}
+  input.invalid{border-color:var(--error);box-shadow:0 0 0 3px rgba(162,59,50,.12)}
+  .field-err{color:var(--error);font-size:16px;font-weight:600;margin-top:6px}
+  .check.invalid{border-color:var(--error)}
+  @media (min-width:768px){
+    :root{--col:800px}
+    .wrap{padding:56px 32px 72px}
+    .topbar-in{padding:14px 32px}
+    .card{padding:40px 44px}
+    h1{font-size:48px}
+    .subtitle{font-size:19px}
+    .card h2{font-size:28px}
+    .rule{padding:20px 24px}
+    .rule-btn{width:auto;min-width:260px}
+    .rule-done{margin-left:46px}
+    .sig-box{height:230px}
+    .submit{width:auto;min-width:320px;display:block;margin:0 auto;padding:16px 40px}
+  }
+  @media (min-width:1200px){
+    :root{--col:880px}
+  }
+  .rule-btn{font:inherit;font-size:17px;font-weight:600;padding:12px 22px;border-radius:9999px;border:1px solid var(--sage);background:var(--sage);color:#FFFFFF;cursor:pointer;width:100%}
+  .rule-btn:hover{background:#4E5F53}
+  .rule-done{margin:8px 0 0 46px;font-size:16px;color:var(--ok);font-weight:600}
+  .locked{text-align:center;color:var(--muted);font-weight:600;margin:0 0 20px}
+  /* Ajustes finais por tamanho de tela (vêm por último para valer sobre as regras acima) */
+  @media (min-width:768px){
+    .rule-btn{width:auto;min-width:280px;padding:12px 32px}
+  }
+  @media (max-width:380px){
+    .wrap{padding:28px 12px 40px}
+    .card{padding:22px 16px}
+    .rule{padding:14px 14px}
+    .rule h3{gap:10px;font-size:18px}
+    .rule-num{width:30px;height:30px;font-size:16px}
+    .rule-done{margin-left:40px}
+    .rule-body ul{padding-left:20px}
+  }
+  .check input[type=radio]{accent-color:var(--accent)}
+  .ouvir{display:flex;width:fit-content;gap:6px;align-items:center;margin:0 0 14px;text-decoration:underline;text-underline-offset:4px}
+  .btn-link{min-height:44px}
+  .check:has(input:checked){border-color:var(--accent);background:#FFFFFF}
+  .check input:focus-visible{outline:2px solid rgba(140,88,69,.45);outline-offset:3px}
+  .ouvir.falando{color:var(--sage)}
+
+  /* ===== Cor, textura e formas (mesma linguagem do site) ===== */
+  body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.08;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .2 0 0 0 0 .15 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  header.page{position:relative;isolation:isolate}
+  @media (max-width:560px){.rule.open .rule-body{padding:12px 14px 14px;margin-left:-6px;margin-right:-6px}.rule-body ul{padding-left:20px}}
+  h1 em{font-style:normal;white-space:nowrap;padding-bottom:8px;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 16%22 preserveAspectRatio=%22none%22 fill=%22none%22 stroke=%22%23E8893A%22 stroke-width=%224%22 stroke-linecap=%22round%22%3E%3Cpath d=%22M3 10C25 3 40 14 62 8S100 3 122 9 160 13 197 5%22/%3E%3C/svg%3E") left bottom / 100% 12px no-repeat}
+  .wrap{overflow-x:clip}
+  .rule{background:var(--tint);border-color:rgba(39,36,34,.07)}
+  .rule h3{align-items:center}
+  .rule-ic{width:44px;height:44px;flex:none;border-radius:14px;background:#FFFFFF;position:relative;box-shadow:0 2px 6px -3px rgba(39,36,34,.25)}
+  .rule-ic::after{content:"";position:absolute;inset:9px;background:var(--ink-ic);-webkit-mask:var(--icon) center/contain no-repeat;mask:var(--icon) center/contain no-repeat}
+  .rule.done .rule-ic{background:var(--ink-ic)}
+  .rule.done .rule-ic::after{background:#FFFFFF}
+  .rule-title small{display:block;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--ink-ic);margin-bottom:1px}
+  .rule-ok{color:var(--ink-ic)}
+  .rule.open{background:var(--tint);border-color:var(--ink-ic);box-shadow:0 14px 28px -18px rgba(39,36,34,.45)}
+  .rule.open .rule-body{background:#FFFFFF;border-radius:12px;padding:16px 18px 18px;margin-top:14px}
+  .rule-btn{background:var(--ink-ic);border-color:var(--ink-ic)}
+  .rule-btn:hover{background:var(--ink-ic);filter:brightness(.92)}
+  .rule-btn:disabled{background:var(--tint);border-color:transparent;color:var(--ink);filter:none}
+  .rule-done{color:var(--ink-ic);margin-left:56px}
+  .ouvir{color:var(--ink-ic)}
+  .rule.locked-rule{opacity:1;border-style:dashed;border-color:rgba(39,36,34,.18)}
+  .rule.locked-rule .rule-ic{opacity:.55;box-shadow:none}
+  .progress{height:12px;background:#EFE6DE}
+  .progress span{background:linear-gradient(90deg,#E8893A,#E3B341 50%,#5D6F62)}
+  .steps li::before{background:#FBE8D9;color:#984812}
+  .steps li:nth-child(2)::before{background:#F7EFD2;color:#735507}
+  .steps li:nth-child(3)::before{background:#E6EEE8;color:#3F5446}
+  #form h2,.success h2{position:relative}
+  #form > h2::before,#blocoResp > h2::before{content:"";display:inline-block;width:14px;height:14px;margin-right:10px;vertical-align:2px;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23E8893A%22%3E%3Cpath d=%22M12 1c.8 5.6 3.4 8.2 11 11-7.6 2.8-10.2 5.4-11 11-.8-5.6-3.4-8.2-11-11 7.6-2.8 10.2-5.4 11-11Z%22/%3E%3C/svg%3E") center/contain no-repeat}
+  .success{position:relative;overflow:hidden;isolation:isolate}
+  .success .tick{background:#E6EEE8;color:#3F5446}
+  @media (max-width:380px){.rule-ic{width:38px;height:38px;border-radius:12px}.rule-ic::after{inset:8px}.rule-done{margin-left:48px}.rule.open .rule-body{padding:14px}}
+  .rule[data-rule="1"]{--tint:#E7ECF8;--ink-ic:#3552B8;--icon:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%221.7%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 20s-7-4.3-7-9.5A3.8 3.8 0 0 1 12 8a3.8 3.8 0 0 1 7 2.5C19 15.7 12 20 12 20Z%22/%3E%3C/svg%3E")}
+  .rule[data-rule="2"]{--tint:#FBE8D9;--ink-ic:#984812;--icon:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%221.7%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 5h16v11H4ZM2 19.5h20M10 16v3.5M14 16v3.5%22/%3E%3C/svg%3E")}
+  .rule[data-rule="3"]{--tint:#F7EFD2;--ink-ic:#735507;--icon:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%221.7%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 6h16v14H4ZM4 10.5h16M8.5 3.5v5M15.5 3.5v5%22/%3E%3C/svg%3E")}
+  .rule[data-rule="4"]{--tint:#E6EEE8;--ink-ic:#3F5446;--icon:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%221.7%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M6 11h12v9H6ZM8.5 11V8a3.5 3.5 0 0 1 7 0v3%22/%3E%3C/svg%3E")}
+  .rule[data-rule="5"]{--tint:#F7E3E7;--ink-ic:#A8404F;--icon:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%221.7%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3.5 21.5 20H2.5ZM12 10v4.5M12 17.2v.3%22/%3E%3C/svg%3E")}
+  .rule[data-rule="6"]{--tint:#E7ECF8;--ink-ic:#3552B8;--icon:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%221.7%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6ZM9 12l2 2 4-4%22/%3E%3C/svg%3E")}
+  .hidden{display:none !important}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-in">
+    <img class="mark" src="img/logo-icone.webp" alt="" width="44" height="44">
+    <span class="brand-name">Vanessa Torriani<small>Psicanálise clínica e sistêmica</small></span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="page">
+    <p class="overline">Para todos os pacientes</p>
+    <h1>Termo de <em>compromisso</em></h1>
+    <p class="subtitle">Os combinados das nossas sessões</p>
+  </header>
+
+  <section class="card" id="termo">
+    <p class="preamble">
+      Oi! Quero combinar algumas coisas com você.
+      Elas valem para todos os meus pacientes, novos e de longa data, a partir do dia em que você assina.
+      Leva uns 3 minutos.
+    </p>
+    <ol class="steps">
+      <li>Leia os combinados com calma, um de cada vez.</li>
+      <li>Preencha seus dados.</li>
+      <li>Assine e envie.</li>
+    </ol>
+    <p class="preamble">Se tiver alguma dúvida, me mande uma mensagem antes de assinar. Eu respondo com calma.</p>
+    <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+    <p class="progress-txt" id="progressTxt" aria-live="polite">0 de 6 combinados aceitos</p>
+
+    <div class="rule" data-rule="1">
+      <h3 tabindex="-1"><span class="rule-ic" aria-hidden="true"></span><span class="rule-title"><small>Combinado 1 de 6</small>Respeito</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <div class="rule-body">
+      <ul>
+        <li>A análise só acontece com respeito dos dois lados.</li>
+        <li>Não aceito ofensas, gritos, ameaças ou falta de respeito comigo.</li>
+      </ul>
+      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
+      <button type="button" class="rule-btn">Entendi e concordo</button>
+      </div>
+      <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
+    </div>
+
+    <div class="rule" data-rule="2">
+      <h3 tabindex="-1"><span class="rule-ic" aria-hidden="true"></span><span class="rule-title"><small>Combinado 2 de 6</small>Na hora da sessão</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <div class="rule-body">
+      <p>Para a sessão acontecer, peço que você:</p>
+      <ul>
+        <li>esteja sem efeito de álcool ou de drogas;</li>
+        <li>não beba e não fume durante a sessão;</li>
+        <li>esteja de camiseta, com uma roupa que combine com o nosso encontro;</li>
+        <li>fique num lugar calmo e reservado, sem barulho, música, animais ou alguém interrompendo.</li>
+      </ul>
+      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
+      <button type="button" class="rule-btn">Entendi e concordo</button>
+      </div>
+      <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
+    </div>
+
+    <div class="rule" data-rule="3">
+      <h3 tabindex="-1"><span class="rule-ic" aria-hidden="true"></span><span class="rule-title"><small>Combinado 3 de 6</small>Faltas e remarcações</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <div class="rule-body">
+      <ul>
+        <li>Precisa faltar ou remarcar? Me avise com pelo menos 24 horas de antecedência.</li>
+        <li>Se o aviso vier depois, ou se você faltar, a sessão é cobrada normalmente, também no plano mensal.</li>
+        <li>As sessões do plano valem dentro do mês contratado.</li>
+        <li>Assim o seu horário fica guardado só para você.</li>
+      </ul>
+      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
+      <button type="button" class="rule-btn">Entendi e concordo</button>
+      </div>
+      <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
+    </div>
+
+    <div class="rule" data-rule="4">
+      <h3 tabindex="-1"><span class="rule-ic" aria-hidden="true"></span><span class="rule-title"><small>Combinado 4 de 6</small>Sigilo e contato</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <div class="rule-body">
+      <ul>
+        <li>Tudo o que você fala nas sessões fica entre nós.</li>
+        <li>Entre as sessões, pode me mandar dúvidas ou desabafos pelo WhatsApp. Eu respondo em até 48 horas.</li>
+        <li>Em uma emergência, ligue para o CVV no 188 ou para o SAMU no 192.</li>
+      </ul>
+      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
+      <button type="button" class="rule-btn">Entendi e concordo</button>
+      </div>
+      <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
+    </div>
+
+    <div class="rule" data-rule="5">
+      <h3 tabindex="-1"><span class="rule-ic" aria-hidden="true"></span><span class="rule-title"><small>Combinado 5 de 6</small>Se um combinado não for cumprido</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <div class="rule-body">
+      <ul>
+        <li>Eu encerro a sessão na hora.</li>
+        <li>Essa sessão conta como realizada, e o valor dela não é devolvido.</li>
+        <li>Se você tem plano mensal, essa sessão conta como uma das sessões do mês.</li>
+        <li>Posso deixar de marcar novas sessões com você.</li>
+      </ul>
+      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
+      <button type="button" class="rule-btn">Entendi e concordo</button>
+      </div>
+      <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
+    </div>
+
+    <div class="rule" data-rule="6">
+      <h3 tabindex="-1"><span class="rule-ic" aria-hidden="true"></span><span class="rule-title"><small>Combinado 6 de 6</small>Seus dados</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <div class="rule-body">
+      <ul>
+        <li>Uso seus dados só para registrar que você aceitou estes combinados.</li>
+        <li>Eles ficam guardados com segurança no sistema de formulários do site (Netlify), e uma cópia fica comigo, pelo tempo necessário para comprovar este termo.</li>
+        <li>Você pode pedir para ver, corrigir ou apagar seus dados quando quiser. É só me mandar uma mensagem.</li>
+        <li>Tudo segue a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).</li>
+      </ul>
+      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
+      <button type="button" class="rule-btn">Entendi e concordo</button>
+      </div>
+      <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
+    </div>
+
+  </section>
+
+  <p class="locked" id="locked">Aceite os 6 combinados acima para preencher os dados e assinar.</p>
+
+  <form class="card hidden" id="form" name="termo-ciencia" method="POST"
+        data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" novalidate>
+    <input type="hidden" name="form-name" value="termo-ciencia">
+    <input type="hidden" name="versao_termo" value="v6, 6 combinados (novembro de 2026)">
+    <input type="hidden" name="data_hora_assinatura" id="data_hora">
+    <input type="hidden" name="regra_1_aceita_em" id="aceite_1">
+    <input type="hidden" name="regra_2_aceita_em" id="aceite_2">
+    <input type="hidden" name="regra_3_aceita_em" id="aceite_3">
+    <input type="hidden" name="regra_4_aceita_em" id="aceite_4">
+    <input type="hidden" name="regra_5_aceita_em" id="aceite_5">
+    <input type="hidden" name="regra_6_aceita_em" id="aceite_6">
+    <input type="file" name="assinatura" id="assinatura_file" class="hidden" tabindex="-1" aria-hidden="true">
+    <input type="file" name="termo_pdf" id="termo_pdf_file" class="hidden" tabindex="-1" aria-hidden="true">
+    <p class="hidden"><label>Não preencher: <input name="bot-field"></label></p>
+
+    <h2>Quem está assinando?</h2>
+    <label class="check">
+      <input type="radio" name="quem_assina" value="O próprio paciente (18 anos ou mais)" checked>
+      <span>Eu sou o paciente e tenho 18 anos ou mais.</span>
+    </label>
+    <label class="check">
+      <input type="radio" name="quem_assina" value="Responsável legal por paciente com menos de 18 anos">
+      <span>Sou pai, mãe ou responsável por um paciente com menos de 18 anos.</span>
+    </label>
+
+    <div id="blocoResp" class="hidden">
+      <h2 style="margin-top:20px">Dados do responsável</h2>
+      <p class="hint" style="margin:-8px 0 16px">Você assina pelo paciente. Os combinados valem para ele ou ela.</p>
+      <div class="field">
+        <label class="lbl" for="resp_nome">Seu nome completo <span class="req">*</span></label>
+        <input type="text" id="resp_nome" name="responsavel_nome" autocomplete="name" minlength="5">
+      </div>
+      <div class="row">
+        <div class="field">
+          <label class="lbl" for="resp_documento">Seu CPF ou outro documento <span class="req">*</span></label>
+          <input type="text" id="resp_documento" name="responsavel_documento" minlength="5">
+        </div>
+        <div class="field">
+          <label class="lbl" for="resp_parentesco">Você é o quê do paciente? <span class="req">*</span></label>
+          <input type="text" id="resp_parentesco" name="responsavel_parentesco" placeholder="Ex.: mãe, pai, avó" minlength="2">
+        </div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:20px" id="tituloDados">Seus dados</h2>
+    <p class="hint" style="margin:-8px 0 16px">Os campos com <span class="req">*</span> são obrigatórios.</p>
+
+    <div class="field">
+      <label class="lbl" for="nome" id="lblNome">Nome completo <span class="req">*</span></label>
+      <input type="text" id="nome" name="nome_completo" autocomplete="name" required minlength="5">
+    </div>
+
+    <div class="field">
+      <label class="lbl" for="documento">CPF ou outro documento <span class="req">*</span></label>
+      <input type="text" id="documento" name="documento" inputmode="text" required minlength="5">
+      <div class="hint">Mora fora do Brasil? Pode usar o passaporte ou um documento do país onde você mora.</div>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <label class="lbl" for="email">E-mail</label>
+        <input type="email" id="email" name="email" autocomplete="email">
+        <div class="hint">Não tem e-mail? Pode deixar em branco.</div>
+      </div>
+      <div class="field">
+        <label class="lbl" for="telefone">Telefone ou WhatsApp <span class="req">*</span></label>
+        <input type="tel" id="telefone" name="telefone" autocomplete="tel" required minlength="8">
+      </div>
+    </div>
+
+    <h2 style="margin-top:12px">Sua confirmação</h2>
+
+    <label class="check">
+      <input type="checkbox" name="declaracao_ciencia" value="Sim" required>
+      <span>Li os 6 combinados, entendi e concordo com todos.</span>
+    </label>
+
+    <label class="check">
+      <input type="checkbox" name="ciencia_sem_devolucao" value="Sim" required>
+      <span>Entendi que, se um combinado não for cumprido, a sessão conta como realizada e o valor não é devolvido.</span>
+    </label>
+
+    <label class="check">
+      <input type="checkbox" name="consentimento_lgpd" value="Sim" required>
+      <span>Aceito que os dados deste termo sejam usados como explica o combinado 6.</span>
+    </label>
+
+    <h2 style="margin-top:20px">Sua assinatura</h2>
+
+    <div class="sig-box">
+      <canvas id="sig" aria-label="Área de assinatura"></canvas>
+      <div class="sig-line"></div>
+      <div class="sig-placeholder" id="sigPlaceholder">Assine aqui com o dedo ou com o mouse</div>
+    </div>
+    <div class="sig-actions">
+      <span class="meta" id="dataExibida"></span>
+      <button type="button" class="btn-link" id="limpar">Apagar e assinar de novo</button>
+    </div>
+
+    <div style="margin-top:24px">
+      <button type="submit" class="submit" id="enviar">Assinar e enviar</button>
+      <div class="msg" id="msg" role="alert"></div>
+    </div>
+  </form>
+
+  <section class="card success hidden" id="sucesso">
+    <div class="tick">✓</div>
+    <h2>Pronto! Termo assinado.</h2>
+    <p id="sucessoNome"></p>
+    <p id="sucessoData"></p>
+    <a class="submit pdf-btn" id="baixarPdf" href="#" download>Baixar o termo em PDF</a>
+    <p class="pdf-note">Guarde este arquivo. Eu também recebo uma cópia.</p>
+  </section>
+
+</div>
+
+<footer class="foot">
+  <strong>Vanessa Torriani</strong>
+  Documento assinado pela internet.
+</footer>
+
+<script src="js/jspdf.umd.min.js"></script>
+<script>
+(function(){
+  var canvas = document.getElementById('sig');
+  var ctx = canvas.getContext('2d');
+  var placeholder = document.getElementById('sigPlaceholder');
+  var drawing = false, hasInk = false, last = null, lastWidth = 0;
+
+  function setupCanvas(manter){
+    var rect = canvas.getBoundingClientRect();
+    if (Math.round(rect.width) === lastWidth) return;
+    // Ao girar a tela, guarda o desenho para não apagar a assinatura
+    var copia = null;
+    if (manter === true && hasInk && canvas.width && canvas.height){
+      copia = document.createElement('canvas');
+      copia.width = canvas.width; copia.height = canvas.height;
+      copia.getContext('2d').drawImage(canvas, 0, 0);
+    }
+    lastWidth = Math.round(rect.width);
+    var ratio = Math.max(window.devicePixelRatio || 1, 1);
+    canvas.width = rect.width * ratio;
+    canvas.height = rect.height * ratio;
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    ctx.lineWidth = 2.2;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.strokeStyle = '#1B2A35';
+    if (copia){
+      ctx.drawImage(copia, 0, 0, rect.width, rect.height);
+      return;
+    }
+    hasInk = false;
+    placeholder.classList.remove('hidden');
+  }
+
+  function pos(e){
+    var r = canvas.getBoundingClientRect();
+    return { x: e.clientX - r.left, y: e.clientY - r.top };
+  }
+
+  canvas.addEventListener('pointerdown', function(e){
+    e.preventDefault();
+    canvas.setPointerCapture(e.pointerId);
+    drawing = true;
+    last = pos(e);
+    ctx.beginPath();
+    ctx.arc(last.x, last.y, ctx.lineWidth / 2, 0, Math.PI * 2);
+    ctx.fillStyle = ctx.strokeStyle;
+    ctx.fill();
+    hasInk = true;
+    placeholder.classList.add('hidden');
+  });
+  canvas.addEventListener('pointermove', function(e){
+    if (!drawing) return;
+    e.preventDefault();
+    var p = pos(e);
+    ctx.beginPath();
+    ctx.moveTo(last.x, last.y);
+    ctx.lineTo(p.x, p.y);
+    ctx.stroke();
+    last = p;
+  });
+  ['pointerup','pointercancel','pointerleave'].forEach(function(ev){
+    canvas.addEventListener(ev, function(){ drawing = false; });
+  });
+
+  document.getElementById('limpar').addEventListener('click', function(){
+    lastWidth = 0;
+    setupCanvas();
+  });
+
+  window.addEventListener('resize', function(){ setupCanvas(true); });
+  setupCanvas();
+
+  function agoraBrasilia(){
+    return new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+  }
+  function dataExtenso(){
+    return new Date().toLocaleDateString('pt-BR', { day:'numeric', month:'long', year:'numeric', timeZone:'America/Sao_Paulo' });
+  }
+  document.getElementById('dataExibida').textContent = 'Data: ' + dataExtenso();
+
+  function exportarAssinatura(){
+    return new Promise(function(resolve){
+      var out = document.createElement('canvas');
+      var rect = canvas.getBoundingClientRect();
+      out.width = Math.round(rect.width * 2);
+      out.height = Math.round(rect.height * 2);
+      var o = out.getContext('2d');
+      o.fillStyle = '#FFFFFF';
+      o.fillRect(0, 0, out.width, out.height);
+      o.drawImage(canvas, 0, 0, out.width, out.height);
+      out.toBlob(function(blob){ resolve({ blob: blob, url: out.toDataURL('image/jpeg', 0.8), w: out.width, h: out.height }); }, 'image/png');
+    });
+  }
+
+  function gerarPdf(sig, nome, registro){
+    if (!window.jspdf) return null;
+    var doc = new window.jspdf.jsPDF({ unit:'mm', format:'a4', compress:true });
+    var M = 20, W = 210 - M * 2, y = 22;
+    function linha(txt, size, style, cor, gap){
+      doc.setFont('helvetica', style || 'normal');
+      doc.setFontSize(size);
+      doc.setTextColor.apply(doc, cor || [39, 36, 34]);
+      var partes = doc.splitTextToSize(txt, W);
+      partes.forEach(function(t){
+        if (y > 280){ doc.addPage(); y = 22; }
+        doc.text(t, M, y);
+        y += size * 0.45;
+      });
+      y += gap || 0;
+    }
+    function val(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+    linha('Vanessa Torriani, psicanálise clínica e sistêmica', 10, 'normal', [93, 111, 98], 2);
+    linha('Termo de compromisso', 20, 'bold', [72, 10, 35], 1);
+    linha('Os combinados das nossas sessões', 11, 'normal', [82, 68, 63], 1);
+    linha('Versão: ' + form.querySelector('[name=versao_termo]').value, 9, 'normal', [82, 68, 63], 4);
+    linha('Estes combinados valem para todos os pacientes, novos e de longa data. Eles passam a valer no dia em que o paciente assina.', 11, 'normal', null, 4);
+    regras.forEach(function(r, k){
+      linha((k + 1) + '. ' + r.querySelector('.rule-title').lastChild.textContent, 12, 'bold', [140, 88, 69], 1);
+      var lead = r.querySelector('.rule-body > p');
+      if (lead) linha(lead.textContent.trim(), 11);
+      Array.prototype.forEach.call(r.querySelectorAll('li'), function(li){ linha('-  ' + li.textContent.trim(), 11); });
+      linha('Aceito em ' + val('aceite_' + (k + 1)).split(' | ')[0], 9, 'italic', [93, 111, 98], 3);
+    });
+    y += 2;
+    if (menor()){
+      linha('Assinado pelo responsável legal', 13, 'bold', [72, 10, 35], 1);
+      linha('Nome: ' + val('resp_nome'), 11);
+      linha('CPF ou documento: ' + val('resp_documento'), 11);
+      linha('Relação com o paciente: ' + val('resp_parentesco'), 11, 'normal', null, 3);
+    }
+    linha('Dados do paciente', 13, 'bold', [72, 10, 35], 1);
+    linha('Nome: ' + val('nome'), 11);
+    linha('CPF ou documento: ' + val('documento'), 11);
+    linha('E-mail: ' + (val('email') || 'não informado'), 11);
+    linha('Telefone: ' + val('telefone'), 11, 'normal', null, 3);
+    linha('Confirmações', 13, 'bold', [72, 10, 35], 1);
+    linha('[x] Li os 6 combinados, entendi e concordo com todos.', 11);
+    linha('[x] Entendi que, se um combinado não for cumprido, a sessão conta como realizada e o valor não é devolvido.', 11);
+    linha('[x] Aceito que os dados deste termo sejam usados como explica o combinado 6.', 11, 'normal', null, 4);
+    var iw = W * 0.45, ih = iw * sig.h / sig.w;
+    if (y + ih + 20 > 285){ doc.addPage(); y = 22; }
+    linha('Assinatura', 13, 'bold', [72, 10, 35], 1);
+    doc.addImage(sig.url, 'JPEG', M, y, iw, ih);
+    y += ih + 4;
+    linha('Assinado em ' + registro.split(' | ')[0], 10);
+    linha('Registro: ' + registro.split(' | ')[1], 9, 'normal', [82, 68, 63], 2);
+    linha('Documento assinado pela internet.', 9, 'italic', [82, 68, 63]);
+    return doc.output('blob');
+  }
+
+  var form = document.getElementById('form');
+  var msg = document.getElementById('msg');
+  var btn = document.getElementById('enviar');
+
+  function erro(t){ msg.className = 'msg error'; msg.textContent = t; }
+
+  var AVISOS = {
+    nome: 'Escreva o nome completo.',
+    documento: 'Escreva o número do CPF ou de outro documento.',
+    email: 'Confira o e-mail, por exemplo nome@gmail.com. Se não tiver, deixe em branco.',
+    telefone: 'Escreva o telefone com DDD.',
+    resp_nome: 'Escreva o seu nome completo.',
+    resp_documento: 'Escreva o número do seu CPF ou de outro documento.',
+    resp_parentesco: 'Escreva o que você é do paciente, por exemplo mãe ou pai.'
+  };
+  function marcar(el, texto){
+    var box = el.closest('.field') || el.closest('.check');
+    var old = box.querySelector('.field-err');
+    if (old) old.remove();
+    el.classList.toggle('invalid', !!texto);
+    if (el.type === 'checkbox') box.classList.toggle('invalid', !!texto);
+    el.setAttribute('aria-invalid', texto ? 'true' : 'false');
+    if (texto && el.type !== 'checkbox'){
+      var d = document.createElement('div');
+      d.className = 'field-err'; d.id = el.id + '-err'; d.textContent = texto;
+      box.appendChild(d);
+      el.setAttribute('aria-describedby', d.id);
+    } else {
+      el.removeAttribute('aria-describedby');
+    }
+  }
+  function validar(){
+    var primeiro = null;
+    Array.prototype.forEach.call(form.querySelectorAll('[required], #email, #blocoResp input'), function(el){
+      if (!el.required && el.id !== 'email'){ marcar(el, ''); return; }
+      el.value = el.type === 'checkbox' ? el.value : el.value.trim();
+      var ok = el.checkValidity();
+      marcar(el, ok ? '' : (AVISOS[el.id] || 'Marque esta caixa.'));
+      if (!ok && !primeiro) primeiro = el;
+    });
+    return primeiro;
+  }
+  Array.prototype.forEach.call(form.querySelectorAll('[required], #email, #blocoResp input'), function(el){
+    el.addEventListener(el.type === 'checkbox' ? 'change' : 'input', function(){
+      if (el.getAttribute('aria-invalid') === 'true' && el.checkValidity()) marcar(el, '');
+    });
+  });
+
+
+  // Quem assina: paciente ou responsável legal
+  var bloco = document.getElementById('blocoResp');
+  function menor(){ return form.querySelector('[name=quem_assina]:checked').value.indexOf('Responsável') === 0; }
+  function quemAssina(){
+    var m = menor();
+    bloco.classList.toggle('hidden', !m);
+    Array.prototype.forEach.call(bloco.querySelectorAll('input'), function(el){ el.required = m; if (!m) marcar(el, ''); });
+    document.getElementById('tituloDados').textContent = m ? 'Dados do paciente' : 'Seus dados';
+    document.getElementById('lblNome').firstChild.textContent = m ? 'Nome completo do paciente ' : 'Nome completo ';
+  }
+  Array.prototype.forEach.call(form.querySelectorAll('[name=quem_assina]'), function(r){ r.addEventListener('change', quemAssina); });
+
+  // Ouvir o combinado em voz alta (voz do próprio aparelho)
+  var temVoz = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+  Array.prototype.forEach.call(document.querySelectorAll('.ouvir'), function(b){
+    if (!temVoz) return;
+    b.classList.remove('hidden');
+    b.addEventListener('click', function(){
+      var r = b.closest('.rule');
+      if (b.classList.contains('falando')){ speechSynthesis.cancel(); return; }
+      speechSynthesis.cancel();
+      var partes = [r.querySelector('.rule-title').lastChild.textContent + '.'];
+      var lead = r.querySelector('.rule-body > p'); if (lead) partes.push(lead.textContent);
+      Array.prototype.forEach.call(r.querySelectorAll('li'), function(li){ partes.push(li.textContent); });
+      var u = new SpeechSynthesisUtterance(partes.join(' '));
+      u.lang = 'pt-BR'; u.rate = 0.9;
+      var vozes = speechSynthesis.getVoices().filter(function(v){ return /^pt(-|_)BR/i.test(v.lang); });
+      if (vozes.length) u.voice = vozes[0];
+      b.classList.add('falando'); b.lastChild.textContent = ' Parar';
+      u.onend = u.onerror = function(){ b.classList.remove('falando'); b.lastChild.textContent = ' Ouvir este combinado'; };
+      speechSynthesis.speak(u);
+    });
+  });
+
+  // Regras uma a uma
+  var regras = Array.prototype.slice.call(document.querySelectorAll('.rule'));
+  var aceitas = 0;
+  var ESPERA = 2; // segundos de leitura antes de liberar o botão
+  function abrir(i){
+    regras.forEach(function(r, k){
+      r.classList.toggle('open', k === i);
+      r.classList.toggle('locked-rule', k > aceitas);
+      r.querySelector('.rule-reread').textContent = (k === i) ? 'Fechar' : 'Ler de novo';
+    });
+    var r = regras[i];
+    if (!r || r.classList.contains('done')) return;
+    var btn = r.querySelector('.rule-btn'), falta = ESPERA;
+    btn.disabled = true;
+    btn.textContent = 'Leia com calma (' + falta + ')';
+    var t = setInterval(function(){
+      falta--;
+      if (falta > 0){ btn.textContent = 'Leia com calma (' + falta + ')'; return; }
+      clearInterval(t);
+      btn.disabled = false;
+      btn.textContent = 'Entendi e concordo';
+    }, 1000);
+  }
+  function progresso(){
+    document.getElementById('progressBar').style.width = (aceitas / regras.length * 100) + '%';
+    var falta = regras.length - aceitas, extra = '';
+    if (aceitas === 0) extra = '';
+    else if (falta === 1) extra = ' · só mais um!';
+    else if (falta === 0) extra = ' · tudo certo!';
+    else if (aceitas >= regras.length / 2) extra = ' · falta pouco';
+    document.getElementById('progressTxt').textContent = aceitas + ' de ' + regras.length + ' combinados aceitos' + extra;
+  }
+  regras.forEach(function(r, k){
+    r.querySelector('.rule-btn').addEventListener('click', function(){
+      var n = k + 1;
+      if (this.disabled) return;
+      if (temVoz) speechSynthesis.cancel();
+      if (!r.classList.contains('done')){
+        r.classList.add('done');
+        document.getElementById('aceite_' + n).value = agoraBrasilia() + ' (horário de Brasília) | ' + new Date().toISOString();
+        aceitas++;
+        progresso();
+      }
+      r.querySelector('.rule-done').classList.remove('hidden');
+      if (aceitas < regras.length){
+        var prox = regras[aceitas];
+        abrir(aceitas);
+        prox.querySelector('h3').focus();
+        prox.scrollIntoView({ behavior:'smooth', block:'center' });
+      } else {
+        abrir(-1);
+        document.getElementById('locked').classList.add('hidden');
+        form.classList.remove('hidden');
+        lastWidth = 0;
+        setupCanvas();
+        var h = form.querySelector('h2');
+        h.setAttribute('tabindex', '-1');
+        h.focus();
+        form.scrollIntoView({ behavior:'smooth', block:'start' });
+      }
+    });
+    r.querySelector('.rule-reread').addEventListener('click', function(){
+      abrir(r.classList.contains('open') ? -1 : k);
+    });
+  });
+  abrir(0);
+  progresso();
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    msg.textContent = '';
+
+    if (aceitas < regras.length){
+      erro('Falta aceitar algum combinado.');
+      return;
+    }
+    var primeiro = validar();
+    if (primeiro){
+      erro(primeiro.type === 'checkbox' ? 'Marque todas as caixas para continuar.' : 'Falta preencher algum campo. Veja as mensagens em vermelho.');
+      primeiro.focus();
+      primeiro.scrollIntoView({ behavior:'smooth', block:'center' });
+      return;
+    }
+    if (!hasInk){
+      erro('Falta a sua assinatura. Assine no quadro.');
+      canvas.scrollIntoView({ behavior:'smooth', block:'center' });
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+
+    var registro = agoraBrasilia() + ' (horário de Brasília) | ' + new Date().toISOString();
+    document.getElementById('data_hora').value = registro;
+
+    exportarAssinatura().then(function(sig){
+      var fd = new FormData(form);
+      var nome = document.getElementById('nome').value.trim();
+      var base = nome.toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      fd.set('assinatura', sig.blob, 'assinatura-' + base + '.png');
+      var pdf = null;
+      try { pdf = gerarPdf(sig, nome, registro); } catch (err) { pdf = null; }
+      if (pdf) fd.set('termo_pdf', pdf, 'termo-' + base + '.pdf');
+      else fd.delete('termo_pdf');
+      var link = document.getElementById('baixarPdf');
+      if (pdf){
+        link.href = URL.createObjectURL(pdf);
+        link.setAttribute('download', 'termo-' + base + '.pdf');
+      } else {
+        link.textContent = 'Salvar ou imprimir o termo';
+        link.removeAttribute('download');
+        link.addEventListener('click', function(ev){ ev.preventDefault(); window.print(); });
+      }
+
+      return fetch('/', { method:'POST', body: fd }).then(function(res){
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        form.classList.add('hidden');
+        document.getElementById('termo').classList.add('hidden');
+        document.getElementById('sucessoNome').textContent = 'Obrigada, ' + (menor() ? document.getElementById('resp_nome').value.trim() : nome) + '. Recebi a sua assinatura.';
+        document.getElementById('sucessoData').textContent = 'Assinado em ' + agoraBrasilia() + ' (horário de Brasília).';
+        document.getElementById('sucesso').classList.remove('hidden');
+        window.scrollTo({ top:0, behavior:'smooth' });
+      });
+    }).catch(function(){
+      btn.disabled = false;
+      btn.textContent = 'Assinar e enviar';
+      erro('Não deu para enviar. Confira a sua internet e tente de novo.');
+    });
+  });
+})();
+</script>
+</body>
+</html>
