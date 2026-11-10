@@ -206,6 +206,9 @@
     .rule-done{margin-left:40px}
     .rule-body ul{padding-left:20px}
   }
+  .check input[type=radio]{accent-color:var(--accent)}
+  .ouvir{display:inline-flex;gap:6px;align-items:center;margin:0 0 14px;text-decoration:none;border-bottom:1px solid currentColor;padding:2px 0}
+  .ouvir.falando{color:var(--sage)}
   .hidden{display:none !important}
 </style>
 </head>
@@ -232,13 +235,13 @@
       Eles passam a valer no dia em que você assina.
     </p>
     <ol class="steps">
-      <li>Leia os 5 combinados com calma, um de cada vez.</li>
+      <li>Leia os 8 combinados com calma, um de cada vez.</li>
       <li>Preencha seus dados.</li>
       <li>Assine e envie.</li>
     </ol>
     <p class="preamble">Se tiver alguma dúvida, me mande uma mensagem antes de assinar. Eu respondo com calma.</p>
     <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
-    <p class="progress-txt" id="progressTxt" aria-live="polite">0 de 5 combinados aceitos</p>
+    <p class="progress-txt" id="progressTxt" aria-live="polite">0 de 8 combinados aceitos</p>
 
     <div class="rule" data-rule="1">
       <h3 tabindex="-1"><span class="rule-num">1</span><span class="rule-title">Respeito</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
@@ -247,6 +250,7 @@
         <li>A análise só acontece quando existe respeito dos dois lados.</li>
         <li>Não aceito ofensas, gritos, ameaças ou qualquer falta de respeito comigo.</li>
       </ul>
+      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
       <button type="button" class="rule-btn">Entendi e concordo</button>
       </div>
       <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
@@ -261,6 +265,7 @@
         <li>sem beber e sem fumar durante a sessão;</li>
         <li>de camiseta, com uma roupa que combine com o nosso encontro.</li>
       </ul>
+      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
       <button type="button" class="rule-btn">Entendi e concordo</button>
       </div>
       <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
@@ -275,31 +280,79 @@
         <li>sem ninguém interrompendo;</li>
         <li>sem barulho alto, música ou animais atrapalhando.</li>
       </ul>
+      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
       <button type="button" class="rule-btn">Entendi e concordo</button>
       </div>
       <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
     </div>
 
     <div class="rule" data-rule="4">
-      <h3 tabindex="-1"><span class="rule-num">4</span><span class="rule-title">Se um combinado não for cumprido</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <h3 tabindex="-1"><span class="rule-num">4</span><span class="rule-title">Faltas e remarcações</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
       <div class="rule-body">
       <ul>
-        <li>Eu encerro a sessão na hora.</li>
-        <li>O valor pago não é devolvido.</li>
-        <li>Posso deixar de marcar novas sessões com você.</li>
+        <li>Se precisar faltar ou remarcar, me avise com pelo menos 24 horas de antecedência.</li>
+        <li>Se o aviso vier depois disso, ou se você faltar, a sessão é cobrada normalmente, também no plano mensal.</li>
+        <li>As sessões do plano valem dentro do mês contratado.</li>
+        <li>Esse combinado guarda o seu horário só para você.</li>
       </ul>
+      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
       <button type="button" class="rule-btn">Entendi e concordo</button>
       </div>
       <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
     </div>
 
     <div class="rule" data-rule="5">
-      <h3 tabindex="-1"><span class="rule-num">5</span><span class="rule-title">Seus dados</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <h3 tabindex="-1"><span class="rule-num">5</span><span class="rule-title">Sigilo</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <div class="rule-body">
+      <ul>
+        <li>Tudo o que você fala nas sessões fica entre nós.</li>
+        <li>O sigilo é um compromisso ético do meu trabalho.</li>
+      </ul>
+      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
+      <button type="button" class="rule-btn">Entendi e concordo</button>
+      </div>
+      <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
+    </div>
+
+    <div class="rule" data-rule="6">
+      <h3 tabindex="-1"><span class="rule-num">6</span><span class="rule-title">Entre as sessões</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <div class="rule-body">
+      <ul>
+        <li>Você pode me mandar dúvidas ou desabafos pelo WhatsApp.</li>
+        <li>Eu respondo em até 48 horas.</li>
+        <li>Em uma emergência, ligue para o CVV no 188 ou para o SAMU no 192.</li>
+      </ul>
+      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
+      <button type="button" class="rule-btn">Entendi e concordo</button>
+      </div>
+      <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
+    </div>
+
+    <div class="rule" data-rule="7">
+      <h3 tabindex="-1"><span class="rule-num">7</span><span class="rule-title">Se um combinado não for cumprido</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
+      <div class="rule-body">
+      <ul>
+        <li>Eu encerro a sessão na hora.</li>
+        <li>Essa sessão conta como realizada, e o valor dela não é devolvido.</li>
+        <li>Se você tem plano mensal, essa sessão conta como uma das sessões do mês.</li>
+        <li>Posso deixar de marcar novas sessões com você.</li>
+      </ul>
+      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
+      <button type="button" class="rule-btn">Entendi e concordo</button>
+      </div>
+      <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
+    </div>
+
+    <div class="rule" data-rule="8">
+      <h3 tabindex="-1"><span class="rule-num">8</span><span class="rule-title">Seus dados</span><span class="rule-ok" aria-hidden="true">✓</span></h3>
       <div class="rule-body">
       <ul>
         <li>Uso seus dados só para registrar que você aceitou estes combinados.</li>
-        <li>Eles ficam em sigilo comigo, como manda a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).</li>
+        <li>Eles ficam guardados com segurança no sistema de formulários do site (Netlify) e uma cópia fica comigo, pelo tempo necessário para comprovar este termo.</li>
+        <li>Você pode pedir para ver, corrigir ou apagar seus dados quando quiser. É só me mandar uma mensagem.</li>
+        <li>Tudo segue a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).</li>
       </ul>
+      <button type="button" class="btn-link ouvir hidden"><span aria-hidden="true">🔊</span> Ouvir este combinado</button>
       <button type="button" class="rule-btn">Entendi e concordo</button>
       </div>
       <p class="rule-done hidden">Aceito. <button type="button" class="btn-link rule-reread">Ler de novo</button></p>
@@ -307,27 +360,59 @@
 
   </section>
 
-  <p class="locked" id="locked">Aceite os 5 combinados acima para preencher seus dados e assinar.</p>
+  <p class="locked" id="locked">Aceite os 8 combinados acima para preencher os dados e assinar.</p>
 
   <form class="card hidden" id="form" name="termo-ciencia" method="POST"
         data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" novalidate>
     <input type="hidden" name="form-name" value="termo-ciencia">
-    <input type="hidden" name="versao_termo" value="v4, combinados na voz da Vanessa (novembro de 2026)">
+    <input type="hidden" name="versao_termo" value="v5, 8 combinados e responsável legal (novembro de 2026)">
     <input type="hidden" name="data_hora_assinatura" id="data_hora">
     <input type="hidden" name="regra_1_aceita_em" id="aceite_1">
     <input type="hidden" name="regra_2_aceita_em" id="aceite_2">
     <input type="hidden" name="regra_3_aceita_em" id="aceite_3">
     <input type="hidden" name="regra_4_aceita_em" id="aceite_4">
     <input type="hidden" name="regra_5_aceita_em" id="aceite_5">
+    <input type="hidden" name="regra_6_aceita_em" id="aceite_6">
+    <input type="hidden" name="regra_7_aceita_em" id="aceite_7">
+    <input type="hidden" name="regra_8_aceita_em" id="aceite_8">
     <input type="file" name="assinatura" id="assinatura_file" class="hidden" tabindex="-1" aria-hidden="true">
     <input type="file" name="termo_pdf" id="termo_pdf_file" class="hidden" tabindex="-1" aria-hidden="true">
     <p class="hidden"><label>Não preencher: <input name="bot-field"></label></p>
 
-    <h2>Seus dados</h2>
+    <h2>Quem está assinando?</h2>
+    <label class="check">
+      <input type="radio" name="quem_assina" value="O próprio paciente (18 anos ou mais)" checked>
+      <span>Eu sou o paciente e tenho 18 anos ou mais.</span>
+    </label>
+    <label class="check">
+      <input type="radio" name="quem_assina" value="Responsável legal por paciente com menos de 18 anos">
+      <span>Sou pai, mãe ou responsável por um paciente com menos de 18 anos.</span>
+    </label>
+
+    <div id="blocoResp" class="hidden">
+      <h2 style="margin-top:20px">Dados do responsável</h2>
+      <p class="hint" style="margin:-8px 0 16px">Você assina por ele. Os combinados valem para o paciente.</p>
+      <div class="field">
+        <label class="lbl" for="resp_nome">Seu nome completo <span class="req">*</span></label>
+        <input type="text" id="resp_nome" name="responsavel_nome" autocomplete="name" minlength="5">
+      </div>
+      <div class="row">
+        <div class="field">
+          <label class="lbl" for="resp_documento">Seu CPF ou outro documento <span class="req">*</span></label>
+          <input type="text" id="resp_documento" name="responsavel_documento" minlength="5">
+        </div>
+        <div class="field">
+          <label class="lbl" for="resp_parentesco">Você é o quê do paciente? <span class="req">*</span></label>
+          <input type="text" id="resp_parentesco" name="responsavel_parentesco" placeholder="Ex.: mãe, pai, avó" minlength="2">
+        </div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:20px" id="tituloDados">Seus dados</h2>
     <p class="hint" style="margin:-8px 0 16px">Os campos com <span class="req">*</span> são obrigatórios.</p>
 
     <div class="field">
-      <label class="lbl" for="nome">Nome completo <span class="req">*</span></label>
+      <label class="lbl" for="nome" id="lblNome">Nome completo <span class="req">*</span></label>
       <input type="text" id="nome" name="nome_completo" autocomplete="name" required minlength="5">
     </div>
 
@@ -353,12 +438,17 @@
 
     <label class="check">
       <input type="checkbox" name="declaracao_ciencia" value="Sim" required>
-      <span>Li os 5 combinados, entendi e concordo com todos.</span>
+      <span>Li os 8 combinados, entendi e concordo com todos.</span>
+    </label>
+
+    <label class="check">
+      <input type="checkbox" name="ciencia_sem_devolucao" value="Sim" required>
+      <span>Entendi que, se um combinado não for cumprido, a sessão conta como realizada e o valor não é devolvido.</span>
     </label>
 
     <label class="check">
       <input type="checkbox" name="consentimento_lgpd" value="Sim" required>
-      <span>Aceito que meus dados sejam usados como explica o combinado 5.</span>
+      <span>Aceito que os dados deste termo sejam usados como explica o combinado 8.</span>
     </label>
 
     <h2 style="margin-top:20px">Sua assinatura</h2>
@@ -510,14 +600,21 @@
       linha('Aceito em ' + val('aceite_' + (k + 1)).split(' | ')[0], 9, 'italic', [93, 111, 98], 3);
     });
     y += 2;
+    if (menor()){
+      linha('Assinado pelo responsável legal', 13, 'bold', [72, 10, 35], 1);
+      linha('Nome: ' + val('resp_nome'), 11);
+      linha('CPF ou documento: ' + val('resp_documento'), 11);
+      linha('Relação com o paciente: ' + val('resp_parentesco'), 11, 'normal', null, 3);
+    }
     linha('Dados do paciente', 13, 'bold', [72, 10, 35], 1);
     linha('Nome: ' + val('nome'), 11);
     linha('CPF ou documento: ' + val('documento'), 11);
     linha('E-mail: ' + (val('email') || 'não informado'), 11);
     linha('Telefone: ' + val('telefone'), 11, 'normal', null, 3);
     linha('Confirmações', 13, 'bold', [72, 10, 35], 1);
-    linha('[x] Li os 5 combinados, entendi e concordo com todos.', 11);
-    linha('[x] Aceito que meus dados sejam usados como explica o combinado 5.', 11, 'normal', null, 4);
+    linha('[x] Li os 8 combinados, entendi e concordo com todos.', 11);
+    linha('[x] Entendi que, se um combinado não for cumprido, a sessão conta como realizada e o valor não é devolvido.', 11);
+    linha('[x] Aceito que os dados deste termo sejam usados como explica o combinado 8.', 11, 'normal', null, 4);
     var iw = W * 0.45, ih = iw * sig.h / sig.w;
     if (y + ih + 20 > 285){ doc.addPage(); y = 22; }
     linha('Assinatura', 13, 'bold', [72, 10, 35], 1);
@@ -536,10 +633,13 @@
   function erro(t){ msg.className = 'msg error'; msg.textContent = t; }
 
   var AVISOS = {
-    nome: 'Escreva o seu nome completo.',
-    documento: 'Escreva o número do seu CPF ou de outro documento.',
+    nome: 'Escreva o nome completo.',
+    documento: 'Escreva o número do CPF ou de outro documento.',
     email: 'Confira o e-mail, por exemplo nome@gmail.com. Se não tiver, deixe em branco.',
-    telefone: 'Escreva o seu telefone com DDD.'
+    telefone: 'Escreva o telefone com DDD.',
+    resp_nome: 'Escreva o seu nome completo.',
+    resp_documento: 'Escreva o número do seu CPF ou de outro documento.',
+    resp_parentesco: 'Escreva o que você é do paciente, por exemplo mãe ou pai.'
   };
   function marcar(el, texto){
     var box = el.closest('.field') || el.closest('.check');
@@ -559,7 +659,8 @@
   }
   function validar(){
     var primeiro = null;
-    Array.prototype.forEach.call(form.querySelectorAll('[required], #email'), function(el){
+    Array.prototype.forEach.call(form.querySelectorAll('[required], #email, #blocoResp input'), function(el){
+      if (!el.required && el.id !== 'email'){ marcar(el, ''); return; }
       el.value = el.type === 'checkbox' ? el.value : el.value.trim();
       var ok = el.checkValidity();
       marcar(el, ok ? '' : (AVISOS[el.id] || 'Marque esta caixa.'));
@@ -567,12 +668,46 @@
     });
     return primeiro;
   }
-  Array.prototype.forEach.call(form.querySelectorAll('[required], #email'), function(el){
+  Array.prototype.forEach.call(form.querySelectorAll('[required], #email, #blocoResp input'), function(el){
     el.addEventListener(el.type === 'checkbox' ? 'change' : 'input', function(){
       if (el.getAttribute('aria-invalid') === 'true' && el.checkValidity()) marcar(el, '');
     });
   });
 
+
+  // Quem assina: paciente ou responsável legal
+  var bloco = document.getElementById('blocoResp');
+  function menor(){ return form.querySelector('[name=quem_assina]:checked').value.indexOf('Responsável') === 0; }
+  function quemAssina(){
+    var m = menor();
+    bloco.classList.toggle('hidden', !m);
+    Array.prototype.forEach.call(bloco.querySelectorAll('input'), function(el){ el.required = m; if (!m) marcar(el, ''); });
+    document.getElementById('tituloDados').textContent = m ? 'Dados do paciente' : 'Seus dados';
+    document.getElementById('lblNome').firstChild.textContent = m ? 'Nome completo do paciente ' : 'Nome completo ';
+  }
+  Array.prototype.forEach.call(form.querySelectorAll('[name=quem_assina]'), function(r){ r.addEventListener('change', quemAssina); });
+
+  // Ouvir o combinado em voz alta (voz do próprio aparelho)
+  var temVoz = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+  Array.prototype.forEach.call(document.querySelectorAll('.ouvir'), function(b){
+    if (!temVoz) return;
+    b.classList.remove('hidden');
+    b.addEventListener('click', function(){
+      var r = b.closest('.rule');
+      if (b.classList.contains('falando')){ speechSynthesis.cancel(); return; }
+      speechSynthesis.cancel();
+      var partes = [r.querySelector('.rule-title').textContent + '.'];
+      var lead = r.querySelector('.rule-body > p'); if (lead) partes.push(lead.textContent);
+      Array.prototype.forEach.call(r.querySelectorAll('li'), function(li){ partes.push(li.textContent); });
+      var u = new SpeechSynthesisUtterance(partes.join(' '));
+      u.lang = 'pt-BR'; u.rate = 0.9;
+      var vozes = speechSynthesis.getVoices().filter(function(v){ return /^pt(-|_)BR/i.test(v.lang); });
+      if (vozes.length) u.voice = vozes[0];
+      b.classList.add('falando'); b.lastChild.textContent = ' Parar';
+      u.onend = u.onerror = function(){ b.classList.remove('falando'); b.lastChild.textContent = ' Ouvir este combinado'; };
+      speechSynthesis.speak(u);
+    });
+  });
 
   // Regras uma a uma
   var regras = Array.prototype.slice.call(document.querySelectorAll('.rule'));
@@ -605,6 +740,7 @@
     r.querySelector('.rule-btn').addEventListener('click', function(){
       var n = k + 1;
       if (this.disabled) return;
+      if (temVoz) speechSynthesis.cancel();
       if (!r.classList.contains('done')){
         r.classList.add('done');
         document.getElementById('aceite_' + n).value = agoraBrasilia() + ' (horário de Brasília) | ' + new Date().toISOString();
@@ -646,7 +782,7 @@
     }
     var primeiro = validar();
     if (primeiro){
-      erro(primeiro.type === 'checkbox' ? 'Marque as duas caixas para continuar.' : 'Falta preencher algum campo. Veja as mensagens em vermelho.');
+      erro(primeiro.type === 'checkbox' ? 'Marque todas as caixas para continuar.' : 'Falta preencher algum campo. Veja as mensagens em vermelho.');
       primeiro.focus();
       primeiro.scrollIntoView({ behavior:'smooth', block:'center' });
       return;
@@ -688,7 +824,7 @@
         if (!res.ok) throw new Error('HTTP ' + res.status);
         form.classList.add('hidden');
         document.getElementById('termo').classList.add('hidden');
-        document.getElementById('sucessoNome').textContent = 'Obrigada, ' + nome + '. Recebi a sua assinatura.';
+        document.getElementById('sucessoNome').textContent = 'Obrigada, ' + (menor() ? document.getElementById('resp_nome').value.trim() : nome) + '. Recebi a sua assinatura.';
         document.getElementById('sucessoData').textContent = 'Assinado em ' + agoraBrasilia() + ' (horário de Brasília).';
         document.getElementById('sucesso').classList.remove('hidden');
         window.scrollTo({ top:0, behavior:'smooth' });
