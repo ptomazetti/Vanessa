@@ -28,6 +28,7 @@
     --line:#E7DFD5;
     --error:#A23B32;
     --ok:#5D6F62;
+    --col:720px;
     --serif:"Playfair Display",Georgia,serif;
     --sans:"Plus Jakarta Sans",system-ui,sans-serif;
   }
@@ -42,11 +43,11 @@
     -webkit-font-smoothing:antialiased;
   }
   .topbar{background:rgba(251,249,245,.92);border-bottom:1px solid var(--line)}
-  .topbar-in{max-width:720px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;gap:.75rem}
+  .topbar-in{max-width:var(--col);margin:0 auto;padding:12px 18px;display:flex;align-items:center;gap:.75rem}
   .mark{width:44px;height:44px;border-radius:9999px;object-fit:cover;flex:none}
   .brand-name{font-family:var(--serif);font-size:21px;line-height:1.1;color:var(--ink)}
   .brand-name small{display:block;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--sage);margin-top:3px}
-  .wrap{max-width:720px;margin:0 auto;padding:36px 18px 48px}
+  .wrap{max-width:var(--col);margin:0 auto;padding:36px 18px 48px}
   header.page{text-align:center;margin-bottom:28px}
   .overline{
     display:inline-flex;align-items:center;gap:.5rem;
@@ -69,7 +70,10 @@
     font-family:var(--serif);font-weight:400;
     font-size:24px;line-height:1.25;margin:0 0 16px;
   }
-  .preamble{margin:0 0 22px}
+  .preamble{margin:0 0 14px}
+  .steps{margin:0 0 14px;padding:0;list-style:none;counter-reset:s}
+  .steps li{counter-increment:s;display:flex;gap:10px;align-items:center;margin-bottom:8px;font-weight:600}
+  .steps li::before{content:counter(s);width:28px;height:28px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-size:15px}
   .clause{margin:0 0 26px}
   .clause:last-child{margin-bottom:0}
   .clause h3{
@@ -99,7 +103,7 @@
     padding:14px;border:1px solid var(--line);border-radius:.75rem;
     margin-bottom:12px;cursor:pointer;background:var(--field);
   }
-  .check input{width:20px;height:20px;margin:2px 0 0;flex:0 0 auto;accent-color:var(--accent)}
+  .check input{width:26px;height:26px;margin:0;flex:0 0 auto;accent-color:var(--accent)}
   .check span{font-size:17px}
 
   .sig-box{
@@ -115,7 +119,7 @@
     position:absolute;left:0;right:0;bottom:14px;text-align:center;
     font-size:15px;color:var(--muted);pointer-events:none;
   }
-  .sig-actions{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+  .sig-actions{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:4px 16px;margin-top:8px}
   .meta{font-size:15px;color:var(--muted)}
   .btn-link{
     background:none;border:none;color:var(--accent);font:inherit;font-size:16px;font-weight:600;
@@ -141,6 +145,8 @@
   }
   .success h2{margin-bottom:8px}
   .success p{color:var(--muted);margin:0 0 6px}
+  .pdf-btn{display:inline-block;width:auto;margin:22px auto 10px;padding:15px 32px;text-decoration:none}
+  .success .pdf-note{font-size:16px}
 
   footer.foot{background:var(--wine);color:var(--wine-text);text-align:center;font-size:14px;padding:20px 18px}
   footer.foot strong{display:block;font-family:var(--serif);font-weight:400;font-size:18px;color:#FFFFFF;margin-bottom:2px}
@@ -160,7 +166,29 @@
   .rule.open .rule-body{display:block}
   .rule.done .rule-ok{display:block}
   .rule.done .rule-num{background:var(--sage);color:#FFFFFF}
-  .rule.locked-rule{opacity:.55}
+  .rule.locked-rule{opacity:.7}
+  .rule.done .rule-btn{display:none}
+  .rule-btn:disabled{background:var(--accent-soft);border-color:var(--line);color:var(--muted);cursor:default}
+  input.invalid{border-color:var(--error);box-shadow:0 0 0 3px rgba(162,59,50,.12)}
+  .field-err{color:var(--error);font-size:16px;font-weight:600;margin-top:6px}
+  .check.invalid{border-color:var(--error)}
+  @media (min-width:768px){
+    :root{--col:800px}
+    .wrap{padding:56px 32px 72px}
+    .topbar-in{padding:14px 32px}
+    .card{padding:40px 44px}
+    h1{font-size:48px}
+    .subtitle{font-size:19px}
+    .card h2{font-size:28px}
+    .rule{padding:20px 24px}
+    .rule-btn{width:auto;min-width:260px}
+    .rule-done{margin-left:46px}
+    .sig-box{height:230px}
+    .submit{width:auto;min-width:320px;display:block;margin:0 auto;padding:16px 40px}
+  }
+  @media (min-width:1200px){
+    :root{--col:880px}
+  }
   .rule-btn{font:inherit;font-size:17px;font-weight:600;padding:12px 22px;border-radius:9999px;border:1px solid var(--sage);background:var(--sage);color:#FFFFFF;cursor:pointer;width:100%}
   .rule-btn:hover{background:#4E5F53}
   .rule-done{margin:8px 0 0 46px;font-size:16px;color:var(--ok);font-weight:600}
@@ -188,10 +216,13 @@
     <p class="preamble">
       Estas regras valem para todos os pacientes, novos e de longa data.
       Elas passam a valer no dia em que você assina.
-      São 5 regras. Leia uma de cada vez, com calma.
-      Depois de ler, toque em "Entendi e concordo" para ir para a próxima.
-      Se tiver dúvida, pergunte à Vanessa antes de continuar.
     </p>
+    <ol class="steps">
+      <li>Leia as 5 regras, uma de cada vez.</li>
+      <li>Preencha seus dados.</li>
+      <li>Assine e envie.</li>
+    </ol>
+    <p class="preamble">Se tiver dúvida, pergunte à Vanessa antes de continuar.</p>
     <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
     <p class="progress-txt" id="progressTxt" aria-live="polite">0 de 5 regras aceitas</p>
 
@@ -274,9 +305,11 @@
     <input type="hidden" name="regra_4_aceita_em" id="aceite_4">
     <input type="hidden" name="regra_5_aceita_em" id="aceite_5">
     <input type="file" name="assinatura" id="assinatura_file" class="hidden" tabindex="-1" aria-hidden="true">
+    <input type="file" name="termo_pdf" id="termo_pdf_file" class="hidden" tabindex="-1" aria-hidden="true">
     <p class="hidden"><label>Não preencher: <input name="bot-field"></label></p>
 
     <h2>Seus dados</h2>
+    <p class="hint" style="margin:-8px 0 16px">Os campos com <span class="req">*</span> são obrigatórios.</p>
 
     <div class="field">
       <label class="lbl" for="nome">Nome completo <span class="req">*</span></label>
@@ -291,8 +324,9 @@
 
     <div class="row">
       <div class="field">
-        <label class="lbl" for="email">E-mail <span class="req">*</span></label>
-        <input type="email" id="email" name="email" autocomplete="email" required>
+        <label class="lbl" for="email">E-mail</label>
+        <input type="email" id="email" name="email" autocomplete="email">
+        <div class="hint">Não tem e-mail? Pode deixar em branco.</div>
       </div>
       <div class="field">
         <label class="lbl" for="telefone">Telefone ou WhatsApp <span class="req">*</span></label>
@@ -335,6 +369,8 @@
     <h2>Pronto! Termo assinado.</h2>
     <p id="sucessoNome"></p>
     <p id="sucessoData"></p>
+    <a class="submit pdf-btn" id="baixarPdf" href="#" download>Baixar o termo em PDF</a>
+    <p class="pdf-note">Guarde este arquivo. A Vanessa também recebe uma cópia.</p>
   </section>
 
 </div>
@@ -344,6 +380,7 @@
   Documento assinado pela internet.
 </footer>
 
+<script src="js/jspdf.umd.min.js"></script>
 <script>
 (function(){
   var canvas = document.getElementById('sig');
@@ -424,8 +461,57 @@
       o.fillStyle = '#FFFFFF';
       o.fillRect(0, 0, out.width, out.height);
       o.drawImage(canvas, 0, 0, out.width, out.height);
-      out.toBlob(resolve, 'image/png');
+      out.toBlob(function(blob){ resolve({ blob: blob, url: out.toDataURL('image/jpeg', 0.8), w: out.width, h: out.height }); }, 'image/png');
     });
+  }
+
+  function gerarPdf(sig, nome, registro){
+    if (!window.jspdf) return null;
+    var doc = new window.jspdf.jsPDF({ unit:'mm', format:'a4', compress:true });
+    var M = 20, W = 210 - M * 2, y = 22;
+    function linha(txt, size, style, cor, gap){
+      doc.setFont('helvetica', style || 'normal');
+      doc.setFontSize(size);
+      doc.setTextColor.apply(doc, cor || [39, 36, 34]);
+      var partes = doc.splitTextToSize(txt, W);
+      partes.forEach(function(t){
+        if (y > 280){ doc.addPage(); y = 22; }
+        doc.text(t, M, y);
+        y += size * 0.45;
+      });
+      y += gap || 0;
+    }
+    function val(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+    linha('Vanessa Torriani, psicanálise clínica e sistêmica', 10, 'normal', [93, 111, 98], 2);
+    linha('Termo de compromisso', 20, 'bold', [72, 10, 35], 1);
+    linha('As regras das sessões de psicanálise', 11, 'normal', [82, 68, 63], 1);
+    linha('Versão: ' + form.querySelector('[name=versao_termo]').value, 9, 'normal', [82, 68, 63], 4);
+    linha('Estas regras valem para todos os pacientes, novos e de longa data. Elas passam a valer no dia em que o paciente assina.', 11, 'normal', null, 4);
+    regras.forEach(function(r, k){
+      linha((k + 1) + '. ' + r.querySelector('.rule-title').textContent, 12, 'bold', [140, 88, 69], 1);
+      var lead = r.querySelector('.rule-body > p');
+      if (lead) linha(lead.textContent.trim(), 11);
+      Array.prototype.forEach.call(r.querySelectorAll('li'), function(li){ linha('-  ' + li.textContent.trim(), 11); });
+      linha('Aceita em ' + val('aceite_' + (k + 1)).split(' | ')[0], 9, 'italic', [93, 111, 98], 3);
+    });
+    y += 2;
+    linha('Dados do paciente', 13, 'bold', [72, 10, 35], 1);
+    linha('Nome: ' + val('nome'), 11);
+    linha('CPF ou documento: ' + val('documento'), 11);
+    linha('E-mail: ' + (val('email') || 'não informado'), 11);
+    linha('Telefone: ' + val('telefone'), 11, 'normal', null, 3);
+    linha('Confirmações', 13, 'bold', [72, 10, 35], 1);
+    linha('[x] Li as 5 regras, entendi e concordo com todas.', 11);
+    linha('[x] Aceito que meus dados sejam usados como explica a regra 5.', 11, 'normal', null, 4);
+    var iw = W * 0.45, ih = iw * sig.h / sig.w;
+    if (y + ih + 20 > 285){ doc.addPage(); y = 22; }
+    linha('Assinatura', 13, 'bold', [72, 10, 35], 1);
+    doc.addImage(sig.url, 'JPEG', M, y, iw, ih);
+    y += ih + 4;
+    linha('Assinado em ' + registro.split(' | ')[0], 10);
+    linha('Registro: ' + registro.split(' | ')[1], 9, 'normal', [82, 68, 63], 2);
+    linha('Documento assinado pela internet.', 9, 'italic', [82, 68, 63]);
+    return doc.output('blob');
   }
 
   var form = document.getElementById('form');
@@ -434,15 +520,67 @@
 
   function erro(t){ msg.className = 'msg error'; msg.textContent = t; }
 
+  var AVISOS = {
+    nome: 'Escreva o seu nome completo.',
+    documento: 'Escreva o número do seu CPF ou de outro documento.',
+    email: 'Confira o e-mail, por exemplo nome@gmail.com. Se não tiver, deixe em branco.',
+    telefone: 'Escreva o seu telefone com DDD.'
+  };
+  function marcar(el, texto){
+    var box = el.closest('.field') || el.closest('.check');
+    var old = box.querySelector('.field-err');
+    if (old) old.remove();
+    el.classList.toggle('invalid', !!texto);
+    if (el.type === 'checkbox') box.classList.toggle('invalid', !!texto);
+    el.setAttribute('aria-invalid', texto ? 'true' : 'false');
+    if (texto && el.type !== 'checkbox'){
+      var d = document.createElement('div');
+      d.className = 'field-err'; d.id = el.id + '-err'; d.textContent = texto;
+      box.appendChild(d);
+      el.setAttribute('aria-describedby', d.id);
+    } else {
+      el.removeAttribute('aria-describedby');
+    }
+  }
+  function validar(){
+    var primeiro = null;
+    Array.prototype.forEach.call(form.querySelectorAll('[required], #email'), function(el){
+      el.value = el.type === 'checkbox' ? el.value : el.value.trim();
+      var ok = el.checkValidity();
+      marcar(el, ok ? '' : (AVISOS[el.id] || 'Marque esta caixa.'));
+      if (!ok && !primeiro) primeiro = el;
+    });
+    return primeiro;
+  }
+  Array.prototype.forEach.call(form.querySelectorAll('[required], #email'), function(el){
+    el.addEventListener(el.type === 'checkbox' ? 'change' : 'input', function(){
+      if (el.getAttribute('aria-invalid') === 'true' && el.checkValidity()) marcar(el, '');
+    });
+  });
+
 
   // Regras uma a uma
   var regras = Array.prototype.slice.call(document.querySelectorAll('.rule'));
   var aceitas = 0;
+  var ESPERA = 3; // segundos de leitura antes de liberar o botão
   function abrir(i){
     regras.forEach(function(r, k){
       r.classList.toggle('open', k === i);
       r.classList.toggle('locked-rule', k > aceitas);
+      r.querySelector('.rule-reread').textContent = (k === i) ? 'Fechar' : 'Ler de novo';
     });
+    var r = regras[i];
+    if (!r || r.classList.contains('done')) return;
+    var btn = r.querySelector('.rule-btn'), falta = ESPERA;
+    btn.disabled = true;
+    btn.textContent = 'Leia a regra (' + falta + ')';
+    var t = setInterval(function(){
+      falta--;
+      if (falta > 0){ btn.textContent = 'Leia a regra (' + falta + ')'; return; }
+      clearInterval(t);
+      btn.disabled = false;
+      btn.textContent = 'Entendi e concordo';
+    }, 1000);
   }
   function progresso(){
     document.getElementById('progressBar').style.width = (aceitas / regras.length * 100) + '%';
@@ -451,6 +589,7 @@
   regras.forEach(function(r, k){
     r.querySelector('.rule-btn').addEventListener('click', function(){
       var n = k + 1;
+      if (this.disabled) return;
       if (!r.classList.contains('done')){
         r.classList.add('done');
         document.getElementById('aceite_' + n).value = agoraBrasilia() + ' (horário de Brasília) | ' + new Date().toISOString();
@@ -490,15 +629,11 @@
       erro('Falta aceitar alguma regra.');
       return;
     }
-    if (!form.checkValidity()){
-      var invalido = form.querySelector(':invalid');
-      if (invalido && invalido.type === 'checkbox'){
-        erro('Marque as duas caixas para continuar.');
-        invalido.focus();
-      } else {
-        form.reportValidity();
-        erro('Falta preencher algum campo. Confira os campos com *.');
-      }
+    var primeiro = validar();
+    if (primeiro){
+      erro(primeiro.type === 'checkbox' ? 'Marque as duas caixas para continuar.' : 'Falta preencher algum campo. Veja as mensagens em vermelho.');
+      primeiro.focus();
+      primeiro.scrollIntoView({ behavior:'smooth', block:'center' });
       return;
     }
     if (!hasInk){
@@ -513,13 +648,26 @@
     var registro = agoraBrasilia() + ' (horário de Brasília) | ' + new Date().toISOString();
     document.getElementById('data_hora').value = registro;
 
-    exportarAssinatura().then(function(blob){
+    exportarAssinatura().then(function(sig){
       var fd = new FormData(form);
       var nome = document.getElementById('nome').value.trim();
-      var arquivo = 'assinatura-' + nome.toLowerCase()
-        .normalize('NFD').replace(/[̀-ͯ]/g, '')
-        .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '.png';
-      fd.set('assinatura', blob, arquivo);
+      var base = nome.toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      fd.set('assinatura', sig.blob, 'assinatura-' + base + '.png');
+      var pdf = null;
+      try { pdf = gerarPdf(sig, nome, registro); } catch (err) { pdf = null; }
+      if (pdf) fd.set('termo_pdf', pdf, 'termo-' + base + '.pdf');
+      else fd.delete('termo_pdf');
+      var link = document.getElementById('baixarPdf');
+      if (pdf){
+        link.href = URL.createObjectURL(pdf);
+        link.setAttribute('download', 'termo-' + base + '.pdf');
+      } else {
+        link.textContent = 'Salvar ou imprimir o termo';
+        link.removeAttribute('download');
+        link.addEventListener('click', function(ev){ ev.preventDefault(); window.print(); });
+      }
 
       return fetch('/', { method:'POST', body: fd }).then(function(res){
         if (!res.ok) throw new Error('HTTP ' + res.status);
