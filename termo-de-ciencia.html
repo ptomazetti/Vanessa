@@ -506,9 +506,16 @@
   var placeholder = document.getElementById('sigPlaceholder');
   var drawing = false, hasInk = false, last = null, lastWidth = 0;
 
-  function setupCanvas(){
+  function setupCanvas(manter){
     var rect = canvas.getBoundingClientRect();
     if (Math.round(rect.width) === lastWidth) return;
+    // Ao girar a tela, guarda o desenho para não apagar a assinatura
+    var copia = null;
+    if (manter === true && hasInk && canvas.width && canvas.height){
+      copia = document.createElement('canvas');
+      copia.width = canvas.width; copia.height = canvas.height;
+      copia.getContext('2d').drawImage(canvas, 0, 0);
+    }
     lastWidth = Math.round(rect.width);
     var ratio = Math.max(window.devicePixelRatio || 1, 1);
     canvas.width = rect.width * ratio;
@@ -518,6 +525,10 @@
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
     ctx.strokeStyle = '#1B2A35';
+    if (copia){
+      ctx.drawImage(copia, 0, 0, rect.width, rect.height);
+      return;
+    }
     hasInk = false;
     placeholder.classList.remove('hidden');
   }
@@ -558,7 +569,7 @@
     setupCanvas();
   });
 
-  window.addEventListener('resize', setupCanvas);
+  window.addEventListener('resize', function(){ setupCanvas(true); });
   setupCanvas();
 
   function agoraBrasilia(){
